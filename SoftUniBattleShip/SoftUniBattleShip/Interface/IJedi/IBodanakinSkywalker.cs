@@ -1,7 +1,6 @@
 ﻿namespace Game.Inerface
 {
-    public interface IJedi
+    public interface IBodanakinСkywalker
     {
-         
     }
 }
