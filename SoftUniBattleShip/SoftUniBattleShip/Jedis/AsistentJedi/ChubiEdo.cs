@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Reflection;
-using Game.Inerface;
 using Jedis;
 
 namespace Game
 {
-    public class ChubiEdo : Asistents, IChubiEdo
+    public class ChubiEdo : Assistant, IChubiEdo
     {
         public ChubiEdo(int poits) : base(poits)
         {
@@ -13,33 +11,33 @@ namespace Game
 
         public ChubiEdo() : base()
         {
-            this.AsistentJediType = AsistentJediType.ChubiEdo;
+            this.AssistantJediType = AssistantJediType.ChubiEdo;
         }
 
-        public override int AsistentsLive
+        public override int AssistantLives
         {
-            get { return this.asistentsLive; }
-            set { this.asistentsLive = 40; }
+            get { return this.assistantLives; }
+            set { this.assistantLives = 40; }
         }
 
-        public int AsistentsAttack
+        public int AssistantAttack
         {
-            get { return this.asistentsAttack; }
-            set { this.asistentsAttack = 5; }
+            get { return this.assistantAttack; }
+            set { this.assistantAttack = 5; }
         }
 
-        public override int AsistentPoint
+        public override int AssistantPoints
         {
-            get { return this.asistPoint; }
+            get { return this.assistantPoints; }
             set
-            { this.asistPoint += value; }
+            { this.assistantPoints += value; }
         }
 
         public override void Point()
         {
-            if (AsistentPoint > AsistentsLive)
+            if (AssistantPoints > AssistantLives)
             {
-                Console.WriteLine("CubaEdo is drunk!!!");
+                Console.WriteLine("ChubiEdo is drunk!!!");
             }
         }
     }

@@ -5,17 +5,17 @@ namespace Game
     public abstract class Paduin : IPaduin
     {
         protected int paduinPower;
-        protected int beerPerSecound;
+        protected int beerPerSecond;
         protected int pointKnowledge;
-        protected AsistensPaduin asistensPaduin;
+        protected AssistantPaduin assistantPaduin;
 
-        public Paduin(int pointKnowledge, AsistensPaduin asistensPaduin)
+        protected Paduin(int pointKnowledge, AssistantPaduin assistantPaduin)
         {
-            PointKnowledge = pointKnowledge;
-            AsistensPaduin = asistensPaduin;
+            this.PointKnowledge = pointKnowledge;
+            this.AssistantPaduin = assistantPaduin;
         }
 
-        public Paduin()
+        protected Paduin()
         {
         }
 
@@ -23,12 +23,12 @@ namespace Game
 
         public int PaduinPower { get; set; }
 
-        public int BeerPerSecund { get; set; }
+        public int BeerPerSecond { get; set; }
 
         public PaduinType PaduinType { get; set; }
 
-        public AsistensPaduin AsistensPaduin { get; set; }
+        public AssistantPaduin AssistantPaduin { get; set; }
 
-        public abstract void KnolidgeCalkulater();
+        public abstract void KnowledgeCalculator();
     }
 }

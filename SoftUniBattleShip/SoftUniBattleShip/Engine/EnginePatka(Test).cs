@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Game.Inerface;
+﻿using Game.Inerface;
 using Game.Jedis;
 using Game.Paduins;
 
@@ -9,80 +8,80 @@ namespace Jedis.Engine
     {
         public static void EnterBatel(string input)
         {
-            string[] inputComand = input.Split(' ');
-            switch (inputComand[0])
+            string[] inputCommand = input.Split(' ');
+            switch (inputCommand[0])
             {
-                case "CreatJediPlayer":
-                    CreaJeditPlayr(inputComand);
+                case "CreateJediPlayer":
+                    CreateJeditPlayer(inputCommand);
                     break;
-                case "CreatPaduinlayr":
+                case "CreatePaduinPlayer":
                     break;
             }
         }
 
-        private static void CreaJeditPlayr(string[] inputComands)
+        private static void CreateJeditPlayer(string[] inputCommands)
         {
-            switch (inputComands[1])
+            switch (inputCommands[1])
             {
                 case "JoNakov":
-                    var joNakov = (IJoNakov) JediFactory.CreatJedi(JediType.JoNakov);
+                    var joNakov = (IJoNakov) JediFactory.CreateJedi(JediType.JoNakov);
                     break;
                 case "AchoUanKenobi":
-                    var achoUanKenobi = (IAcuUanKenobi) JediFactory.CreatJedi(JediType.AchoUanKenobi);
+                    var achoUanKenobi = (IAchoUanKenobi) JediFactory.CreatJedi(JediType.AchoUanKenobi);
                     break;
-                case "BadanakiSkeyWalker":
-                    var badanakiSkyeWalker = (IBodanakinСkywalker) JediFactory.CreatJedi(JediType.BodanakiSkyeWalker);
+                case "RoyalSkeyWalker":
+                    var royalSkyeWalker = (IRoyalSkywalker) JediFactory.CreateJedi(JediType.RoyalSkyWalker);
                     break;
-                case "NicSolo":
-                    var nicSolo = (INicSolo) JediFactory.CreatJedi(JediType.NicSolo);
+                case "NaskoSolo":
+                    var naskoSolo = (INaskoSolo) JediFactory.CreateJedi(JediType.NaskoSolo);
                     break;
             }
         }
 
-        private static void CreatPaduinPlayr(string[] inputComands)
+        private static void CreatePaduinPlayer(string[] inputCommands)
         {
-            switch (inputComands[1])
+            switch (inputCommands[1])
             {
                 case "CountSevgin":
-                    var countSevgin = (ICountSevgin) PadoinFactor.CreatPaduin(PaduinType.CountSevgin);
+                    var countSevgin = (ICountSevgin) PadoinFactor.CreatePaduin(PaduinType.CountSevgin);
                     break;
                 case "Karnobatman":
                     var karnobatman =
-                        (IKarnobatmanFromKranobasterdam) PadoinFactor.CreatPaduin(PaduinType.Karnotman);
+                        (IKarnobatmanFromKranobasterdam) PadoinFactor.CreatePaduin(PaduinType.Karnotman);
                     break;
                 case "SashoFett":
-                    var sashoFett = (ISashoFett) PadoinFactor.CreatPaduin(PaduinType.SashoFett);
+                    var sashoFett = (ISashoFett) PadoinFactor.CreatePaduin(PaduinType.SashoFett);
                     break;
                 case "WightJan":
-                    var wightJan = (IWightJan) PadoinFactor.CreatPaduin(PaduinType.WightJan);
+                    var wightJan = (IWightJan) PadoinFactor.CreatePaduin(PaduinType.WightJan);
                     break;
             }
         }
 
-        private static void CreatAsistentJedi(string[] inputComand)
+        private static void CreateAssistantJedi(string[] inputCommand)
         {
-            switch (inputComand[1])
+            switch (inputCommand[1])
             {
                 case "ChubiEdo":
-                    var chubiEdo = (IAsistents) AsistentJediFaktory.CreatJediАсistents(AsistentJediType.ChubiEdo);
+                    var chubiEdo = (IAssistants) AsistentJediFaktory.CreateJediАssitant(AssistantJediType.ChubiEdo);
                     break;
                 case "R2Trifon2":
-                    var r2Trifon2 = (IAsistents) AsistentJediFaktory.CreatJediАсistents(AsistentJediType.R2Trifon2);
+                    var r2Trifon2 = (IAssistants) AsistentJediFaktory.CreateJediАssistant(AssistantJediType.R2Trifon2);
                     break;
             }
         }
 
-        private static void CreatAsistentPaduin(string[] inputComand)
+        private static void CreateAssistantPaduin(string[] inputCommand)
         {
-            switch (inputComand[1])
+            switch (inputCommand[1])
             {
                 case "FugelmanToWookie":
                     var fugelmabToWookie =
-                        (IAsistentsPaduin)
-                            AsistentPaduinFactory.CreateAsistentPaduin(AsistentPaduinType.FugelmanToWookie);
+                        (IAssistantPaduin)
+                            AssistantPaduinFactory.CreateAssistantPaduin(AssistantPaduinType.FugelmanToWookie);
                     break;
-                case "SipiTriBitiO":
-                    var sipiTriBirirO = (IAsistentsPaduin) AsistentPaduinFactory.CreateAsistentPaduin(AsistentPaduinType.SipiTriBiriO);
+                case "SipiTriBiriO":
+                    var sipiTriBiriO = (IAssistantPaduin) AssistantPaduinFactory.CreateAssistantPaduin(AssistantPaduinType.SipiTriBiriO);
                     break;
             }
         }

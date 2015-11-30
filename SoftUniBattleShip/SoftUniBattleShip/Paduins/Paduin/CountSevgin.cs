@@ -5,7 +5,7 @@ namespace Game
 {
     public class CountSevgin : Paduin,ICountSevgin
     {
-        public CountSevgin(int pointKnowledge, AsistensPaduin asistensPaduin) 
+        public CountSevgin(int pointKnowledge, AssistantPaduin asistensPaduin) 
             : base(pointKnowledge, asistensPaduin)
         {
 
@@ -30,15 +30,15 @@ namespace Game
 
         public int BeerPerSecound
         {
-            get { return this.beerPerSecound; }
-            set { this.beerPerSecound = 3; }
+            get { return this.beerPerSecond; }
+            set { this.beerPerSecond = 3; }
         }
 
-        public override void KnolidgeCalkulater()
+        public override void KnowledgeCalculator()
         {
             if (PaduinPower < PointKnowledge)
             {
-                Console.WriteLine("Paduin have very knowledge");
+                Console.WriteLine("Paduin have knowledge");
             }
         }
     }

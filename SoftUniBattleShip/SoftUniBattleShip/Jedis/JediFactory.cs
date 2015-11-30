@@ -18,10 +18,10 @@ namespace Game.Jedis
                     return new JoNakov();
                 case JediType.AchoUanKenobi:
                     return new AchoUanKenobi();
-                case JediType.BodanakiSkyeWalker:
-                    return new BadanakiSkeyWalker();
-                case JediType.NicSolo:
-                    return new NicSolo();
+                case JediType.RoyalSkyWalker:
+                    return new RoyalSkyWalker();
+                case JediType.NaskoSolo:
+                    return new NaskoSolo();
                 default:
                     throw new ArgumentException();
             } 

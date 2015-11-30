@@ -2,9 +2,9 @@
 {
     public interface IJedi
     {
-        int PointsDamadje { get; } //Damadge който му се нанася
+        int PointsDamage { get; } //Damage който му се нанася
 
-        int DemidjeKnolidge { get; } //Damadge който нанася
+        int KnowledgeDamage { get; } //Damadge който нанася
 
         int ThePolerOfDrinks { get; } //Живота му
 

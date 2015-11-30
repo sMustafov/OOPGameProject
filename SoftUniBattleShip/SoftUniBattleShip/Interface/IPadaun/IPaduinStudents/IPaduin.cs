@@ -6,10 +6,10 @@
 
         int PaduinPower { get; set; }
 
-        int BeerPerSecund { set; get; }
+        int BeerPerSecond { set; get; }
 
         PaduinType PaduinType { get; set; }
 
-        void KnolidgeCalkulater();
+        void KnowledgeCalculator();
     }
 }

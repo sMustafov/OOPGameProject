@@ -11,16 +11,16 @@ namespace Game
             this.JediType = JediType.JoNakov;
         }
 
-        public JoNakov(int points, Asistents asistent) : base(points, asistent)
+        public JoNakov(int points, Assistant assistant) : base(points, assistant)
         {
 
         }
 
 
-        public override int DemidjeKnolidge
+        public override int KnowledgeDamage
         {
-            get {return this.damadgeKnolidgh; }
-            set { this.damadgeKnolidgh = 30; }
+            get {return this.knowledgeDamage; }
+            set { this.knowledgeDamage = 30; }
         }
 
         public override int ThePolerOfDrinks
@@ -29,7 +29,7 @@ namespace Game
             set { this.thePower = 100; }
         }
 
-        public override int PointsDamadje
+        public override int PointsDamage
         {
             get { return point; }
             set { this.point += value; }
@@ -37,7 +37,7 @@ namespace Game
 
         public override void Points()
         {
-            if (PointsDamadje > ThePolerOfDrinks)
+            if (PointsDamage > ThePolerOfDrinks)
             {
                 Console.WriteLine("JoNakov is drunk!!!");
             }

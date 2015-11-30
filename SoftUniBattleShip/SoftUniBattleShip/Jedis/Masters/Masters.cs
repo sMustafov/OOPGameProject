@@ -2,11 +2,11 @@
 {
     public class Masters : Jedi.Jedi, IMasters
     {
-        protected int damadgeKnolidgh;
+        protected int knowledgeDamage;
         protected int thePower;
         protected int point;
 
-        public Masters(int points, Asistents asistent) : base(points, asistent)
+        public Masters(int points, Assistant assistant) : base(points, assistant)
         {
         }
 

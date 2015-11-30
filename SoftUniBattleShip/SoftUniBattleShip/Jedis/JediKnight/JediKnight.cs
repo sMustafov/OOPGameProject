@@ -5,11 +5,11 @@ namespace Jedis
     public class JediKnight : Jedi.Jedi, IJediKnight
     {
      
-        protected int damadgeKnolidgh;
+        protected int knowledgeDamage;
         protected int thePower;
-        protected int point;
+        protected int points;
 
-        public JediKnight(int points, Asistents asistent) : base(points, asistent)
+        public JediKnight(int points, Assistant assistant) : base(points, assistant)
         {
             
         }

@@ -4,7 +4,7 @@
     {
         JoNakov,
         AchoUanKenobi,
-        BodanakiSkyeWalker,
-        NicSolo
+        RoyalSkyWalker,
+        NaskoSolo
     }
 }

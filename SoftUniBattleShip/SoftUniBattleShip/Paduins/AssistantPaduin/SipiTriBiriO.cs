@@ -4,18 +4,18 @@ using Jedis;
 
 namespace Game
 {
-    public class R2Trifon2 : Assistant, IR2Trifon2
+    public class SipiTriBiriO : AssistantPaduin, ISipiTriBitiO
     {
-        public R2Trifon2(int poits) : base(poits)
+        public SipiTriBiriO(int points) : base(points)
         {
         }
 
-        public R2Trifon2() : base()
+        public SipiTriBiriO() : base()
         {
-            this.AsistentJediType = AsistentJediType.R2Trifon2;
+            this.AssistantPaduinType = AssistantPaduinType.SipiTriBiriO;
         }
 
-        public override int AssistantLives
+        public  int AssistantLives
         {
             get { return this.assistantLives; }
             set { this.assistantLives = 40; }
@@ -27,7 +27,7 @@ namespace Game
             set { this.assistantAttack = 5; }
         }
 
-        public override int AssistantPoints
+        public int AssistantPoints
         {
             get { return this.assistantPoints; }
             set
@@ -38,7 +38,7 @@ namespace Game
         {
             if (AssistantPoints > AssistantLives)
             {
-                Console.WriteLine("R2Trifon2 is drunk!!!");
+                Console.WriteLine("CubaEdo is drunk!!!");
             }
         }
     }
