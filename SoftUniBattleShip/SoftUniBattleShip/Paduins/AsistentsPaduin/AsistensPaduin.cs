@@ -1,19 +1,20 @@
 ﻿using Game.Inerface;
+using Jedis;
 
-namespace Jedis
+namespace Game
 {
-    public class Asistents : IAsistents
+    public abstract class AsistensPaduin : IAsistentsPaduin
     {
         protected int asistentsAttack;
         protected int asistentsLive;
         protected int asistPoint;
 
-        protected Asistents(int poits)
+        public AsistensPaduin(int sistAtak)
         {
-            AsistentPoint = poits;
+            AssistentistAttack = sistAtak;
         }
 
-        protected Asistents()
+        public AsistensPaduin()
         {
         }
 
@@ -23,11 +24,8 @@ namespace Jedis
 
         public virtual int AsistentsLive { get; set; }
 
-        public AsistentJediType AsistentJediType { get; set; }
+        public AsistentPaduinType AsistentPaduinType { get; set; }
 
-        public virtual void Point()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Point();
     }
 }

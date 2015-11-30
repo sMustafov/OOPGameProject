@@ -4,14 +4,26 @@ namespace Jedis.Jedi
 {
     public abstract class Jedi : IJedi
     {
-        
+        public Jedi(int points, Asistents asist)
+        {
+            PointsDamadje = points;
+            Asistent = asist;
+        }
 
-        public virtual int Points { get; set; }
+        public Jedi()
+        {
+        }
+
+        public virtual int PointsDamadje { get; set; }
 
         public virtual int DemidjeKnolidge { get; set; }
 
-        public virtual int ThePolerOfDinks { get; }
+        public virtual int ThePolerOfDrinks { get; set; }
 
-        public abstract void DrinkPromilCalculater();
+        public JediType JediType { get; set; }
+
+        public virtual Asistents Asistent { get; set; }
+
+        public abstract void Points();
     }
 }

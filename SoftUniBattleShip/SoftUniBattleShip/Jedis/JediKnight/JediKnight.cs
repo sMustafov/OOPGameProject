@@ -4,14 +4,21 @@ namespace Jedis
 {
     public class JediKnight : Jedi.Jedi, IJediKnight
     {
-        protected const int MAX_DRINC_PRMIL_GET = 100;
+     
+        protected int damadgeKnolidgh;
+        protected int thePower;
+        protected int point;
 
-        public JediKnight(int points, int demidg, int thePler)
+        public JediKnight(int points, Asistents asistent) : base(points, asistent)
         {
             
         }
 
-        public override void DrinkPromilCalculater()
+        public JediKnight():base()
+        {
+        }
+
+        public override void Points()
         {
             throw new System.NotImplementedException();
         }

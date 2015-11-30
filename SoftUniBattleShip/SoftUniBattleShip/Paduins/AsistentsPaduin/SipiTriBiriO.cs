@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Reflection;
 using Game.Inerface;
 using Jedis;
 
 namespace Game
 {
-    public class ChubiEdo : Asistents, IChubiEdo
+    public class SipiTriBiriO : AsistensPaduin, ISipiTriBitiO
     {
-        public ChubiEdo(int poits) : base(poits)
+        public SipiTriBiriO(int poits) : base(poits)
         {
         }
 
-        public ChubiEdo() : base()
+        public SipiTriBiriO() : base()
         {
-            this.AsistentJediType = AsistentJediType.ChubiEdo;
+            this.AsistentPaduinType = AsistentPaduinType.SipiTriBiriO;
         }
 
         public override int AsistentsLive

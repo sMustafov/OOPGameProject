@@ -4,8 +4,17 @@
     {
         protected int damadgeKnolidgh;
         protected int thePower;
+        protected int point;
 
-        public override void DrinkPromilCalculater()
+        public Masters(int points, Asistents asistent) : base(points, asistent)
+        {
+        }
+
+        public Masters():base()
+        {
+        }
+
+        public override void Points()
         {
             throw new System.NotImplementedException();
         }

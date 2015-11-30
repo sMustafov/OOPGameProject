@@ -2,12 +2,14 @@
 {
     public interface IJedi
     {
-        int Points { get; }
+        int PointsDamadje { get; } //Damadge който му се нанася
 
-        int DemidjeKnolidge { get; }
+        int DemidjeKnolidge { get; } //Damadge който нанася
 
-        int ThePolerOfDinks { get; }
+        int ThePolerOfDrinks { get; } //Живота му
 
-        void DrinkPromilCalculater();
+        JediType JediType { get; } //
+
+        void Points();
     }
 }
