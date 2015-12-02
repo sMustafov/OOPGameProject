@@ -38,7 +38,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(31, 51);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 36);
@@ -50,7 +50,7 @@
             // InstructionsButton
             // 
             this.InstructionsButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.InstructionsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InstructionsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.InstructionsButton.Location = new System.Drawing.Point(31, 132);
             this.InstructionsButton.Name = "InstructionsButton";
             this.InstructionsButton.Size = new System.Drawing.Size(104, 36);
@@ -61,24 +61,24 @@
             // CharacterTypeButton
             // 
             this.CharacterTypeButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CharacterTypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CharacterTypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CharacterTypeButton.Location = new System.Drawing.Point(528, 51);
             this.CharacterTypeButton.Name = "CharacterTypeButton";
             this.CharacterTypeButton.Size = new System.Drawing.Size(104, 36);
             this.CharacterTypeButton.TabIndex = 2;
-            this.CharacterTypeButton.Text = "Choose Character Type";
+            this.CharacterTypeButton.Text = "Character";
             this.CharacterTypeButton.UseVisualStyleBackColor = false;
             this.CharacterTypeButton.Click += new System.EventHandler(this.CharacterTypeButton_Click);
             // 
             // ChooseCategory
             // 
             this.ChooseCategory.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ChooseCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseCategory.Location = new System.Drawing.Point(528, 132);
             this.ChooseCategory.Name = "ChooseCategory";
             this.ChooseCategory.Size = new System.Drawing.Size(104, 36);
             this.ChooseCategory.TabIndex = 3;
-            this.ChooseCategory.Text = "Choose Category";
+            this.ChooseCategory.Text = "Category";
             this.ChooseCategory.UseVisualStyleBackColor = false;
             // 
             // StartingScreen
@@ -93,6 +93,7 @@
             this.Controls.Add(this.InstructionsButton);
             this.Controls.Add(this.button1);
             this.Name = "StartingScreen";
+            this.ShowIcon = false;
             this.Text = "SoftUniBattleShip";
             this.Load += new System.EventHandler(this.StartingScreen_Load);
             this.ResumeLayout(false);

@@ -43,6 +43,7 @@
             this.JediButton.TabIndex = 0;
             this.JediButton.Text = "Jedi";
             this.JediButton.UseVisualStyleBackColor = false;
+            this.JediButton.Click += new System.EventHandler(this.JediButton_Click);
             // 
             // PaduinButton
             // 
@@ -54,6 +55,7 @@
             this.PaduinButton.TabIndex = 1;
             this.PaduinButton.Text = "Paduin";
             this.PaduinButton.UseVisualStyleBackColor = false;
+            this.PaduinButton.Click += new System.EventHandler(this.PaduinButton_Click);
             // 
             // ChooseCharacterScreen
             // 

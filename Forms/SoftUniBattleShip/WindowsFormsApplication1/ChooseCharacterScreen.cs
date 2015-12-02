@@ -16,5 +16,17 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void JediButton_Click(object sender, EventArgs e)
+        {
+            Jedi jediForm = new Jedi();
+            jediForm.Show();
+        }
+
+        private void PaduinButton_Click(object sender, EventArgs e)
+        {
+            Paduin paduinForm = new Paduin();
+            paduinForm.Show();
+        }
     }
 }
