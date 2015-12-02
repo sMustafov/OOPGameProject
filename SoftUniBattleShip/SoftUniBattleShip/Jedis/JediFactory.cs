@@ -10,7 +10,7 @@ namespace Game.Jedis
 {
     class JediFactory
     {
-        public static IJedi CreatJedi(JediType type)
+        public static IJedi CreateJedi(JediType type)
         {
             switch (type)
             {

@@ -21,7 +21,7 @@ namespace Game
             set { this.assistantLives = 40; }
         }
 
-        public int AssistantAttack
+        public override int AssistantAttack
         {
             get { return this.assistantAttack; }
             set { this.assistantAttack = 5; }

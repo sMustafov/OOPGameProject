@@ -4,13 +4,13 @@ using Jedis;
 
 namespace Game
 {
-    public class BadanakiSkeyWalker : JediKnight, IRoyalSkyWalker
+    public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
-        public BadanakiSkeyWalker(int points, Assistant assistant) : base(points, assistant)
+        public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)
         {
         }
 
-        public BadanakiSkeyWalker() : base()
+        public RoyalSkyWalker() : base()
         {
             this.JediType = JediType.RoyalSkyWalker;
         }

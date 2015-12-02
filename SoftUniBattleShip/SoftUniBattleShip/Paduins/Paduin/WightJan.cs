@@ -22,7 +22,7 @@ namespace Game
             set { this.pointKnowledge += value; }
         }
 
-        public int PaduinPower
+        public override int PaduinPower
         {
             get { return this.paduinPower; }
             set { this.paduinPower = 50; }

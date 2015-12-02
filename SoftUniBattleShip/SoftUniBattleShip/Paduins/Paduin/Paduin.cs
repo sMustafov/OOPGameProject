@@ -23,7 +23,7 @@ namespace Game
 
         public int PointKnowledge { get; set; }
 
-        public int PaduinPower { get; set; }
+        public abstract int PaduinPower { get; set; }
 
         public int BeerPerSecond { get; set; }
 

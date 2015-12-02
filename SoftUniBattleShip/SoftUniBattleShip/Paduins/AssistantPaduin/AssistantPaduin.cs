@@ -19,7 +19,7 @@ namespace Game
         }
 
         public int AssistantPoint { get; private set; }
-        public int AssistantAttack { get; private set; }
+        public abstract int AssistantAttack { get; set; }
         public int AssistantLive { get; private set; }
         public AssistantPaduinType AssistantPaduinType { get; set; }
         public abstract void Point();

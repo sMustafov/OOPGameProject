@@ -4,11 +4,11 @@ namespace Jedis
 {
     public interface IAssistants
     {
-        int AssistantPoint { get; } // Damage който му се нанася
+        int AssistantPoints { get; } // Damage който му се нанася
 
         int AssistantAttack { get; } //Damage който нанася 
 
-        int AssistantLive { get; } // Живота му
+        int AssistantLives { get; } // Живота му
 
         AssistantJediType AssistantJediType { get; set; }
 

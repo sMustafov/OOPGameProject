@@ -22,7 +22,7 @@ namespace Game
             set { this.pointKnowledge += value; }
         }
 
-        public int PaduinPower
+        public override int PaduinPower
         {
             get { return this.paduinPower; }
             set { this.paduinPower = 50; }
@@ -34,7 +34,7 @@ namespace Game
             set { this.beerPerSecond = 3; }
         }
 
-        public override void KnolidgeCalkulater()
+        public override void KnowledgeCalculator()
         {
             if (PaduinPower < PointKnowledge)
             {

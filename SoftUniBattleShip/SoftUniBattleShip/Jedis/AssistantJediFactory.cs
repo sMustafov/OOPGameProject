@@ -5,7 +5,7 @@ namespace Game.Jedis
 {
     public class AssistantJediFactory
     {
-        public static IAssistants CreateJediАsistant(AssistantJediType type)
+        public static IAssistants CreateJediАssistant(AssistantJediType type)
         {
             switch (type)
             {

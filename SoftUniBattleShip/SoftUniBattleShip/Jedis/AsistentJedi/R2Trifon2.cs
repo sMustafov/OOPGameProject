@@ -12,7 +12,7 @@ namespace Game
 
         public R2Trifon2() : base()
         {
-            this.AsistentJediType = AsistentJediType.R2Trifon2;
+            this.AssistantJediType = AssistantJediType.R2Trifon2;
         }
 
         public override int AssistantLives
@@ -21,7 +21,7 @@ namespace Game
             set { this.assistantLives = 40; }
         }
 
-        public int AssistantAttack
+        public override int AssistantAttack
         {
             get { return this.assistantAttack; }
             set { this.assistantAttack = 5; }

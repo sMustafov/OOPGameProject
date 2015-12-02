@@ -9,7 +9,7 @@ namespace Game.Paduins
 {
     public class PadoinFactor
     {
-        public static IPaduin CreatPaduin(PaduinType type)
+        public static IPaduin CreatePaduin(PaduinType type)
         {
             switch (type)
             {

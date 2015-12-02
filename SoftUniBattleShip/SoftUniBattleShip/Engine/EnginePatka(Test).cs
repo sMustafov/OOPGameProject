@@ -12,14 +12,14 @@ namespace Jedis.Engine
             switch (inputCommand[0])
             {
                 case "CreateJediPlayer":
-                    CreateJeditPlayer(inputCommand);
+                    CreateJediPlayer(inputCommand);
                     break;
                 case "CreatePaduinPlayer":
                     break;
             }
         }
 
-        private static void CreateJeditPlayer(string[] inputCommands)
+        private static void CreateJediPlayer(string[] inputCommands)
         {
             switch (inputCommands[1])
             {
@@ -27,10 +27,10 @@ namespace Jedis.Engine
                     var joNakov = (IJoNakov) JediFactory.CreateJedi(JediType.JoNakov);
                     break;
                 case "AchoUanKenobi":
-                    var achoUanKenobi = (IAchoUanKenobi) JediFactory.CreatJedi(JediType.AchoUanKenobi);
+                    var achoUanKenobi = (IAchoUanKenobi) JediFactory.CreateJedi(JediType.AchoUanKenobi);
                     break;
                 case "RoyalSkeyWalker":
-                    var royalSkyeWalker = (IRoyalSkywalker) JediFactory.CreateJedi(JediType.RoyalSkyWalker);
+                    var royalSkyeWalker = (IRoyalSkyWalker) JediFactory.CreateJedi(JediType.RoyalSkyWalker);
                     break;
                 case "NaskoSolo":
                     var naskoSolo = (INaskoSolo) JediFactory.CreateJedi(JediType.NaskoSolo);
@@ -63,10 +63,10 @@ namespace Jedis.Engine
             switch (inputCommand[1])
             {
                 case "ChubiEdo":
-                    var chubiEdo = (IAssistants) AsistentJediFaktory.CreateJediАssitant(AssistantJediType.ChubiEdo);
+                    var chubiEdo = (IAssistants) AssistantJediFactory.CreateJediАssistant(AssistantJediType.ChubiEdo);
                     break;
                 case "R2Trifon2":
-                    var r2Trifon2 = (IAssistants) AsistentJediFaktory.CreateJediАssistant(AssistantJediType.R2Trifon2);
+                    var r2Trifon2 = (IAssistants) AssistantJediFactory.CreateJediАssistant(AssistantJediType.R2Trifon2);
                     break;
             }
         }

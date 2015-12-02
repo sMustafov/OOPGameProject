@@ -3,13 +3,13 @@ using Jedis;
 
 namespace Game
 {
-    public class NicSolo : JediKnight, INaskoSolo
+    public class NaskoSolo : JediKnight, INaskoSolo
     {
-        public NicSolo(int points, Assistant assistant) : base(points, assistant)
+        public NaskoSolo(int points, Assistant assistant) : base(points, assistant)
         {
         }
 
-        public NicSolo() : base()
+        public NaskoSolo() : base()
         {
             this.JediType = JediType.NaskoSolo;
         }
