@@ -1,6 +1,4 @@
-﻿using Jedis;
-
-namespace Game.Inerface
+﻿namespace SoftUniBattleShip.Interface.IJedi.IJediKnight
 {
     public interface IRoyalSkyWalker : IJediKnight
     {

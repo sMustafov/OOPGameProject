@@ -1,6 +1,9 @@
-﻿namespace Jedis
+﻿namespace SoftUniBattleShip.Jedis.Masters
 {
-    public class Masters : Jedi.Jedi, IMasters
+    using Interface.IJedi.IMasters;
+    using AsistentJedi;
+
+    public class Masters : Jedi, IMasters
     {
         protected int knowledgeDamage;
         protected int thePower;

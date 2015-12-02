@@ -1,8 +1,9 @@
-﻿using Game.Inerface;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Paduins.AssistantPaduin
 {
+
+    using Interface;
+    using Interface.IPadaun.IAssistantPaduin;
+    
     public abstract class AssistantPaduin : IAssistantPaduin
     {
         protected int assistantAttack;

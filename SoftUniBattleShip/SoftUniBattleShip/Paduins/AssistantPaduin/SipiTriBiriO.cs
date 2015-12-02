@@ -1,9 +1,9 @@
-﻿using System;
-using Game.Inerface;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Paduins.AssistantPaduin
 {
+    using System;
+
+    using Interface.IPadaun.IAssistantPaduin;
+
     public class SipiTriBiriO : AssistantPaduin, ISipiTriBitiO
     {
         public SipiTriBiriO(int points) : base(points)
@@ -12,7 +12,7 @@ namespace Game
 
         public SipiTriBiriO() : base()
         {
-            this.AssistantPaduinType = AssistantPaduinType.SipiTriBiriO;
+            this.AssistantPaduinType = AssistantPaduinType;
         }
 
         public  int AssistantLives

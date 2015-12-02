@@ -1,7 +1,9 @@
-﻿using Jedis.Inerface;
-
-namespace Jedis.Jedi
+﻿namespace SoftUniBattleShip.Jedis
 {
+    using Inerface;
+    using Interface;
+    using AsistentJedi;
+
     public abstract class Jedi : IJedi
     {
         protected Jedi(int points, Assistant assistant)

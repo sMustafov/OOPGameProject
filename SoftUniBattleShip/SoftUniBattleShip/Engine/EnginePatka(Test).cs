@@ -1,8 +1,13 @@
-﻿using Game.Inerface;
-using Game.Jedis;
-using Game.Paduins;
+﻿using SoftUniBattleShip.Interface;
+using SoftUniBattleShip.Interface.IJedi.IAssistants;
+using SoftUniBattleShip.Interface.IJedi.IJediKnight;
+using SoftUniBattleShip.Interface.IJedi.IMasters;
+using SoftUniBattleShip.Interface.IPadaun.IAssistantPaduin;
+using SoftUniBattleShip.Interface.IPadaun.IPaduinStudents;
+using SoftUniBattleShip.Jedis;
+using SoftUniBattleShip.Paduins;
 
-namespace Jedis.Engine
+namespace SoftUniBattleShip.Engine
 {
     public class EnginePatka // Test Engine
     {

@@ -1,9 +1,9 @@
-﻿using System;
-using Game.Inerface;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Paduins.AssistantPaduin
 {
+    using System;
+
+    using Interface.IPadaun.IAssistantPaduin;
+
     public class FugelmanToWookie : AssistantPaduin, IFugelmanToWookie
     {
         public FugelmanToWookie(int points) : base(points)
@@ -12,7 +12,7 @@ namespace Game
 
         public FugelmanToWookie() : base()
         {
-            this.AssistantPaduinType = AssistantPaduinType.FugelmanToWookie;
+            this.AssistantPaduinType = AssistantPaduinType;
         }
 
         public int AssistantLives

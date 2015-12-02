@@ -1,8 +1,10 @@
-﻿using System;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Jedis.AsistentJedi
 {
+    using System;
+
+    using Interface;
+    using Interface.IJedi.IAssistants;
+
     public class ChubiEdo : Assistant, IChubiEdo
     {
         public ChubiEdo(int poits) : base(poits)

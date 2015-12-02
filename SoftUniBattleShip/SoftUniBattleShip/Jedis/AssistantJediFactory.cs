@@ -1,8 +1,11 @@
-﻿using System;
-using Jedis;
-
-namespace Game.Jedis
+﻿namespace SoftUniBattleShip.Jedis
 {
+    using System;
+    using Interface;
+
+    using Interface.IJedi.IAssistants;
+    using AsistentJedi;
+    
     public class AssistantJediFactory
     {
         public static IAssistants CreateJediАssistant(AssistantJediType type)

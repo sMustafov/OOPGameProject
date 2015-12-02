@@ -1,11 +1,16 @@
-﻿using System;
-using Jedis;
+﻿using SoftUniBattleShip.Interface;
+using SoftUniBattleShip.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace SoftUniBattleShip.Paduins.Paduin
 {
+    using System;
+    
+    using SoftUniBattleShip;
+    using Jedis;
+   
     internal class Karnobatman : Paduin, IKarnobatmanFromKranobasterdam
     {
-        public Karnobatman(int pointKnowledge, AssistantPaduin assistantPaduin) 
+        public Karnobatman(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
 

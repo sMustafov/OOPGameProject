@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Jedis;
+﻿using SoftUniBattleShip.Interface;
+using SoftUniBattleShip.Interface.IPadaun.IPaduinStudents;
+using SoftUniBattleShip.Paduins.Paduin;
 
-namespace Game.Paduins
+namespace SoftUniBattleShip.Paduins
 {
+    using System;
+
+
     public class PadoinFactor
     {
         public static IPaduin CreatePaduin(PaduinType type)

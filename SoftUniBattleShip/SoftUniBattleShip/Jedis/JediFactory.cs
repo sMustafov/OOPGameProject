@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Jedis;
-using Jedis.Inerface;
-
-namespace Game.Jedis
+﻿namespace SoftUniBattleShip.Jedis
 {
+    using System; 
+
+    using Inerface;
+    using Interface;
+    using JediKnight;
+    using Masters;
+
     class JediFactory
     {
         public static IJedi CreateJedi(JediType type)

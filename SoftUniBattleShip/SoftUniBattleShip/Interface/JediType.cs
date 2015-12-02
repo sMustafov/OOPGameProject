@@ -1,4 +1,4 @@
-﻿namespace Jedis
+﻿namespace SoftUniBattleShip.Interface
 {
     public enum JediType
     {

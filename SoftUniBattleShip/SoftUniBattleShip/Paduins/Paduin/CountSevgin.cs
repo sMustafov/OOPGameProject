@@ -1,11 +1,13 @@
-﻿using System;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Paduins.Paduin
 {
+    using System;
+
+    using Interface;
+    using Interface.IPadaun.IPaduinStudents;
+    
     public class CountSevgin : Paduin,ICountSevgin
     {
-        public CountSevgin(int pointKnowledge, AssistantPaduin asistensPaduin) 
+        public CountSevgin(int pointKnowledge, AssistantPaduin.AssistantPaduin asistensPaduin) 
             : base(pointKnowledge, asistensPaduin)
         {
 

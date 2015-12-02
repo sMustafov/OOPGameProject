@@ -1,9 +1,11 @@
-﻿using System;
-using Game.Inerface;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Jedis.JediKnight
 {
+    using System;
+    
+    using Interface;
+    using Interface.IJedi.IJediKnight;
+    using AsistentJedi;
+
     public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
         public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)

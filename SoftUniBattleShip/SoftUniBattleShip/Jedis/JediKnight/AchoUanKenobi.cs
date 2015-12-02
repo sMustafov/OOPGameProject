@@ -1,8 +1,11 @@
-﻿using System;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Jedis.JediKnight
 {
+    using System;
+  
+    using Interface;
+    using Interface.IJedi.IJediKnight;
+    using AsistentJedi;
+
     public class AchoUanKenobi : JediKnight, IAchoUanKenobi
     {
 

@@ -1,9 +1,10 @@
-﻿using System;
-using Game.Inerface;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Jedis.AsistentJedi
 {
+    using System;
+
+    using Interface.IJedi.IAssistants;
+    using Interface;
+    
     public class R2Trifon2 : Assistant, IR2Trifon2
     {
         public R2Trifon2(int poits) : base(poits)

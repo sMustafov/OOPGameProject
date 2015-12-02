@@ -1,7 +1,8 @@
-﻿using Game.Inerface;
-
-namespace Jedis
+﻿namespace SoftUniBattleShip.Jedis.AsistentJedi
 {
+    using Interface;
+    using Interface.IJedi.IAssistants;
+    
     public class Assistant : IAssistants
     {
         protected int assistantAttack;

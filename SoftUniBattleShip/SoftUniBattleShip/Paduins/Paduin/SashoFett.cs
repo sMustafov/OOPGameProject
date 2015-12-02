@@ -1,11 +1,13 @@
-﻿using System;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Paduins.Paduin
 {
+    using System;
+
+    using Interface;
+    using Interface.IPadaun.IPaduinStudents;
+    
     public class SashoFett : Paduin, ISashoFett
     {
-        public SashoFett(int pointKnowledge, AssistantPaduin assistantPaduin) 
+        public SashoFett(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
 

@@ -1,8 +1,9 @@
-﻿
-
-namespace Jedis
+﻿namespace SoftUniBattleShip.Jedis.JediKnight
 {
-    public class JediKnight : Jedi.Jedi, IJediKnight
+    using Interface.IJedi.IJediKnight;
+    using AsistentJedi;
+
+    public class JediKnight : Jedi, IJediKnight
     {
      
         protected int knowledgeDamage;

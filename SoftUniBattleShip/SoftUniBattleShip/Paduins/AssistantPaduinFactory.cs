@@ -1,8 +1,10 @@
-﻿using System;
-using Jedis;
-
-namespace Game.Paduins
+﻿namespace SoftUniBattleShip.Paduins
 {
+    using System;
+    using Interface;
+    using Interface.IPadaun.IAssistantPaduin;
+    using AssistantPaduin;
+
     public class AssistantPaduinFactory
     {
         public static IAssistantPaduin CreateAssistantPaduin(AssistantPaduinType type)

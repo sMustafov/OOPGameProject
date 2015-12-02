@@ -1,8 +1,11 @@
-﻿using System;
-using Jedis;
-
-namespace Game
+﻿namespace SoftUniBattleShip.Jedis.Masters
 {
+    using System;
+
+    using Interface.IJedi.IMasters;
+    using AsistentJedi;
+    using Interface;
+
     public class JoNakov : Masters, IJoNakov
     {
         

@@ -1,8 +1,6 @@
-﻿using Jedis.Inerface;
-
-namespace Jedis
+﻿namespace SoftUniBattleShip.Interface.IJedi.IJediKnight
 {
-    public interface IJediKnight : IJedi
+    public interface IJediKnight : Inerface.IJedi
     {
     }
 }

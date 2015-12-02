@@ -1,6 +1,4 @@
-﻿using Game.Inerface;
-
-namespace Jedis
+﻿namespace SoftUniBattleShip.Interface.IJedi.IAssistants
 {
     public interface IAssistants
     {
