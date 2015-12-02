@@ -28,31 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instructions));
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(240, 158);
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Everything is clear !";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Instructions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(654, 204);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.galactic_center;
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Instructions";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Instructions";
             this.ResumeLayout(false);
 
         }

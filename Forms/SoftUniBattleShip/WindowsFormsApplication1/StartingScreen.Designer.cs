@@ -38,10 +38,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F);
             this.button1.Location = new System.Drawing.Point(31, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
+            this.button1.Size = new System.Drawing.Size(112, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Play";
             this.button1.UseVisualStyleBackColor = false;
@@ -50,10 +50,10 @@
             // InstructionsButton
             // 
             this.InstructionsButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.InstructionsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InstructionsButton.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InstructionsButton.Location = new System.Drawing.Point(31, 132);
             this.InstructionsButton.Name = "InstructionsButton";
-            this.InstructionsButton.Size = new System.Drawing.Size(104, 36);
+            this.InstructionsButton.Size = new System.Drawing.Size(112, 36);
             this.InstructionsButton.TabIndex = 1;
             this.InstructionsButton.Text = "Instructions";
             this.InstructionsButton.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@
             // CharacterTypeButton
             // 
             this.CharacterTypeButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CharacterTypeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CharacterTypeButton.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F);
             this.CharacterTypeButton.Location = new System.Drawing.Point(528, 51);
             this.CharacterTypeButton.Name = "CharacterTypeButton";
             this.CharacterTypeButton.Size = new System.Drawing.Size(104, 36);
@@ -74,7 +74,7 @@
             // ChooseCategory
             // 
             this.ChooseCategory.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ChooseCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseCategory.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F);
             this.ChooseCategory.Location = new System.Drawing.Point(528, 132);
             this.ChooseCategory.Name = "ChooseCategory";
             this.ChooseCategory.Size = new System.Drawing.Size(104, 36);

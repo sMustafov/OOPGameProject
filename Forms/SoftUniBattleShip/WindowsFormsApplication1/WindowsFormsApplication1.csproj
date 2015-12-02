@@ -149,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StartingScreen.resx">
       <DependentUpon>StartingScreen.cs</DependentUpon>
@@ -165,6 +166,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learn_how_to_code.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learn_how_to_code213.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movies-star-wars-chahracters-wallpapers-free-download-lovely-hd-widescreen-wallpapers-of-star-wars2s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dqwdcqw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dqwdcqw - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dqwdcqw - Copy - Copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galactic_center.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

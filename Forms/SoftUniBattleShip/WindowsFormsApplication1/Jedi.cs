@@ -39,5 +39,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void AchoButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

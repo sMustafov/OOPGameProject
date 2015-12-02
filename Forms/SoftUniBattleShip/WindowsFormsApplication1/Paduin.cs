@@ -24,5 +24,15 @@ namespace WindowsFormsApplication1
             ss.ShowDialog();
             this.Close();
         }
+
+        private void PaduinLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AssistantLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
