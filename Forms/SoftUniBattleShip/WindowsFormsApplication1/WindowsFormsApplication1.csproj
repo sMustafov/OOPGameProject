@@ -62,18 +62,62 @@
     <Compile Include="Instructions.Designer.cs">
       <DependentUpon>Instructions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\AssistantJediType.cs" />
+    <Compile Include="Interface\AssistantPaduinType.cs" />
+    <Compile Include="Interface\IJedi\IAssistants\IAsistents.cs" />
+    <Compile Include="Interface\IJedi\IAssistants\IChubiEdo.cs" />
+    <Compile Include="Interface\IJedi\IAssistants\IR2Trifon2.cs" />
+    <Compile Include="Interface\IJedi\IJedi.cs" />
+    <Compile Include="Interface\IJedi\IJediKnight\IAchoUanKenobi.cs" />
+    <Compile Include="Interface\IJedi\IJediKnight\IJediKnight.cs" />
+    <Compile Include="Interface\IJedi\IJediKnight\INaskoSolo.cs" />
+    <Compile Include="Interface\IJedi\IJediKnight\IRoyalSkywalker.cs" />
+    <Compile Include="Interface\IJedi\IMasters\IJoNakov.cs" />
+    <Compile Include="Interface\IJedi\IMasters\IMasters.cs" />
+    <Compile Include="Interface\IPadaun\IAssistantPaduin\IAssistantPaduin.cs" />
+    <Compile Include="Interface\IPadaun\IAssistantPaduin\IFugelmanToWookie.cs" />
+    <Compile Include="Interface\IPadaun\IAssistantPaduin\ISipiTriBitiO.cs" />
+    <Compile Include="Interface\IPadaun\IPaduinStudents\ICountSevgin.cs" />
+    <Compile Include="Interface\IPadaun\IPaduinStudents\IKarnobatmanBane.cs" />
+    <Compile Include="Interface\IPadaun\IPaduinStudents\IPaduin.cs" />
+    <Compile Include="Interface\IPadaun\IPaduinStudents\ISashoFett.cs" />
+    <Compile Include="Interface\IPadaun\IPaduinStudents\IWightJan.cs" />
+    <Compile Include="Interface\JediType.cs" />
+    <Compile Include="Interface\PaduinType.cs" />
     <Compile Include="Jedi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Jedi.Designer.cs">
       <DependentUpon>Jedi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jedis\AsistentJedi\Assistant.cs" />
+    <Compile Include="Jedis\AsistentJedi\ChubiEdo.cs" />
+    <Compile Include="Jedis\AsistentJedi\R2Trifon2.cs" />
+    <Compile Include="Jedis\AssistantJediFactory.cs" />
+    <Compile Include="Jedis\Jedi.cs" />
+    <Compile Include="Jedis\JediFactory.cs" />
+    <Compile Include="Jedis\JediKnight\AchoUanKenobi.cs" />
+    <Compile Include="Jedis\JediKnight\JediKnight.cs" />
+    <Compile Include="Jedis\JediKnight\NaskoSolo.cs" />
+    <Compile Include="Jedis\JediKnight\RoyalSkyWalker.cs" />
+    <Compile Include="Jedis\Masters\JoNakov.cs" />
+    <Compile Include="Jedis\Masters\Masters.cs" />
     <Compile Include="Paduin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Paduin.Designer.cs">
       <DependentUpon>Paduin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paduins\AssistantPaduinFactory.cs" />
+    <Compile Include="Paduins\AssistantPaduin\AssistantPaduin.cs" />
+    <Compile Include="Paduins\AssistantPaduin\FugelmanToWookie.cs" />
+    <Compile Include="Paduins\AssistantPaduin\SipiTriBiriO.cs" />
+    <Compile Include="Paduins\PadoinFactor.cs" />
+    <Compile Include="Paduins\Paduin\CountSevgin.cs" />
+    <Compile Include="Paduins\Paduin\Karnobatman.cs" />
+    <Compile Include="Paduins\Paduin\Paduin.cs" />
+    <Compile Include="Paduins\Paduin\SashoFett.cs" />
+    <Compile Include="Paduins\Paduin\WightJan.cs" />
     <Compile Include="StartingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
