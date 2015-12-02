@@ -144,6 +144,7 @@
             this.SaveButton.TabIndex = 9;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // Paduin
             // 
@@ -161,6 +162,7 @@
             this.Controls.Add(this.SevginButton);
             this.Controls.Add(this.label1);
             this.Name = "Paduin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Paduin";
             this.ResumeLayout(false);
             this.PerformLayout();

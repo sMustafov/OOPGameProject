@@ -66,6 +66,7 @@
             this.Controls.Add(this.PaduinButton);
             this.Controls.Add(this.JediButton);
             this.Name = "ChooseCharacterScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Character";
             this.ResumeLayout(false);
 

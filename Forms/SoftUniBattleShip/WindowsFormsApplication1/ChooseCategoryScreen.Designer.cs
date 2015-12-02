@@ -45,6 +45,7 @@
             this.SaveButton.TabIndex = 0;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CategoryLabel
             // 
@@ -102,6 +103,7 @@
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.SaveButton);
             this.Name = "ChooseCategoryScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
             this.ResumeLayout(false);
 

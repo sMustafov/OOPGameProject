@@ -155,6 +155,7 @@
             this.SaveButton.TabIndex = 10;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // Jedi
             // 
@@ -173,7 +174,9 @@
             this.Controls.Add(this.LabelMaster);
             this.Controls.Add(this.Label);
             this.Name = "Jedi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jedi";
+            this.Load += new System.EventHandler(this.Jedi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

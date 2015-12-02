@@ -16,5 +16,13 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartingScreen ss = new StartingScreen();
+            ss.ShowDialog();
+            this.Close();
+        }
     }
 }

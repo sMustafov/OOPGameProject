@@ -57,6 +57,7 @@
             this.InstructionsButton.TabIndex = 1;
             this.InstructionsButton.Text = "Instructions";
             this.InstructionsButton.UseVisualStyleBackColor = false;
+            this.InstructionsButton.Click += new System.EventHandler(this.InstructionsButton_Click);
             // 
             // CharacterTypeButton
             // 
@@ -80,6 +81,7 @@
             this.ChooseCategory.TabIndex = 3;
             this.ChooseCategory.Text = "Category";
             this.ChooseCategory.UseVisualStyleBackColor = false;
+            this.ChooseCategory.Click += new System.EventHandler(this.ChooseCategory_Click);
             // 
             // StartingScreen
             // 
@@ -94,6 +96,7 @@
             this.Controls.Add(this.button1);
             this.Name = "StartingScreen";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SoftUniBattleShip";
             this.Load += new System.EventHandler(this.StartingScreen_Load);
             this.ResumeLayout(false);

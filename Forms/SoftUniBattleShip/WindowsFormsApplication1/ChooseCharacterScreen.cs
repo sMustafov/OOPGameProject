@@ -19,14 +19,18 @@ namespace WindowsFormsApplication1
 
         private void JediButton_Click(object sender, EventArgs e)
         {
-            Jedi jediForm = new Jedi();
-            jediForm.Show();
+            this.Hide();
+            Jedi jedi = new Jedi();
+            jedi.ShowDialog();
+            this.Close();
         }
 
         private void PaduinButton_Click(object sender, EventArgs e)
         {
-            Paduin paduinForm = new Paduin();
-            paduinForm.Show();
+            this.Hide();
+            Paduin paduin = new Paduin();
+            paduin.ShowDialog();
+            this.Close();
         }
     }
 }

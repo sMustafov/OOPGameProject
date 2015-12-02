@@ -29,8 +29,26 @@ namespace WindowsFormsApplication1
 
         private void CharacterTypeButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ChooseCharacterScreen ccs = new ChooseCharacterScreen();
-            ccs.Show();
+            ccs.ShowDialog();
+            this.Close();
+        }
+
+        private void InstructionsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Instructions instructions = new Instructions();
+            instructions.ShowDialog();
+            this.Close();
+        }
+
+        private void ChooseCategory_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChooseCategoryScreen ccs = new ChooseCategoryScreen();
+            ccs.ShowDialog();
+            this.Close();
         }
     }
 }

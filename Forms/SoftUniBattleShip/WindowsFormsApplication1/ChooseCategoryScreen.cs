@@ -26,5 +26,13 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartingScreen ss = new StartingScreen();
+            ss.ShowDialog();
+            this.Close();
+        }
     }
 }
