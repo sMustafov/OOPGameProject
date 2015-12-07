@@ -5,6 +5,8 @@ namespace Game
 {
     internal class Karnobatman : Paduin, IKarnobatmanFromKranobasterdam
     {
+        private string characterImage = @" ";
+
         public Karnobatman(int pointKnowledge, AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
@@ -14,6 +16,11 @@ namespace Game
         public Karnobatman() : base()
         {
             this.PaduinType = PaduinType.Karnotman;
+        }
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public int PointKnowledge1

@@ -1,4 +1,6 @@
-﻿namespace Jedis.Inerface
+﻿using System.Drawing;
+
+namespace Jedis.Inerface
 {
     public interface IJedi
     {
@@ -11,6 +13,8 @@
         int ThePolerOfDrinks { get; } //Живота му
 
         JediType JediType { get; } //
+
+        string CharacterImage { get; set; }
 
         void Points();
     }

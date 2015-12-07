@@ -2,7 +2,7 @@
 
 namespace Jedis
 {
-    public class Assistant : IAssistants
+    public abstract class Assistant : IAssistants
     {
         protected int assistantAttack;
         protected int assistantLives;
@@ -22,6 +22,8 @@ namespace Jedis
         public virtual int AssistantAttack { get; set; }
 
         public virtual int AssistantLive { get; set; }
+
+        public abstract string CharacterImage { get; set; }
 
         public AssistantJediType AssistantJediType { get; set; }
 

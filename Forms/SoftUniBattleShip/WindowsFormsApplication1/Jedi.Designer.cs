@@ -38,6 +38,7 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             // Label
             // 
             this.Label.BackColor = System.Drawing.Color.Transparent;
-            this.Label.Font = new System.Drawing.Font("Stencil Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label.ForeColor = System.Drawing.Color.Transparent;
             this.Label.Location = new System.Drawing.Point(41, 9);
             this.Label.Name = "Label";
@@ -90,6 +91,7 @@
             this.RoyalButton.TabStop = true;
             this.RoyalButton.Text = "Royal SkyWalker";
             this.RoyalButton.UseVisualStyleBackColor = true;
+            this.RoyalButton.CheckedChanged += new System.EventHandler(this.RoyalButton_CheckedChanged);
             // 
             // NaskoButton
             // 
@@ -102,6 +104,7 @@
             this.NaskoButton.TabStop = true;
             this.NaskoButton.Text = "Nasko Solo";
             this.NaskoButton.UseVisualStyleBackColor = true;
+            this.NaskoButton.CheckedChanged += new System.EventHandler(this.NaskoButton_CheckedChanged);
             // 
             // EdoButton
             // 
@@ -114,6 +117,7 @@
             this.EdoButton.TabStop = true;
             this.EdoButton.Text = "Chubi Edo";
             this.EdoButton.UseVisualStyleBackColor = true;
+            this.EdoButton.CheckedChanged += new System.EventHandler(this.EdoButton_CheckedChanged);
             // 
             // TrigonButton
             // 
@@ -126,6 +130,7 @@
             this.TrigonButton.TabStop = true;
             this.TrigonButton.Text = "R2 Trifon2";
             this.TrigonButton.UseVisualStyleBackColor = true;
+            this.TrigonButton.CheckedChanged += new System.EventHandler(this.TrigonButton_CheckedChanged);
             // 
             // SaveButton
             // 
@@ -147,7 +152,7 @@
             this.groupBox1.Controls.Add(this.AchoButton);
             this.groupBox1.Controls.Add(this.NaskoButton);
             this.groupBox1.Controls.Add(this.RoyalButton);
-            this.groupBox1.Font = new System.Drawing.Font("Stencil Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(35, 58);
             this.groupBox1.Name = "groupBox1";
@@ -161,7 +166,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.EdoButton);
             this.groupBox2.Controls.Add(this.TrigonButton);
-            this.groupBox2.Font = new System.Drawing.Font("Stencil Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(412, 58);
             this.groupBox2.Name = "groupBox2";
@@ -170,17 +175,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Assistant";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(613, 128);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 51);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BackButton);
+            // 
             // Jedi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.dqwdcqw___Copy___Copy;
             this.ClientSize = new System.Drawing.Size(728, 264);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Label);
+            this.MaximizeBox = false;
             this.Name = "Jedi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jedi";
@@ -205,5 +226,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

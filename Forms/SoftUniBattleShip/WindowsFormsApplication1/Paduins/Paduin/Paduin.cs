@@ -27,6 +27,8 @@ namespace Game
 
         public int BeerPerSecond { get; set; }
 
+        public abstract string CharacterImage { get; set; }
+
         public PaduinType PaduinType { get; set; }
 
         public AssistantPaduin AssistantPaduin { get; set; }

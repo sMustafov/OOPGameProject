@@ -1,6 +1,9 @@
-﻿namespace Jedis
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Jedis
 {
-    public class Masters : Jedi.Jedi, IMasters
+    public abstract class Masters : Jedi.Jedi, IMasters
     {
         protected int knowledgeDamage;
         protected int thePower;

@@ -19,7 +19,10 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            PlayScreen ps = new PlayScreen();
+            ps.ShowDialog();
+            this.Close();
         }
 
         private void StartingScreen_Load(object sender, EventArgs e)
@@ -49,6 +52,11 @@ namespace WindowsFormsApplication1
             ChooseCategoryScreen ccs = new ChooseCategoryScreen();
             ccs.ShowDialog();
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

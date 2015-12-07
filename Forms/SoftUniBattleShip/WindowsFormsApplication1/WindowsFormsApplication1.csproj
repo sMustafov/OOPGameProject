@@ -56,6 +56,7 @@
     <Compile Include="ChooseCharacterScreen.Designer.cs">
       <DependentUpon>ChooseCharacterScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Direction.cs" />
     <Compile Include="Instructions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +84,7 @@
     <Compile Include="Interface\IPadaun\IPaduinStudents\ISashoFett.cs" />
     <Compile Include="Interface\IPadaun\IPaduinStudents\IWightJan.cs" />
     <Compile Include="Interface\JediType.cs" />
-    <Compile Include="Interface\PaduinType.cs" />
+    <Compile Include="Paduins\PaduinType.cs" />
     <Compile Include="Jedi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +119,18 @@
     <Compile Include="Paduins\Paduin\Paduin.cs" />
     <Compile Include="Paduins\Paduin\SashoFett.cs" />
     <Compile Include="Paduins\Paduin\WightJan.cs" />
+    <Compile Include="PlayScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayScreen.Designer.cs">
+      <DependentUpon>PlayScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question.Designer.cs">
+      <DependentUpon>Question.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +145,9 @@
     <EmbeddedResource Include="ChooseCharacterScreen.resx">
       <DependentUpon>ChooseCharacterScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.en-001.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Instructions.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Paduin.resx">
       <DependentUpon>Paduin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayScreen.resx">
+      <DependentUpon>PlayScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +170,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Question.resx">
+      <DependentUpon>Question.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartingScreen.resx">
       <DependentUpon>StartingScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +209,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\galactic_center.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nakov.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

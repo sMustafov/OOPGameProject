@@ -4,15 +4,22 @@ using Jedis;
 
 namespace Game
 {
-    public class RoyalaSkeyWalker : JediKnight, IRoyalSkyWalker
+    public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
-        public RoyalaSkeyWalker(int points, Assistant assistant) : base(points, assistant)
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\royal.jpg";
+        public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)
         {
         }
 
-        public RoyalaSkeyWalker() : base()
+        public RoyalSkyWalker() : base()
         {
             this.JediType = JediType.RoyalSkyWalker;
+        }
+
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public override int KnowledgeDamage

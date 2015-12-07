@@ -19,7 +19,7 @@ namespace Game.Jedis
                 case JediType.AchoUanKenobi:
                     return new AchoUanKenobi();
                 case JediType.RoyalSkyWalker:
-                    return new RoyalaSkeyWalker();
+                    return new RoyalSkyWalker();
                 case JediType.NaskoSolo:
                     return new NaskoSolo();
                 default:

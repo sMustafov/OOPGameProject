@@ -45,7 +45,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Stencil Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
@@ -65,6 +65,7 @@
             this.SevginButton.TabStop = true;
             this.SevginButton.Text = "Count Sevgin";
             this.SevginButton.UseVisualStyleBackColor = true;
+            this.SevginButton.CheckedChanged += new System.EventHandler(this.SevginButton_CheckedChanged);
             // 
             // YanchoButton
             // 
@@ -151,7 +152,7 @@
             this.groupBox1.Controls.Add(this.YanchoButton);
             this.groupBox1.Controls.Add(this.SashoButton);
             this.groupBox1.Controls.Add(this.JanButton);
-            this.groupBox1.Font = new System.Drawing.Font("Stencil Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(48, 60);
             this.groupBox1.Name = "groupBox1";
@@ -159,13 +160,14 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select  a paduin";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.FuglemanButton);
             this.groupBox2.Controls.Add(this.TriBiriButton);
-            this.groupBox2.Font = new System.Drawing.Font("Stencil Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(347, 60);
             this.groupBox2.Name = "groupBox2";
@@ -178,6 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.dqwdcqw___Copy___Copy;
             this.ClientSize = new System.Drawing.Size(728, 264);
             this.Controls.Add(this.groupBox2);
@@ -185,9 +188,11 @@
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(613, 192);
+            this.MaximizeBox = false;
             this.Name = "Paduin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Paduin";
+            this.Load += new System.EventHandler(this.Paduin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

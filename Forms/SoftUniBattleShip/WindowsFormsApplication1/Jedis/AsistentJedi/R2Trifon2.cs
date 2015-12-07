@@ -6,6 +6,8 @@ namespace Game
 {
     public class R2Trifon2 : Assistant, IR2Trifon2
     {
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\trifon.jpg";
+
         public R2Trifon2(int poits) : base(poits)
         {
         }
@@ -14,7 +16,11 @@ namespace Game
         {
             this.AssistantJediType = AssistantJediType.R2Trifon2;
         }
-
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
+        }
         public override int AssistantLive
         {
             get { return this.assistantLives; }

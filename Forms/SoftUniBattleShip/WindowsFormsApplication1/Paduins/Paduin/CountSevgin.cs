@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Drawing;
 using Jedis;
 
 namespace Game
 {
     public class CountSevgin : Paduin,ICountSevgin
     {
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\sevgin.jpg";
+
         public CountSevgin(int pointKnowledge, AssistantPaduin asistensPaduin) 
             : base(pointKnowledge, asistensPaduin)
         {
@@ -14,6 +17,12 @@ namespace Game
         public CountSevgin() : base()
         {
             this.PaduinType = PaduinType.CountSevgin;
+        }
+
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public int PointKnowledge1

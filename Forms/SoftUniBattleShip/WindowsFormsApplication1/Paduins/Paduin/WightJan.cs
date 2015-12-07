@@ -5,6 +5,7 @@ namespace Game
 {
     public class WightJan : Paduin,IWightJan
     {
+        private string characterImage = @" "; 
         public WightJan(int pointKnowledge, AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
@@ -14,6 +15,11 @@ namespace Game
         public WightJan() : base()
         {
             this.PaduinType = PaduinType.WightJan;
+        }
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public int PointKnowledge1

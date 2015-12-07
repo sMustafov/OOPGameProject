@@ -5,6 +5,8 @@ namespace Game
 {
     public class ChubiEdo : Assistant, IChubiEdo
     {
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\edo.jpg";
+
         public ChubiEdo(int poits) : base(poits)
         {
         }
@@ -12,6 +14,11 @@ namespace Game
         public ChubiEdo() : base()
         {
             this.AssistantJediType = AssistantJediType.ChubiEdo;
+        }
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public override int AssistantLive

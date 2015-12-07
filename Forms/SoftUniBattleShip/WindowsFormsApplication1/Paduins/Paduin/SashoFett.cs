@@ -5,6 +5,8 @@ namespace Game
 {
     public class SashoFett : Paduin, ISashoFett
     {
+        private string characterImage = @" ";
+
         public SashoFett(int pointKnowledge, AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
@@ -15,7 +17,11 @@ namespace Game
         {
             this.PaduinType = PaduinType.SashoFett;
         }
-
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
+        }
         public int PointKnowledge1
         {
             get { return this.pointKnowledge; }

@@ -5,7 +5,7 @@ namespace Game
 {
     public class AchoUanKenobi : JediKnight, IAchoUanKenobi
     {
-
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\acho.jpg";
         public AchoUanKenobi(int points, Assistant assistant) : base(points, assistant)
         {
         }
@@ -14,7 +14,11 @@ namespace Game
         {
             this.JediType = JediType.AchoUanKenobi;
         }
-
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
+        }
         public override int KnowledgeDamage
         {
             get { return this.knowledgeDamage; }

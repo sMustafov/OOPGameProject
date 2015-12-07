@@ -50,6 +50,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.galactic_center;
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MaximizeBox = false;
             this.Name = "Instructions";
             this.ResumeLayout(false);
 

@@ -1,5 +1,8 @@
 ﻿
 
+using System.Drawing;
+using System.Windows.Forms.VisualStyles;
+
 namespace Jedis
 {
     public class JediKnight : Jedi.Jedi, IJediKnight
@@ -17,6 +20,8 @@ namespace Jedis
         public JediKnight():base()
         {
         }
+
+        public override string CharacterImage { get; set; }
 
         public override void Points()
         {

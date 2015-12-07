@@ -5,6 +5,8 @@ namespace Game
 {
     public class NaskoSolo : JediKnight, INaskoSolo
     {
+        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\nasko.jpg";
+
         public NaskoSolo(int points, Assistant assistant) : base(points, assistant)
         {
         }
@@ -12,6 +14,12 @@ namespace Game
         public NaskoSolo() : base()
         {
             this.JediType = JediType.NaskoSolo;
+        }
+
+        public override string CharacterImage
+        {
+            get { return this.characterImage; }
+            set { this.characterImage = value; }
         }
 
         public override int KnowledgeDamage
