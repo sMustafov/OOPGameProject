@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
         {
         }
 
-        public AchoUanKenobi() : base()
+        public AchoUanKenobi()
         {
             this.JediType = JediType.AchoUanKenobi;
         }

@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
             set { this.assistantLives = 40; }
         }
 
-        public int AssistantAttack
+        public new int AssistantAttack
         {
             get { return this.assistantAttack; }
             set { this.assistantAttack = 5; }

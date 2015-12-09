@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
 
         public int BeerPerSecond { get; set; }
 
-        public abstract string CharacterImage { get; set; }
+        public abstract string CharacterImage { get; protected set ; }
 
         public PaduinType PaduinType { get; set; }
 

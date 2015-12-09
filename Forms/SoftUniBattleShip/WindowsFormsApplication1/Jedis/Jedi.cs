@@ -7,7 +7,6 @@ namespace WindowsFormsApplication1.Jedis
 {
     public abstract class Jedi : IJedi
     {
-        private Image characterImage;
 
         protected Jedi(int points, Assistant assistant)
         {

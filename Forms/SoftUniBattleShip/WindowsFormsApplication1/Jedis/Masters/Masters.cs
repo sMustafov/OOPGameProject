@@ -9,17 +9,15 @@ namespace WindowsFormsApplication1.Jedis.Masters
         protected int thePower;
         protected int point;
 
-        public Masters(int points, Assistant assistant) : base(points, assistant)
+        protected Masters(int points, Assistant assistant) : base(points, assistant)
         {
         }
 
-        public Masters():base()
+        protected Masters()
         {
         }
 
-        public override void Points()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract override void Points();
+
     }
 }
