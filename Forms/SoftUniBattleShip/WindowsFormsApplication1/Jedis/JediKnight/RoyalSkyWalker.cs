@@ -1,12 +1,13 @@
 ﻿using System;
-using Game.Inerface;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IJediKnight;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\royal.jpg";
+        private string characterImage = @"..\..\Resources\royal.jpg";
         public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)
         {
         }

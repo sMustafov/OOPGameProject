@@ -1,7 +1,7 @@
-﻿using Game.Inerface;
-using Jedis;
+﻿using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IPadaun.IAssistantPaduin;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.AssistantPaduin
 {
     public abstract class AssistantPaduin : IAssistantPaduin
     {

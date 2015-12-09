@@ -1,12 +1,12 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class WightJan : Paduin,IWightJan
     {
         private string characterImage = @" "; 
-        public WightJan(int pointKnowledge, AssistantPaduin assistantPaduin) 
+        public WightJan(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
 

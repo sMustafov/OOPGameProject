@@ -1,11 +1,9 @@
-﻿
+﻿using WindowsFormsApplication1.Interface.IJedi.IJediKnight;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-using System.Drawing;
-using System.Windows.Forms.VisualStyles;
-
-namespace Jedis
+namespace WindowsFormsApplication1.Jedis.JediKnight
 {
-    public class JediKnight : Jedi.Jedi, IJediKnight
+    public class JediKnight : Jedi, IJediKnight
     {
      
         protected int knowledgeDamage;

@@ -1,4 +1,4 @@
-﻿namespace Jedis
+﻿namespace WindowsFormsApplication1.Interface
 {
     public enum AssistantJediType
     {

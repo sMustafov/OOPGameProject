@@ -1,11 +1,13 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IJediKnight;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class NaskoSolo : JediKnight, INaskoSolo
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\nasko.jpg";
+        private string characterImage = @"..\..\Resources\nasko.jpg";
 
         public NaskoSolo(int points, Assistant assistant) : base(points, assistant)
         {

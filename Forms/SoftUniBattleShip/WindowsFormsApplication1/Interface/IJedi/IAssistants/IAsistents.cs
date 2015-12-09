@@ -1,6 +1,4 @@
-﻿using Game.Inerface;
-
-namespace Jedis
+﻿namespace WindowsFormsApplication1.Interface.IJedi.IAssistants
 {
     public interface IAssistants
     {

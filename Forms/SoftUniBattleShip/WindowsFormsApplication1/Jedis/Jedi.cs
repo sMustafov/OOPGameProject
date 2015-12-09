@@ -1,7 +1,9 @@
 ﻿using System.Drawing;
-using Jedis.Inerface;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Jedis.Jedi
+namespace WindowsFormsApplication1.Jedis
 {
     public abstract class Jedi : IJedi
     {

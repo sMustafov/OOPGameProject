@@ -1,12 +1,12 @@
 ﻿using System;
-using Game.Inerface;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IAssistants;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.AsistentJedi
 {
     public class R2Trifon2 : Assistant, IR2Trifon2
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\trifon.jpg";
+        private string characterImage = @"..\..\Resources\trifon.jpg";
 
         public R2Trifon2(int poits) : base(poits)
         {

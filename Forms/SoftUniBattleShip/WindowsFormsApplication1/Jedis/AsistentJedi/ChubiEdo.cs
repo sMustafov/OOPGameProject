@@ -1,11 +1,12 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IAssistants;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.AsistentJedi
 {
     public class ChubiEdo : Assistant, IChubiEdo
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\edo.jpg";
+        private string characterImage = @"..\..\Resources\edo.jpg";
 
         public ChubiEdo(int poits) : base(poits)
         {

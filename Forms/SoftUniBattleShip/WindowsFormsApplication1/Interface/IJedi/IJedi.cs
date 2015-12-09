@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace Jedis.Inerface
+﻿namespace WindowsFormsApplication1.Interface.IJedi
 {
     public interface IJedi
     {

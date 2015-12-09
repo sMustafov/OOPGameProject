@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Drawing;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IMasters;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.Masters
 {
     public class JoNakov : Masters, IJoNakov
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\nakov.jpg";
+        private string characterImage = @"..\..\Resources\nakov.jpg";
 
         public JoNakov() : base()
         {

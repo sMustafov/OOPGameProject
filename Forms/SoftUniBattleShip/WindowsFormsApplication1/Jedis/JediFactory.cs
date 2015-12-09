@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Jedis;
-using Jedis.Inerface;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi;
+using WindowsFormsApplication1.Jedis.JediKnight;
+using WindowsFormsApplication1.Jedis.Masters;
 
-namespace Game.Jedis
+namespace WindowsFormsApplication1.Jedis
 {
     class JediFactory
     {

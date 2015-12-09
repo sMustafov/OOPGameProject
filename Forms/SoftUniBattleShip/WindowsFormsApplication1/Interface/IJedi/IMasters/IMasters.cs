@@ -1,6 +1,4 @@
-﻿using Jedis.Inerface;
-
-namespace Jedis
+﻿namespace WindowsFormsApplication1.Interface.IJedi.IMasters
 {
     public interface IMasters : IJedi
     {

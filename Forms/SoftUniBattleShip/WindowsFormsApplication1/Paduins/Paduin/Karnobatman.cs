@@ -1,13 +1,13 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.Paduin
 {
     internal class Karnobatman : Paduin, IKarnobatmanFromKranobasterdam
     {
         private string characterImage = @" ";
 
-        public Karnobatman(int pointKnowledge, AssistantPaduin assistantPaduin) 
+        public Karnobatman(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
 

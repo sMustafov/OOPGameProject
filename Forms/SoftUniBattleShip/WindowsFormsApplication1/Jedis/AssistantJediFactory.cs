@@ -1,7 +1,9 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IAssistants;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Game.Jedis
+namespace WindowsFormsApplication1.Jedis
 {
     public class AssistantJediFactory
     {

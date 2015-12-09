@@ -1,11 +1,13 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IJediKnight;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Game
+namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class AchoUanKenobi : JediKnight, IAchoUanKenobi
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\acho.jpg";
+        private string characterImage = @"..\..\Resources\acho.jpg";
         public AchoUanKenobi(int points, Assistant assistant) : base(points, assistant)
         {
         }

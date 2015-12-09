@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Drawing;
-using Jedis;
+using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class CountSevgin : Paduin,ICountSevgin
     {
-        private string characterImage = @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\sevgin.jpg";
+        private string characterImage = @"..\..\Resources\sevgin.jpg";
 
-        public CountSevgin(int pointKnowledge, AssistantPaduin asistensPaduin) 
+        public CountSevgin(int pointKnowledge, AssistantPaduin.AssistantPaduin asistensPaduin) 
             : base(pointKnowledge, asistensPaduin)
         {
 

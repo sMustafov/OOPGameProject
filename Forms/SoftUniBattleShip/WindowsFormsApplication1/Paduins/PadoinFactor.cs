@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Jedis;
+using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
+using WindowsFormsApplication1.Paduins.Paduin;
 
-namespace Game.Paduins
+namespace WindowsFormsApplication1.Paduins
 {
     public class PadoinFactor
     {

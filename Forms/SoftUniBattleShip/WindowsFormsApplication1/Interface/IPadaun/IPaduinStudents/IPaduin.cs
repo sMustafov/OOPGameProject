@@ -1,4 +1,6 @@
-﻿namespace Jedis
+﻿using WindowsFormsApplication1.Paduins;
+
+namespace WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents
 {
     public interface IPaduin
     {

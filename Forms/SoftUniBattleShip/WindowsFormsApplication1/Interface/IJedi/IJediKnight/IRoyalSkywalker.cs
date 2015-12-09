@@ -1,6 +1,4 @@
-﻿using Jedis;
-
-namespace Game.Inerface
+﻿namespace WindowsFormsApplication1.Interface.IJedi.IJediKnight
 {
     public interface IRoyalSkyWalker : IJediKnight
     {

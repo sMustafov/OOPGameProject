@@ -146,9 +146,11 @@
             // 
             // Beer
             // 
-            this.Beer.Location = new System.Drawing.Point(219, 111);
+            this.Beer.Image = global::WindowsFormsApplication1.Properties.Resources.beer;
+            this.Beer.Location = new System.Drawing.Point(218, 104);
             this.Beer.Name = "Beer";
             this.Beer.Size = new System.Drawing.Size(30, 40);
+            this.Beer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Beer.TabIndex = 11;
             this.Beer.TabStop = false;
             this.Beer.Click += new System.EventHandler(this.Beer_Click);

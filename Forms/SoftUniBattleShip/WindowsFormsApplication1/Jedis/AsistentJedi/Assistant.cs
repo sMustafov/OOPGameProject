@@ -1,6 +1,7 @@
-﻿using Game.Inerface;
+﻿using WindowsFormsApplication1.Interface;
+using WindowsFormsApplication1.Interface.IJedi.IAssistants;
 
-namespace Jedis
+namespace WindowsFormsApplication1.Jedis.AsistentJedi
 {
     public abstract class Assistant : IAssistants
     {

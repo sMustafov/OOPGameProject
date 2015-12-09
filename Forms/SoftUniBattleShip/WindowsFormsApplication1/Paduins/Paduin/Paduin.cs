@@ -1,15 +1,15 @@
-﻿using Jedis;
+﻿using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public abstract class Paduin : IPaduin
     {
         protected int paduinPower;
         protected int beerPerSecond;
         protected int pointKnowledge;
-        protected AssistantPaduin assistantPaduin;
+        protected AssistantPaduin.AssistantPaduin assistantPaduin;
 
-        protected Paduin(int pointKnowledge, AssistantPaduin assistantPaduin)
+        protected Paduin(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin)
         {
             this.PointKnowledge = pointKnowledge;
             this.AssistantPaduin = assistantPaduin;
@@ -31,7 +31,7 @@ namespace Game
 
         public PaduinType PaduinType { get; set; }
 
-        public AssistantPaduin AssistantPaduin { get; set; }
+        public AssistantPaduin.AssistantPaduin AssistantPaduin { get; set; }
 
         public abstract void KnowledgeCalculator();
     }

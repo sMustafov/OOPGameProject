@@ -1,9 +1,9 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
+﻿using WindowsFormsApplication1.Interface.IJedi.IMasters;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
 
-namespace Jedis
+namespace WindowsFormsApplication1.Jedis.Masters
 {
-    public abstract class Masters : Jedi.Jedi, IMasters
+    public abstract class Masters : Jedi, IMasters
     {
         protected int knowledgeDamage;
         protected int thePower;

@@ -1,13 +1,13 @@
 ﻿using System;
-using Jedis;
+using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
-namespace Game
+namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class SashoFett : Paduin, ISashoFett
     {
         private string characterImage = @" ";
 
-        public SashoFett(int pointKnowledge, AssistantPaduin assistantPaduin) 
+        public SashoFett(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {
 

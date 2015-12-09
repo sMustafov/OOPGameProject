@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Game;
+using WindowsFormsApplication1.Jedis.AsistentJedi;
+using WindowsFormsApplication1.Jedis.JediKnight;
+using WindowsFormsApplication1.Jedis.Masters;
+using WindowsFormsApplication1.Paduins.Paduin;
 
 namespace WindowsFormsApplication1
 {
@@ -60,10 +63,10 @@ namespace WindowsFormsApplication1
         {
             Image beer =
                 Image.FromFile(
-                    @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\beer.jpg");
+                    @"..\..\Resources\beer.jpg");
             Beer.Image = beer;
-            Beer.Height = beer.Height;
-            Beer.Width = beer.Width;
+//            Beer.Height = beer.Height;  //Makes the beer ultra strong
+//            Beer.Width = beer.Width;
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
@@ -120,7 +123,7 @@ namespace WindowsFormsApplication1
             }
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\csharp.png");
+                image = Image.FromFile(@"..\..\Resources\csharp.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -136,7 +139,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\java.jpg");
+                image = Image.FromFile(@"..\..\Resources\java.jpg");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -152,7 +155,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\cplusplus.jpg");
+                image = Image.FromFile(@"..\..\Resources\cplusplus.jpg");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -168,7 +171,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\oop.png");
+                image = Image.FromFile(@"C:..\..\Resources\oop.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
