@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1.Paduins.AssistantPaduin
         {
         }
 
-        public SipiTriBiriO() : base()
+        public SipiTriBiriO()
         {
             this.AssistantPaduinType = AssistantPaduinType.SipiTriBiriO;
         }
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Paduins.AssistantPaduin
             set { this.assistantLives = 40; }
         }
 
-        public int AssistantAttack
+        public new int AssistantAttack
         {
             get { return this.assistantAttack; }
             set { this.assistantAttack = 5; }

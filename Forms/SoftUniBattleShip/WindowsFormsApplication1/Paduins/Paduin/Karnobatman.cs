@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
         public override string CharacterImage
         {
             get { return this.characterImage; }
-            set { this.characterImage = value; }
+            protected set { this.characterImage = value; }
         }
 
         public int PointKnowledge1
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
             set { this.pointKnowledge += value; }
         }
 
-        public int PaduinPower
+        public new int PaduinPower
         {
             get { return this.paduinPower; }
             set { this.paduinPower = 50; }

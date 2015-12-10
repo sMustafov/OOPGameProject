@@ -76,45 +76,53 @@ namespace WindowsFormsApplication1
         {
             Image beer =
                 Image.FromFile(
+<<<<<<< HEAD
                     @"..\..\Resources\Beer.png");
             //Beer.Image = beer;
             //Beer.Height = beer.Height;
             //Beer.Width = beer.Width;
+=======
+                    @"..\..\Resources\beer.jpg");
+            Beer.Image = beer;
+//            Beer.Height = beer.Height;
+//            Beer.Width = beer.Width;
+
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
                 Image image = Image.FromFile(nakov.CharacterImage);
 
-                pictureBox2.Image = image;
-                pictureBox2.Height = image.Height;
-                pictureBox2.Width = image.Width;
+                enemyBox.Image = image;
+                enemyBox.Height = image.Height;
+                enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 2)
             {
                 AchoUanKenobi acho = new AchoUanKenobi();
                 Image image = Image.FromFile(acho.CharacterImage);
 
-                pictureBox2.Image = image;
-                pictureBox2.Height = image.Height;
-                pictureBox2.Width = image.Width;
+                enemyBox.Image = image;
+                enemyBox.Height = image.Height;
+                enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 3)
             {
                 RoyalSkyWalker royal = new RoyalSkyWalker();
                 Image image = Image.FromFile(royal.CharacterImage);
 
-                pictureBox2.Image = image;
-                pictureBox2.Height = image.Height;
-                pictureBox2.Width = image.Width;
+                enemyBox.Image = image;
+                enemyBox.Height = image.Height;
+                enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 4)
             {
                 NaskoSolo nasko = new NaskoSolo();
                 Image image = Image.FromFile(nasko.CharacterImage);
 
-                pictureBox2.Image = image;
-                pictureBox2.Height = image.Height;
-                pictureBox2.Width = image.Width;
+                enemyBox.Image = image;
+                enemyBox.Height = image.Height;
+                enemyBox.Width = image.Width;
             }
             if (Jedi.FinalAssistantCharacter == 1)
             {
@@ -137,7 +145,11 @@ namespace WindowsFormsApplication1
 
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
+<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Csharp.png");
+=======
+                image = Image.FromFile(@"..\..\Resources\csharp.png");
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -165,7 +177,11 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
+<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Java.png");
+=======
+                image = Image.FromFile(@"..\..\Resources\java.jpg");
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -193,7 +209,11 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
+<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
+=======
+                image = Image.FromFile(@"..\..\Resources\cplusplus.jpg");
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -221,7 +241,11 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
+<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Oop.png");
+=======
+                image = Image.FromFile(@"..\..\Resources\oop.png");
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -307,10 +331,17 @@ namespace WindowsFormsApplication1
                 timer.Stop();
             }
 
+<<<<<<< HEAD
             //if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
             //{
             //    Drunk++;
             //}
+=======
+            if (Beer.Bounds.IntersectsWith(enemyBox.Bounds))
+            {
+                Drunk++;
+            }
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
 
 
             if (pictureBox3.Bounds.IntersectsWith(paduin.Bounds))
@@ -359,7 +390,7 @@ namespace WindowsFormsApplication1
 
 
             //First Category
-            if (pictureBox2.Location.Y == pictureBox3.Location.Y)
+            if (enemyBox.Location.Y == pictureBox3.Location.Y)
             {
                 pictureBox3.Visible = true;
                 pictureBox3.Location = new Point(pictureBox3.Location.X, pictureBox3.Location.Y);
@@ -373,7 +404,7 @@ namespace WindowsFormsApplication1
             }
 
             //Second Category
-            if (pictureBox2.Location.Y == pictureBox4.Location.Y)
+            if (enemyBox.Location.Y == pictureBox4.Location.Y)
             {
                 pictureBox4.Visible = true;
                 pictureBox4.Location = new Point(pictureBox4.Location.X, pictureBox4.Location.Y);
@@ -387,7 +418,7 @@ namespace WindowsFormsApplication1
             }
 
             //Third Category
-            if (pictureBox2.Location.Y == pictureBox5.Location.Y)
+            if (enemyBox.Location.Y == pictureBox5.Location.Y)
             {
                 pictureBox5.Visible = true;
                 pictureBox5.Location = new Point(pictureBox5.Location.X, pictureBox5.Location.Y);
@@ -400,8 +431,13 @@ namespace WindowsFormsApplication1
                 pictureBox5.Left -= 580;
             }
 
+<<<<<<< HEAD
             //Forth Category
             if (pictureBox2.Location.Y == pictureBox6.Location.Y)
+=======
+            //Forth Category 
+            if (enemyBox.Location.Y == pictureBox6.Location.Y)
+>>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
             {
                 pictureBox6.Visible = true;
                 pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y);
@@ -415,7 +451,7 @@ namespace WindowsFormsApplication1
             }
 
             //Fifth Category
-            if (pictureBox2.Location.Y == pictureBox7.Location.Y)
+            if (enemyBox.Location.Y == pictureBox7.Location.Y)
             {
                 pictureBox7.Visible = true;
                 pictureBox7.Location = new Point(pictureBox7.Location.X, pictureBox7.Location.Y);
@@ -429,7 +465,7 @@ namespace WindowsFormsApplication1
             }
 
             //Sixth Category
-            if (pictureBox2.Location.Y == pictureBox8.Location.Y)
+            if (enemyBox.Location.Y == pictureBox8.Location.Y)
             {
                 pictureBox8.Visible = true;
                 pictureBox8.Location = new Point(pictureBox8.Location.X, pictureBox8.Location.Y);
@@ -443,7 +479,7 @@ namespace WindowsFormsApplication1
             }
 
             //Seventh Category
-            if (pictureBox2.Location.Y == pictureBox9.Location.Y)
+            if (enemyBox.Location.Y == pictureBox9.Location.Y)
             {
                 pictureBox9.Visible = true;
                 pictureBox9.Location = new Point(pictureBox9.Location.X, pictureBox9.Location.Y);
@@ -457,7 +493,7 @@ namespace WindowsFormsApplication1
             }
 
             //Eight Category
-            if (pictureBox2.Location.Y == pictureBox10.Location.Y)
+            if (enemyBox.Location.Y == pictureBox10.Location.Y)
             {
                 pictureBox10.Visible = true;
                 pictureBox10.Location = new Point(pictureBox10.Location.X, pictureBox10.Location.Y);
@@ -525,16 +561,16 @@ namespace WindowsFormsApplication1
             //Jedi Character direction - only Up and Down
             if (directionCharacter == Direction.Up)
             {
-                pictureBox2.Top -= 1;
-                if (pictureBox2.Top == 20)
+                enemyBox.Top -= 1;
+                if (enemyBox.Top == 20)
                 {
                     directionCharacter = Direction.Down;
                 }
             }
             if (directionCharacter == Direction.Down)
             {
-                pictureBox2.Top += 1;
-                if (pictureBox2.Top == 280)
+                enemyBox.Top += 1;
+                if (enemyBox.Top == 280)
                 {
                     directionCharacter = Direction.Up;
                 }
