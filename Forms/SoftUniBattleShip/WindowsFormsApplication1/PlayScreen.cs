@@ -74,20 +74,17 @@ namespace WindowsFormsApplication1
 
         private void PlayScreen_Load(object sender, EventArgs e)
         {
-            Image beer =
-                Image.FromFile(
-<<<<<<< HEAD
-                    @"..\..\Resources\Beer.png");
+            //Image beer = Image.FromFile(@"..\..\Resources\Beer.png");
             //Beer.Image = beer;
             //Beer.Height = beer.Height;
             //Beer.Width = beer.Width;
-=======
-                    @"..\..\Resources\beer.jpg");
-            Beer.Image = beer;
-//            Beer.Height = beer.Height;
-//            Beer.Width = beer.Width;
 
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
+            //@"..\..\Resources\beer.jpg");
+            //Beer.Image = beer;
+            //Beer.Height = beer.Height;
+            //Beer.Width = beer.Width;
+
+
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
@@ -145,11 +142,7 @@ namespace WindowsFormsApplication1
 
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Csharp.png");
-=======
-                image = Image.FromFile(@"..\..\Resources\csharp.png");
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -177,11 +170,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Java.png");
-=======
-                image = Image.FromFile(@"..\..\Resources\java.jpg");
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -209,11 +198,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
-=======
-                image = Image.FromFile(@"..\..\Resources\cplusplus.jpg");
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -241,11 +226,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
-<<<<<<< HEAD
                 image = Image.FromFile(@"..\..\Resources\Oop.png");
-=======
-                image = Image.FromFile(@"..\..\Resources\oop.png");
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -330,18 +311,15 @@ namespace WindowsFormsApplication1
             {
                 timer.Stop();
             }
-
-<<<<<<< HEAD
+            
             //if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
             //{
             //    Drunk++;
             //}
-=======
-            if (Beer.Bounds.IntersectsWith(enemyBox.Bounds))
-            {
-                Drunk++;
-            }
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
+            //if (Beer.Bounds.IntersectsWith(enemyBox.Bounds))
+            //{
+            //   Drunk++;
+            //}
 
 
             if (pictureBox3.Bounds.IntersectsWith(paduin.Bounds))
@@ -430,14 +408,10 @@ namespace WindowsFormsApplication1
                 directionCategory3 = Direction.None;
                 pictureBox5.Left -= 580;
             }
-
-<<<<<<< HEAD
-            //Forth Category
-            if (pictureBox2.Location.Y == pictureBox6.Location.Y)
-=======
+            
+            
             //Forth Category 
             if (enemyBox.Location.Y == pictureBox6.Location.Y)
->>>>>>> 41e3390ba63fe82cd2c17f9c66bd648be15b4dc5
             {
                 pictureBox6.Visible = true;
                 pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y);
