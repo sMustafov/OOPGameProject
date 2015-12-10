@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayScreen));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -38,31 +39,30 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.paduin = new System.Windows.Forms.PictureBox();
             this.paduinKnowledge = new System.Windows.Forms.Label();
             this.jediDrunk = new System.Windows.Forms.Label();
-            this.Beer = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.paduin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paduin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Beer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paduin)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(12, 68);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 224);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 65);
             this.pictureBox2.TabIndex = 1;
@@ -71,7 +71,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(653, 68);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(822, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 65);
             this.pictureBox1.TabIndex = 2;
@@ -80,6 +81,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Location = new System.Drawing.Point(32, 47);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 40);
@@ -94,6 +96,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Location = new System.Drawing.Point(32, 70);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 40);
@@ -103,6 +106,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Location = new System.Drawing.Point(32, 93);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 40);
@@ -112,6 +116,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Location = new System.Drawing.Point(32, 128);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 40);
@@ -119,21 +124,12 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // paduin
-            // 
-            this.paduin.Location = new System.Drawing.Point(302, 70);
-            this.paduin.Name = "paduin";
-            this.paduin.Size = new System.Drawing.Size(50, 65);
-            this.paduin.TabIndex = 8;
-            this.paduin.TabStop = false;
-            this.paduin.Click += new System.EventHandler(this.paduin_Click);
-            // 
             // paduinKnowledge
             // 
-            this.paduinKnowledge.BackColor = System.Drawing.Color.Transparent;
-            this.paduinKnowledge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.paduinKnowledge.ForeColor = System.Drawing.Color.Red;
-            this.paduinKnowledge.Location = new System.Drawing.Point(127, 7);
+            this.paduinKnowledge.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.paduinKnowledge.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paduinKnowledge.ForeColor = System.Drawing.Color.White;
+            this.paduinKnowledge.Location = new System.Drawing.Point(29, 5);
             this.paduinKnowledge.Name = "paduinKnowledge";
             this.paduinKnowledge.Size = new System.Drawing.Size(206, 22);
             this.paduinKnowledge.TabIndex = 9;
@@ -142,29 +138,19 @@
             // 
             // jediDrunk
             // 
-            this.jediDrunk.BackColor = System.Drawing.Color.Transparent;
-            this.jediDrunk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.jediDrunk.ForeColor = System.Drawing.Color.Red;
-            this.jediDrunk.Location = new System.Drawing.Point(421, 9);
+            this.jediDrunk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.jediDrunk.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jediDrunk.ForeColor = System.Drawing.Color.White;
+            this.jediDrunk.Location = new System.Drawing.Point(562, 5);
             this.jediDrunk.Name = "jediDrunk";
             this.jediDrunk.Size = new System.Drawing.Size(141, 20);
             this.jediDrunk.TabIndex = 10;
             this.jediDrunk.Text = "Jedi Drunk : 0";
             this.jediDrunk.Click += new System.EventHandler(this.jediDrunk_Click);
             // 
-            // Beer
-            // 
-            this.Beer.Image = global::WindowsFormsApplication1.Properties.Resources.beer;
-            this.Beer.Location = new System.Drawing.Point(218, 104);
-            this.Beer.Name = "Beer";
-            this.Beer.Size = new System.Drawing.Size(30, 40);
-            this.Beer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Beer.TabIndex = 11;
-            this.Beer.TabStop = false;
-            this.Beer.Click += new System.EventHandler(this.Beer_Click);
-            // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Location = new System.Drawing.Point(32, 253);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(30, 40);
@@ -174,6 +160,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Location = new System.Drawing.Point(32, 224);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(30, 40);
@@ -183,6 +170,7 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Location = new System.Drawing.Point(32, 188);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(30, 40);
@@ -192,6 +180,7 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Location = new System.Drawing.Point(32, 160);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(30, 40);
@@ -199,19 +188,30 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click_1);
             // 
+            // paduin
+            // 
+            this.paduin.BackColor = System.Drawing.Color.Transparent;
+            this.paduin.Image = ((System.Drawing.Image)(resources.GetObject("paduin.Image")));
+            this.paduin.Location = new System.Drawing.Point(410, 47);
+            this.paduin.Name = "paduin";
+            this.paduin.Size = new System.Drawing.Size(50, 65);
+            this.paduin.TabIndex = 8;
+            this.paduin.TabStop = false;
+            this.paduin.Click += new System.EventHandler(this.paduin_Click);
+            // 
             // PlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.galactic_center;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 361);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.Beer);
             this.Controls.Add(this.jediDrunk);
             this.Controls.Add(this.paduinKnowledge);
             this.Controls.Add(this.paduin);
@@ -221,6 +221,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Transparent;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "PlayScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -233,12 +236,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paduin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Beer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paduin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,13 +255,12 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox paduin;
         private System.Windows.Forms.Label paduinKnowledge;
         private System.Windows.Forms.Label jediDrunk;
-        private System.Windows.Forms.PictureBox Beer;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox paduin;
     }
 }

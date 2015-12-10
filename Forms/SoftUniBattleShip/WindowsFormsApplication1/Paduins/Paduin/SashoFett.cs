@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class SashoFett : Paduin, ISashoFett
     {
-        private string characterImage = @" ";
+        private string characterImage = @"..\..\Resources\Sasho.png";
 
         public SashoFett(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)

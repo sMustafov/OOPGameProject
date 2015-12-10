@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paduin));
             this.label1 = new System.Windows.Forms.Label();
             this.SevginButton = new System.Windows.Forms.RadioButton();
             this.YanchoButton = new System.Windows.Forms.RadioButton();
@@ -79,6 +80,7 @@
             this.YanchoButton.TabStop = true;
             this.YanchoButton.Text = "Karnobatman Bane";
             this.YanchoButton.UseVisualStyleBackColor = true;
+            this.YanchoButton.CheckedChanged += new System.EventHandler(this.YanchoButton_CheckedChanged);
             // 
             // SashoButton
             // 
@@ -92,6 +94,7 @@
             this.SashoButton.TabStop = true;
             this.SashoButton.Text = "Sasho Fett";
             this.SashoButton.UseVisualStyleBackColor = true;
+            this.SashoButton.CheckedChanged += new System.EventHandler(this.SashoButton_CheckedChanged);
             // 
             // JanButton
             // 
@@ -105,6 +108,7 @@
             this.JanButton.TabStop = true;
             this.JanButton.Text = "Wight Jan";
             this.JanButton.UseVisualStyleBackColor = true;
+            this.JanButton.CheckedChanged += new System.EventHandler(this.JanButton_CheckedChanged);
             // 
             // FuglemanButton
             // 
@@ -118,6 +122,7 @@
             this.FuglemanButton.TabStop = true;
             this.FuglemanButton.Text = "Fugleman ToWookie";
             this.FuglemanButton.UseVisualStyleBackColor = true;
+            this.FuglemanButton.CheckedChanged += new System.EventHandler(this.FuglemanButton_CheckedChanged);
             // 
             // TriBiriButton
             // 
@@ -131,6 +136,7 @@
             this.TriBiriButton.TabStop = true;
             this.TriBiriButton.Text = "Sipi TriBiriO";
             this.TriBiriButton.UseVisualStyleBackColor = true;
+            this.TriBiriButton.CheckedChanged += new System.EventHandler(this.TriBiriButton_CheckedChanged);
             // 
             // SaveButton
             // 
@@ -181,12 +187,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.dqwdcqw___Copy___Copy;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(728, 264);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Location = new System.Drawing.Point(613, 192);
             this.MaximizeBox = false;
             this.Name = "Paduin";

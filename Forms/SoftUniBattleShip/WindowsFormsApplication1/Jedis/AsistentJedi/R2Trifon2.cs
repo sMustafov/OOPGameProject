@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
 {
     public class R2Trifon2 : Assistant, IR2Trifon2
     {
-        private string characterImage = @"..\..\Resources\trifon.jpg";
+        private string characterImage = @"..\..\Resources\Trifon.png";
 
         public R2Trifon2(int poits) : base(poits)
         {

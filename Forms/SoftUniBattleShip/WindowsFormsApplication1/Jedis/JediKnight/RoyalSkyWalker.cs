@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
-        private string characterImage = @"..\..\Resources\royal.jpg";
+        private string characterImage = @"..\..\Resources\Royal.png";
         public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)
         {
         }

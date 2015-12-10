@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class NaskoSolo : JediKnight, INaskoSolo
     {
-        private string characterImage = @"..\..\Resources\nasko.jpg";
+        private string characterImage = @"..\..\Resources\Nasko.png";
 
         public NaskoSolo(int points, Assistant assistant) : base(points, assistant)
         {

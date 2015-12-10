@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class CountSevgin : Paduin,ICountSevgin
     {
-        private string characterImage = @"..\..\Resources\sevgin.jpg";
+        private string characterImage = @"..\..\Resources\Sevgin.png";
 
         public CountSevgin(int pointKnowledge, AssistantPaduin.AssistantPaduin asistensPaduin) 
             : base(pointKnowledge, asistensPaduin)

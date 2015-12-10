@@ -35,11 +35,12 @@
             // 
             // JediButton
             // 
-            this.JediButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.JediButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.JediButton.Location = new System.Drawing.Point(35, 90);
+            this.JediButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.JediButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.JediButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JediButton.Location = new System.Drawing.Point(31, 90);
             this.JediButton.Name = "JediButton";
-            this.JediButton.Size = new System.Drawing.Size(95, 54);
+            this.JediButton.Size = new System.Drawing.Size(99, 36);
             this.JediButton.TabIndex = 0;
             this.JediButton.Text = "Jedi";
             this.JediButton.UseVisualStyleBackColor = false;
@@ -47,11 +48,12 @@
             // 
             // PaduinButton
             // 
-            this.PaduinButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.PaduinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PaduinButton.Location = new System.Drawing.Point(522, 90);
+            this.PaduinButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PaduinButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PaduinButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaduinButton.Location = new System.Drawing.Point(493, 88);
             this.PaduinButton.Name = "PaduinButton";
-            this.PaduinButton.Size = new System.Drawing.Size(95, 54);
+            this.PaduinButton.Size = new System.Drawing.Size(130, 38);
             this.PaduinButton.TabIndex = 1;
             this.PaduinButton.Text = "Paduin";
             this.PaduinButton.UseVisualStyleBackColor = false;
@@ -66,6 +68,7 @@
             this.ClientSize = new System.Drawing.Size(654, 204);
             this.Controls.Add(this.PaduinButton);
             this.Controls.Add(this.JediButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "ChooseCharacterScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

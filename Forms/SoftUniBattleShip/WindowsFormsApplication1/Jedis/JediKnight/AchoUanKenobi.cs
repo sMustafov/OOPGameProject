@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
 {
     public class AchoUanKenobi : JediKnight, IAchoUanKenobi
     {
-        private string characterImage = @"..\..\Resources\acho.jpg";
+        private string characterImage = @"..\..\Resources\Acho.png";
         public AchoUanKenobi(int points, Assistant assistant) : base(points, assistant)
         {
         }

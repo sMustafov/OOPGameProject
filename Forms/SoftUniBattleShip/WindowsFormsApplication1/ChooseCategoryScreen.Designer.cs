@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseCategoryScreen));
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.CSharpButton = new System.Windows.Forms.RadioButton();
@@ -123,7 +124,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.learn_how_to_code213;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(654, 204);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.JavaButton);
@@ -131,6 +132,7 @@
             this.Controls.Add(this.CSharpButton);
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.SaveButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "ChooseCategoryScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -142,6 +142,9 @@
     <EmbeddedResource Include="Instructions.en-001.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Jedi.resx">
       <DependentUpon>Jedi.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,34 +184,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\learn_how_to_code.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\learn_how_to_code213.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\movies-star-wars-chahracters-wallpapers-free-download-lovely-hd-widescreen-wallpapers-of-star-wars2s.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dqwdcqw.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dqwdcqw - Copy.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dqwdcqw - Copy - Copy.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\galactic_center.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nakov.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\beer.jpg" />
-    <None Include="Resources\beer1.jpg" />
+    <Content Include="Resources\Acho.png" />
+    <Content Include="Resources\BattleGameSpace.jpg" />
+    <Content Include="Resources\BattleMenu.jpg" />
+    <Content Include="Resources\BattleMenu2.jpg" />
+    <Content Include="Resources\BattleMenuMatrix.jpg" />
+    <Content Include="Resources\BattleSpace.jpg" />
+    <Content Include="Resources\Beer.png" />
+    <Content Include="Resources\Cplusplus.png" />
+    <Content Include="Resources\csharp.png" />
+    <Content Include="Resources\Edo.png" />
+    <Content Include="Resources\Jan.png" />
+    <Content Include="Resources\Java.png" />
+    <Content Include="Resources\Nakov.png" />
+    <Content Include="Resources\Nasko.png" />
+    <Content Include="Resources\Oop.png" />
+    <Content Include="Resources\Qncho.png" />
+    <Content Include="Resources\Royal.png" />
+    <Content Include="Resources\Sasho.png" />
+    <Content Include="Resources\Sevgin.png" />
+    <Content Include="Resources\Trifon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

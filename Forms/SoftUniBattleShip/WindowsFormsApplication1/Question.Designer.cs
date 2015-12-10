@@ -77,6 +77,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Question";
             this.Text = "Question";
+            this.Load += new System.EventHandler(this.Question_Load);
             this.ResumeLayout(false);
 
         }

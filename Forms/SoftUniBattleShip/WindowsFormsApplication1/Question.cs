@@ -26,5 +26,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void Question_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

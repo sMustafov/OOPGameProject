@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
 {
     public class WightJan : Paduin,IWightJan
     {
-        private string characterImage = @" "; 
+        private string characterImage = @"..\..\Resources\Jan.png"; 
         public WightJan(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
             : base(pointKnowledge, assistantPaduin)
         {

@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
 {
     public class ChubiEdo : Assistant, IChubiEdo
     {
-        private string characterImage = @"..\..\Resources\edo.jpg";
+        private string characterImage = @"..\..\Resources\Edo.png";
 
         public ChubiEdo(int poits) : base(poits)
         {

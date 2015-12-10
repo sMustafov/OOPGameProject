@@ -5,6 +5,7 @@ using WindowsFormsApplication1.Jedis.AsistentJedi;
 using WindowsFormsApplication1.Jedis.JediKnight;
 using WindowsFormsApplication1.Jedis.Masters;
 using WindowsFormsApplication1.Paduins.Paduin;
+using WindowsFormsApplication1.Properties;
 
 namespace WindowsFormsApplication1
 {
@@ -58,7 +59,7 @@ namespace WindowsFormsApplication1
             pictureBox8.Visible = false;
             pictureBox9.Visible = false;
             pictureBox10.Visible = false;
-            Beer.Visible = false;
+            //Beer.Visible = false;
 
 
             timer.Interval = 15;
@@ -75,10 +76,10 @@ namespace WindowsFormsApplication1
         {
             Image beer =
                 Image.FromFile(
-                    @"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\beer.jpg");
-            Beer.Image = beer;
-            Beer.Height = beer.Height;
-            Beer.Width = beer.Width;
+                    @"..\..\Resources\Beer.png");
+            //Beer.Image = beer;
+            //Beer.Height = beer.Height;
+            //Beer.Width = beer.Width;
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
@@ -133,9 +134,10 @@ namespace WindowsFormsApplication1
                 pictureBox1.Height = image.Height;
                 pictureBox1.Width = image.Width;
             }
+
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\csharp.png");
+                image = Image.FromFile(@"..\..\Resources\Csharp.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -163,7 +165,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\java.jpg");
+                image = Image.FromFile(@"..\..\Resources\Java.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -191,7 +193,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\cplusplus.jpg");
+                image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -219,7 +221,7 @@ namespace WindowsFormsApplication1
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
-                image = Image.FromFile(@"C:\Users\pc1\Desktop\OOPGameProject\OOPGameProject\Forms\SoftUniBattleShip\WindowsFormsApplication1\Resources\oop.png");
+                image = Image.FromFile(@"..\..\Resources\Oop.png");
                 pictureBox3.Image = image;
                 pictureBox3.Height = image.Height;
                 pictureBox3.Width = image.Width;
@@ -256,8 +258,8 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 2)
             {
-                //Karnobatman karnobatman = new Karnobatman();
-                //Image image = Image.FromFile(karnobatman.CharacterImage);
+                Karnobatman karnobatman = new Karnobatman();
+                Image image = Image.FromFile(karnobatman.CharacterImage);
 
                 paduin.Image = image;
                 paduin.Height = image.Height;
@@ -265,8 +267,8 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 3)
             {
-                //SashoFett sasho = new SashoFett();
-                //Image image = Image.FromFile(sasho.CharacterImage);
+                SashoFett sasho = new SashoFett();
+                Image image = Image.FromFile(sasho.CharacterImage);
 
                 paduin.Image = image;
                 paduin.Height = image.Height;
@@ -274,8 +276,8 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 4)
             {
-                //WightJan jan = new WightJan();
-                //Image image = Image.FromFile(jan.CharacterImage);
+                WightJan jan = new WightJan();
+                Image image = Image.FromFile(jan.CharacterImage);
 
                 paduin.Image = image;
                 paduin.Height = image.Height;
@@ -305,31 +307,56 @@ namespace WindowsFormsApplication1
                 timer.Stop();
             }
 
-            if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
-            {
-                Drunk++;
-            }
+            //if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
+            //{
+            //    Drunk++;
+            //}
 
 
             if (pictureBox3.Bounds.IntersectsWith(paduin.Bounds))
             {
-                Question question = new Question();
-                question.ShowDialog();
-
+                //Question question = new Question();
+                //question.ShowDialog();
+                
                 Score++;
+                pictureBox3.Hide();
             }
             if (pictureBox4.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                pictureBox4.Hide();
             }
             if (pictureBox5.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                pictureBox5.Hide();
             }
             if (pictureBox6.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                pictureBox6.Hide();
             }
+            if (pictureBox7.Bounds.IntersectsWith(paduin.Bounds))
+            {
+                Score++;
+                pictureBox7.Hide();
+            }
+            if (pictureBox8.Bounds.IntersectsWith(paduin.Bounds))
+            {
+                Score++;
+                pictureBox8.Hide();
+            }
+            if (pictureBox9.Bounds.IntersectsWith(paduin.Bounds))
+            {
+                Score++;
+                pictureBox9.Hide();
+            }
+            if (pictureBox10.Bounds.IntersectsWith(paduin.Bounds))
+            {
+                Score++;
+                pictureBox10.Hide();
+            }
+
 
             //First Category
             if (pictureBox2.Location.Y == pictureBox3.Location.Y)
@@ -338,11 +365,11 @@ namespace WindowsFormsApplication1
                 pictureBox3.Location = new Point(pictureBox3.Location.X, pictureBox3.Location.Y);
                 directionCategory1 = Direction.Right;
             }
-            if (pictureBox3.Left == 300)
+            if (pictureBox3.Left == 600)
             {
                 pictureBox3.Visible = false;
                 directionCategory1 = Direction.None;
-                pictureBox3.Left -= 280;
+                pictureBox3.Left -= 580;
             }
 
             //Second Category
@@ -352,11 +379,11 @@ namespace WindowsFormsApplication1
                 pictureBox4.Location = new Point(pictureBox4.Location.X, pictureBox4.Location.Y);
                 directionCategory2 = Direction.Right;
             }
-            if (pictureBox4.Left == 300)
+            if (pictureBox4.Left == 600)
             {
                 pictureBox4.Visible = false;
                 directionCategory2 = Direction.None;
-                pictureBox4.Left -= 280;
+                pictureBox4.Left -= 580;
             }
 
             //Third Category
@@ -366,25 +393,25 @@ namespace WindowsFormsApplication1
                 pictureBox5.Location = new Point(pictureBox5.Location.X, pictureBox5.Location.Y);
                 directionCategory3 = Direction.Right;
             }
-            if (pictureBox5.Left == 300)
+            if (pictureBox5.Left == 600)
             {
                 pictureBox5.Visible = false;
                 directionCategory3 = Direction.None;
-                pictureBox5.Left -= 280;
+                pictureBox5.Left -= 580;
             }
 
-            //Forth Category 
+            //Forth Category
             if (pictureBox2.Location.Y == pictureBox6.Location.Y)
             {
                 pictureBox6.Visible = true;
                 pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y);
                 directionCategory4 = Direction.Right;
             }
-            if (pictureBox6.Left == 300)
+            if (pictureBox6.Left == 600)
             {
                 pictureBox6.Visible = false;
                 directionCategory4 = Direction.None;
-                pictureBox6.Left -= 280;
+                pictureBox6.Left -= 580;
             }
 
             //Fifth Category
@@ -394,11 +421,11 @@ namespace WindowsFormsApplication1
                 pictureBox7.Location = new Point(pictureBox7.Location.X, pictureBox7.Location.Y);
                 directionCategory5 = Direction.Right;
             }
-            if (pictureBox7.Left == 300)
+            if (pictureBox7.Left == 600)
             {
                 pictureBox7.Visible = false;
                 directionCategory5 = Direction.None;
-                pictureBox7.Left -= 280;
+                pictureBox7.Left -= 580;
             }
 
             //Sixth Category
@@ -408,11 +435,11 @@ namespace WindowsFormsApplication1
                 pictureBox8.Location = new Point(pictureBox8.Location.X, pictureBox8.Location.Y);
                 directionCategory6 = Direction.Right;
             }
-            if (pictureBox8.Left == 300)
+            if (pictureBox8.Left == 600)
             {
                 pictureBox8.Visible = false;
                 directionCategory6 = Direction.None;
-                pictureBox8.Left -= 280;
+                pictureBox8.Left -= 580;
             }
 
             //Seventh Category
@@ -422,11 +449,11 @@ namespace WindowsFormsApplication1
                 pictureBox9.Location = new Point(pictureBox9.Location.X, pictureBox9.Location.Y);
                 directionCategory7 = Direction.Right;
             }
-            if (pictureBox9.Left == 300)
+            if (pictureBox9.Left == 600)
             {
                 pictureBox9.Visible = false;
                 directionCategory7 = Direction.None;
-                pictureBox9.Left -= 280;
+                pictureBox9.Left -= 580;
             }
 
             //Eight Category
@@ -436,11 +463,11 @@ namespace WindowsFormsApplication1
                 pictureBox10.Location = new Point(pictureBox10.Location.X, pictureBox10.Location.Y);
                 directionCategory8 = Direction.Right;
             }
-            if (pictureBox10.Left == 300)
+            if (pictureBox10.Left == 600)
             {
                 pictureBox10.Visible = false;
                 directionCategory8 = Direction.None;
-                pictureBox10.Left -= 280;
+                pictureBox10.Left -= 580;
             }
             //Paduins Direction
             if (directionPaduin == Direction.Right)
@@ -513,6 +540,10 @@ namespace WindowsFormsApplication1
                 }
             }
 
+
+            //Paduin direction
+            //?????
+
             //Assistant direction - only Up and Down
             if (directionAssistant == Direction.Up)
             {
@@ -535,11 +566,11 @@ namespace WindowsFormsApplication1
             //Beer direction
             if (directionBeer == Direction.Right)
             {
-                Beer.Left += 5;
+                //Beer.Left += 5;
             }
             else if (directionBeer == Direction.Left)
             {
-                Beer.Left -= 5;
+                //Beer.Left -= 5;
             }
 
             Invalidate();
@@ -565,9 +596,9 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Space)
             {
-                //    Beer = new PictureBox();
-                Beer.Location = new Point(paduin.Location.X, paduin.Location.Y);
-                Beer.Visible = true;
+                //Beer = new PictureBox();
+                //Beer.Location = new Point(paduin.Location.X, paduin.Location.Y);
+                //Beer.Visible = true;
                 if (directionPaduin == Direction.Right)
                 {
                     directionBeer = Direction.Right;
@@ -628,7 +659,7 @@ namespace WindowsFormsApplication1
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

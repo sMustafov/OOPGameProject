@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Jedis.Masters
 {
     public class JoNakov : Masters, IJoNakov
     {
-        private string characterImage = @"..\..\Resources\nakov.jpg";
+        private string characterImage = @"..\..\Resources\Nakov.png";
 
         public JoNakov() : base()
         {
