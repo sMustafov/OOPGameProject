@@ -5,12 +5,12 @@ using WindowsFormsApplication1.Jedis.AsistentJedi;
 using WindowsFormsApplication1.Jedis.JediKnight;
 using WindowsFormsApplication1.Jedis.Masters;
 using WindowsFormsApplication1.Paduins.Paduin;
-using WindowsFormsApplication1.Properties;
 
 namespace WindowsFormsApplication1
 {
     public partial class PlayScreen : Form
     {
+        private Question q;
         private PlayScreen playScreen;
         private int x;
         private int y;
@@ -84,7 +84,6 @@ namespace WindowsFormsApplication1
             //Beer.Height = beer.Height;
             //Beer.Width = beer.Width;
 
-
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
@@ -143,114 +142,22 @@ namespace WindowsFormsApplication1
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
                 image = Image.FromFile(@"..\..\Resources\Csharp.png");
-                pictureBox3.Image = image;
-                pictureBox3.Height = image.Height;
-                pictureBox3.Width = image.Width;
-                pictureBox4.Image = image;
-                pictureBox4.Height = image.Height;
-                pictureBox4.Width = image.Width;
-                pictureBox5.Image = image;
-                pictureBox5.Height = image.Height;
-                pictureBox5.Width = image.Width;
-                pictureBox6.Image = image;
-                pictureBox6.Height = image.Height;
-                pictureBox6.Width = image.Width;
-                pictureBox7.Image = image;
-                pictureBox7.Height = image.Height;
-                pictureBox7.Width = image.Width;
-                pictureBox8.Image = image;
-                pictureBox8.Height = image.Height;
-                pictureBox8.Width = image.Width;
-                pictureBox9.Image = image;
-                pictureBox9.Height = image.Height;
-                pictureBox9.Width = image.Width;
-                pictureBox10.Image = image;
-                pictureBox10.Height = image.Height;
-                pictureBox10.Width = image.Width;
+                Picture(image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
                 image = Image.FromFile(@"..\..\Resources\Java.png");
-                pictureBox3.Image = image;
-                pictureBox3.Height = image.Height;
-                pictureBox3.Width = image.Width;
-                pictureBox4.Image = image;
-                pictureBox4.Height = image.Height;
-                pictureBox4.Width = image.Width;
-                pictureBox5.Image = image;
-                pictureBox5.Height = image.Height;
-                pictureBox5.Width = image.Width;
-                pictureBox6.Image = image;
-                pictureBox6.Height = image.Height;
-                pictureBox6.Width = image.Width;
-                pictureBox7.Image = image;
-                pictureBox7.Height = image.Height;
-                pictureBox7.Width = image.Width;
-                pictureBox8.Image = image;
-                pictureBox8.Height = image.Height;
-                pictureBox8.Width = image.Width;
-                pictureBox9.Image = image;
-                pictureBox9.Height = image.Height;
-                pictureBox9.Width = image.Width;
-                pictureBox10.Image = image;
-                pictureBox10.Height = image.Height;
-                pictureBox10.Width = image.Width;
+                Picture(image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
                 image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
-                pictureBox3.Image = image;
-                pictureBox3.Height = image.Height;
-                pictureBox3.Width = image.Width;
-                pictureBox4.Image = image;
-                pictureBox4.Height = image.Height;
-                pictureBox4.Width = image.Width;
-                pictureBox5.Image = image;
-                pictureBox5.Height = image.Height;
-                pictureBox5.Width = image.Width;
-                pictureBox6.Image = image;
-                pictureBox6.Height = image.Height;
-                pictureBox6.Width = image.Width;
-                pictureBox7.Image = image;
-                pictureBox7.Height = image.Height;
-                pictureBox7.Width = image.Width;
-                pictureBox8.Image = image;
-                pictureBox8.Height = image.Height;
-                pictureBox8.Width = image.Width;
-                pictureBox9.Image = image;
-                pictureBox9.Height = image.Height;
-                pictureBox9.Width = image.Width;
-                pictureBox10.Image = image;
-                pictureBox10.Height = image.Height;
-                pictureBox10.Width = image.Width;
+                Picture(image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
                 image = Image.FromFile(@"..\..\Resources\Oop.png");
-                pictureBox3.Image = image;
-                pictureBox3.Height = image.Height;
-                pictureBox3.Width = image.Width;
-                pictureBox4.Image = image;
-                pictureBox4.Height = image.Height;
-                pictureBox4.Width = image.Width;
-                pictureBox5.Image = image;
-                pictureBox5.Height = image.Height;
-                pictureBox5.Width = image.Width;
-                pictureBox6.Image = image;
-                pictureBox6.Height = image.Height;
-                pictureBox6.Width = image.Width;
-                pictureBox7.Image = image;
-                pictureBox7.Height = image.Height;
-                pictureBox7.Width = image.Width;
-                pictureBox8.Image = image;
-                pictureBox8.Height = image.Height;
-                pictureBox8.Width = image.Width;
-                pictureBox9.Image = image;
-                pictureBox9.Height = image.Height;
-                pictureBox9.Width = image.Width;
-                pictureBox10.Image = image;
-                pictureBox10.Height = image.Height;
-                pictureBox10.Width = image.Width;
+                Picture(image);
             }
             if (Paduin.FinalPaduinCharacter == 1)
             {
@@ -311,7 +218,7 @@ namespace WindowsFormsApplication1
             {
                 timer.Stop();
             }
-            
+
             //if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
             //{
             //    Drunk++;
@@ -324,46 +231,84 @@ namespace WindowsFormsApplication1
 
             if (pictureBox3.Bounds.IntersectsWith(paduin.Bounds))
             {
-                //Question question = new Question();
-                //question.ShowDialog();
-                
-                Score++;
-                pictureBox3.Hide();
+                timer.Stop();
+                q = new Question();
+                q.ShowDialog();
+
+                if (Question.FinalAnswer == 1)
+                {
+                    directionCategory1 = Direction.None;
+                    pictureBox3.Hide();
+                    pictureBox3.Location = new Point(pictureBox3.Location.X - paduin.Location.X + 60,
+                        pictureBox3.Location.Y);
+                    timer.Start();
+                }
+                else if (Question.FinalAnswer == 2 || Question.FinalAnswer == 3 || Question.FinalAnswer == 4)
+                {
+                    
+                    directionCategory1 = Direction.None;
+                    pictureBox3.Hide();
+                    pictureBox3.Location = new Point(pictureBox3.Location.X - paduin.Location.X + 60,
+                        pictureBox3.Location.Y);
+                    Score += 30;
+                    timer.Start();
+                }
             }
             if (pictureBox4.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory2 = Direction.None;
                 pictureBox4.Hide();
+                pictureBox4.Location = new Point(pictureBox4.Location.X - paduin.Location.X + 60,
+                        pictureBox4.Location.Y);
             }
             if (pictureBox5.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory3 = Direction.None;
                 pictureBox5.Hide();
+                pictureBox5.Location = new Point(pictureBox5.Location.X - paduin.Location.X + 60,
+                        pictureBox5.Location.Y);
             }
             if (pictureBox6.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory4 = Direction.None;
                 pictureBox6.Hide();
+                pictureBox6.Location = new Point(pictureBox6.Location.X - paduin.Location.X + 60,
+                        pictureBox6.Location.Y);
             }
             if (pictureBox7.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory5 = Direction.None;
                 pictureBox7.Hide();
+                pictureBox7.Location = new Point(pictureBox7.Location.X - paduin.Location.X + 60,
+                        pictureBox7.Location.Y);
             }
             if (pictureBox8.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory6 = Direction.None;
                 pictureBox8.Hide();
+                pictureBox8.Location = new Point(pictureBox8.Location.X - paduin.Location.X + 60,
+                        pictureBox8.Location.Y);
             }
             if (pictureBox9.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory7 = Direction.None;
                 pictureBox9.Hide();
+                pictureBox9.Location = new Point(pictureBox9.Location.X - paduin.Location.X + 60,
+                        pictureBox9.Location.Y);
             }
             if (pictureBox10.Bounds.IntersectsWith(paduin.Bounds))
             {
                 Score++;
+                directionCategory8 = Direction.None;
                 pictureBox10.Hide();
+                pictureBox10.Location = new Point(pictureBox10.Location.X - paduin.Location.X + 60,
+                        pictureBox10.Location.Y);
             }
 
 
@@ -408,8 +353,8 @@ namespace WindowsFormsApplication1
                 directionCategory3 = Direction.None;
                 pictureBox5.Left -= 580;
             }
-            
-            
+
+
             //Forth Category 
             if (enemyBox.Location.Y == pictureBox6.Location.Y)
             {
@@ -483,18 +428,38 @@ namespace WindowsFormsApplication1
             if (directionPaduin == Direction.Right)
             {
                 paduin.Left += 3;
+                if (paduin.Left >= 750)
+                {
+                    paduin.Left = 700;
+                    directionPaduin = Direction.Left;
+                }
             }
             if (directionPaduin == Direction.Left)
             {
                 paduin.Left -= 3;
+                if (paduin.Left <= 100)
+                {
+                    paduin.Left = 150;
+                    directionPaduin = Direction.Right;
+                }
             }
             if (directionPaduin == Direction.Up)
             {
                 paduin.Top -= 3;
+                if (paduin.Top <= 10)
+                {
+                    paduin.Top = 50;
+                    directionPaduin = Direction.Down;
+                }
             }
             if (directionPaduin == Direction.Down)
             {
                 paduin.Top += 3;
+                if (paduin.Top >= 280)
+                {
+                    paduin.Top = 230;
+                    directionPaduin = Direction.Up;
+                }
             }
 
 
@@ -549,10 +514,6 @@ namespace WindowsFormsApplication1
                     directionCharacter = Direction.Up;
                 }
             }
-
-
-            //Paduin direction
-            //?????
 
             //Assistant direction - only Up and Down
             if (directionAssistant == Direction.Up)
@@ -669,7 +630,35 @@ namespace WindowsFormsApplication1
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void Picture(Image image)
+        {
+            pictureBox3.Image = image;
+            pictureBox3.Height = image.Height;
+            pictureBox3.Width = image.Width;
+            pictureBox4.Image = image;
+            pictureBox4.Height = image.Height;
+            pictureBox4.Width = image.Width;
+            pictureBox5.Image = image;
+            pictureBox5.Height = image.Height;
+            pictureBox5.Width = image.Width;
+            pictureBox6.Image = image;
+            pictureBox6.Height = image.Height;
+            pictureBox6.Width = image.Width;
+            pictureBox7.Image = image;
+            pictureBox7.Height = image.Height;
+            pictureBox7.Width = image.Width;
+            pictureBox8.Image = image;
+            pictureBox8.Height = image.Height;
+            pictureBox8.Width = image.Width;
+            pictureBox9.Image = image;
+            pictureBox9.Height = image.Height;
+            pictureBox9.Width = image.Width;
+            pictureBox10.Image = image;
+            pictureBox10.Height = image.Height;
+            pictureBox10.Width = image.Width;
         }
     }
 }
