@@ -78,6 +78,7 @@
     <Compile Include="Interface\IPadaun\IPaduinStudents\ISashoFett.cs" />
     <Compile Include="Interface\IPadaun\IPaduinStudents\IWightJan.cs" />
     <Compile Include="Interface\JediType.cs" />
+    <Compile Include="JediQuest.cs" />
     <Compile Include="Paduins\PaduinType.cs" />
     <Compile Include="Jedi.cs">
       <SubType>Form</SubType>

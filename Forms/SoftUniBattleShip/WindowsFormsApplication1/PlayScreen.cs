@@ -319,11 +319,12 @@ namespace WindowsFormsApplication1
                 pictureBox3.Location = new Point(pictureBox3.Location.X, pictureBox3.Location.Y);
                 directionCategory1 = Direction.Right;
             }
-            if (pictureBox3.Left == 600)
+            if (pictureBox3.Left >= 600)
             {
-                pictureBox3.Visible = false;
                 directionCategory1 = Direction.None;
-                pictureBox3.Left -= 580;
+                pictureBox3.Hide();
+                pictureBox3.Location = new Point(pictureBox3.Location.X - 580,
+                        pictureBox3.Location.Y);
             }
 
             //Second Category
@@ -333,11 +334,12 @@ namespace WindowsFormsApplication1
                 pictureBox4.Location = new Point(pictureBox4.Location.X, pictureBox4.Location.Y);
                 directionCategory2 = Direction.Right;
             }
-            if (pictureBox4.Left == 600)
+            if (pictureBox4.Left >= 600)
             {
-                pictureBox4.Visible = false;
                 directionCategory2 = Direction.None;
-                pictureBox4.Left -= 580;
+                pictureBox4.Hide();
+                pictureBox4.Location = new Point(pictureBox4.Location.X - 580,
+                        pictureBox4.Location.Y);
             }
 
             //Third Category
@@ -347,11 +349,12 @@ namespace WindowsFormsApplication1
                 pictureBox5.Location = new Point(pictureBox5.Location.X, pictureBox5.Location.Y);
                 directionCategory3 = Direction.Right;
             }
-            if (pictureBox5.Left == 600)
+            if (pictureBox5.Left >= 600)
             {
-                pictureBox5.Visible = false;
                 directionCategory3 = Direction.None;
-                pictureBox5.Left -= 580;
+                pictureBox5.Hide();
+                pictureBox5.Location = new Point(pictureBox5.Location.X - 580,
+                        pictureBox5.Location.Y);
             }
 
 
@@ -362,11 +365,12 @@ namespace WindowsFormsApplication1
                 pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y);
                 directionCategory4 = Direction.Right;
             }
-            if (pictureBox6.Left == 600)
+            if (pictureBox6.Left >= 600)
             {
-                pictureBox6.Visible = false;
                 directionCategory4 = Direction.None;
-                pictureBox6.Left -= 580;
+                pictureBox6.Hide();
+                pictureBox6.Location = new Point(pictureBox6.Location.X - 580,
+                        pictureBox6.Location.Y);
             }
 
             //Fifth Category
@@ -376,11 +380,12 @@ namespace WindowsFormsApplication1
                 pictureBox7.Location = new Point(pictureBox7.Location.X, pictureBox7.Location.Y);
                 directionCategory5 = Direction.Right;
             }
-            if (pictureBox7.Left == 600)
+            if (pictureBox7.Left >= 600)
             {
-                pictureBox7.Visible = false;
                 directionCategory5 = Direction.None;
-                pictureBox7.Left -= 580;
+                pictureBox7.Hide();
+                pictureBox7.Location = new Point(pictureBox7.Location.X - 580,
+                        pictureBox7.Location.Y);
             }
 
             //Sixth Category
@@ -390,11 +395,12 @@ namespace WindowsFormsApplication1
                 pictureBox8.Location = new Point(pictureBox8.Location.X, pictureBox8.Location.Y);
                 directionCategory6 = Direction.Right;
             }
-            if (pictureBox8.Left == 600)
+            if (pictureBox8.Left >= 600)
             {
-                pictureBox8.Visible = false;
                 directionCategory6 = Direction.None;
-                pictureBox8.Left -= 580;
+                pictureBox8.Hide();
+                pictureBox8.Location = new Point(pictureBox8.Location.X - 580,
+                        pictureBox8.Location.Y);
             }
 
             //Seventh Category
@@ -404,11 +410,12 @@ namespace WindowsFormsApplication1
                 pictureBox9.Location = new Point(pictureBox9.Location.X, pictureBox9.Location.Y);
                 directionCategory7 = Direction.Right;
             }
-            if (pictureBox9.Left == 600)
+            if (pictureBox9.Left >= 600)
             {
-                pictureBox9.Visible = false;
                 directionCategory7 = Direction.None;
-                pictureBox9.Left -= 580;
+                pictureBox9.Hide();
+                pictureBox9.Location = new Point(pictureBox9.Location.X - 580,
+                        pictureBox9.Location.Y);
             }
 
             //Eight Category
@@ -418,11 +425,12 @@ namespace WindowsFormsApplication1
                 pictureBox10.Location = new Point(pictureBox10.Location.X, pictureBox10.Location.Y);
                 directionCategory8 = Direction.Right;
             }
-            if (pictureBox10.Left == 600)
+            if (pictureBox10.Left >= 600)
             {
-                pictureBox10.Visible = false;
                 directionCategory8 = Direction.None;
-                pictureBox10.Left -= 580;
+                pictureBox10.Hide();
+                pictureBox10.Location = new Point(pictureBox10.Location.X - 580,
+                        pictureBox10.Location.Y);
             }
             //Paduins Direction
             if (directionPaduin == Direction.Right)

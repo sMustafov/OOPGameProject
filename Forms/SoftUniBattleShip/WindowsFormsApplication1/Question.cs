@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 
         public Question()
         {
+
             InitializeComponent();
         }
 
@@ -22,7 +23,26 @@ namespace WindowsFormsApplication1
 
         private void Question_Load(object sender, EventArgs e)
         {
-
+            Random random = new Random();
+            int randNum = random.Next(1, 5);
+            string question = null;
+            if (ChooseCategoryScreen.FinalCategory == 1)
+            {
+                question = JediQuest.cShrap(randNum);
+            }
+            else if (ChooseCategoryScreen.FinalCategory == 2)
+            {
+                question = JediQuest.Java(randNum);
+            }
+            else if (ChooseCategoryScreen.FinalCategory == 4)
+            {
+                question = JediQuest.OOP(randNum);
+            }
+            else if (ChooseCategoryScreen.FinalCategory == 3)
+            {
+                question = JediQuest.cPlusPlus(randNum);
+            }
+            label1.Text = question;
         }
 
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
@@ -39,7 +59,7 @@ namespace WindowsFormsApplication1
         {
             FinalAnswer = answer;
             this.Close();
-            
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
