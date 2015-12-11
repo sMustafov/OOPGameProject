@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Quests;
 
 namespace WindowsFormsApplication1
 {
     public partial class Question : Form
     {
-        public static int FinalAnswer;
+        public static int PlayerAnswer;
         private int answer;
         private Question question;
         private PlayScreen pl;
@@ -23,26 +24,26 @@ namespace WindowsFormsApplication1
 
         private void Question_Load(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int randNum = random.Next(1, 5);
-            string question = null;
+            //using Quest/ QuestFactory
+            Quest quest = null;
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-                question = JediQuest.cShrap(randNum);
+               quest = QuestFactory.GenerateQuest(QuestionType.Cs);
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-                question = JediQuest.Java(randNum);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 4)
-            {
-                question = JediQuest.OOP(randNum);
+                quest = QuestFactory.GenerateQuest(QuestionType.Java);
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-                question = JediQuest.cPlusPlus(randNum);
+                quest = QuestFactory.GenerateQuest(QuestionType.Cpp);
             }
-            label1.Text = question;
+            else if (ChooseCategoryScreen.FinalCategory == 4)
+            {
+                quest = QuestFactory.GenerateQuest(QuestionType.Oop);
+            }
+            //show quest
+            label1.Text = quest.ToString();
         }
 
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace WindowsFormsApplication1
 
         private void Save_Click(object sender, EventArgs e)
         {
-            FinalAnswer = answer;
+            PlayerAnswer = answer;
             this.Close();
 
         }

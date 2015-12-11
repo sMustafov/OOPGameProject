@@ -235,7 +235,7 @@ namespace WindowsFormsApplication1
                 q = new Question();
                 q.ShowDialog();
 
-                if (Question.FinalAnswer == 1)
+                if (Question.PlayerAnswer == 1)
                 {
                     directionCategory1 = Direction.None;
                     pictureBox3.Hide();
@@ -243,7 +243,7 @@ namespace WindowsFormsApplication1
                         pictureBox3.Location.Y);
                     timer.Start();
                 }
-                else if (Question.FinalAnswer == 2 || Question.FinalAnswer == 3 || Question.FinalAnswer == 4)
+                else if (Question.PlayerAnswer == 2 || Question.PlayerAnswer == 3 || Question.PlayerAnswer == 4)
                 {
                     
                     directionCategory1 = Direction.None;
