@@ -5,7 +5,7 @@
 
     public class QuestFactory
     {
-        private static readonly List<Quest> questionList = new List<Quest>
+        private static readonly List<Quest> QuestionList = new List<Quest>
         {
             new Quest("C# namespace is different from Java package. Answer with: \"true\" or \"false\".", "false", QuestionType.Cs),
             new Quest("Checked exceptions are not present in C#. Answer with: \"true\" or \"false\".","true", QuestionType.Cs),
@@ -24,12 +24,6 @@
             new Quest("C++ is strongly typed language. Answer with: \"true\" or \"false\".", "false", QuestionType.Cpp),
             new Quest("Does C++ support exception handling? Answer with: \"true\" or \"false\".", "false", QuestionType.Cpp),
             new Quest("C++ programs can be run only with special IDE. Answer with: \"true\" or \"false\"", "false", QuestionType.Cpp),
-
-
-
-
-
-
         };
 
         
@@ -40,14 +34,14 @@
         /// <returns>Question</returns>
         public static Quest GenerateQuest(QuestionType questionType)
         {
-            int questionListSize = questionList.Count;
+            int questionListSize = QuestionList.Count;
 
             Random random = new Random();
             try
             {
                 do
                 {
-                    var question = questionList[random.Next(1, questionListSize)];
+                    var question = QuestionList[random.Next(1, questionListSize)];
 
                     if (question.Type == questionType)
                     {
@@ -58,7 +52,7 @@
             catch (IndexOutOfRangeException)
             {
                 Console.WriteLine("Error check code");
-                return questionList[1];
+                return QuestionList[1];
             }
         }
     }

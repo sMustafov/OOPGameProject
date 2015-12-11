@@ -4,12 +4,11 @@
 
     public class Quest
     {
+        public string Question { get; private set ; }
 
-        public string Question { get; set; }
+        public string Answer { get; private set ; }
 
-        public string Answer { get; set; }
-
-        public QuestionType Type { get; set; }
+        public QuestionType Type { get; private set; }
 
         //constructor
         public Quest(string question, string answer, QuestionType type)
@@ -19,6 +18,11 @@
             this.Type = type;
         }
 
+        /// <summary>
+        /// This method checks weather the answer is correct
+        /// </summary>
+        /// <param name="playerAnswer">Answer to be checked</param>
+        /// <returns>True if correct, false if not</returns>
         public bool IsAnswerCorrect(string playerAnswer)
         {
             return String.Compare(playerAnswer, this.Answer, StringComparison.OrdinalIgnoreCase) == 0;
