@@ -19,7 +19,7 @@
         }
 
         /// <summary>
-        /// This method checks weather the answer is correct
+        /// This method checks whether the answer is correct
         /// </summary>
         /// <param name="playerAnswer">Answer to be checked</param>
         /// <returns>True if correct, false if not</returns>

@@ -22,28 +22,36 @@ namespace WindowsFormsApplication1
 
         }
 
+        //Load Question when get hit
         private void Question_Load(object sender, EventArgs e)
+        {   
+            label1.Text = LoadQuest(ChooseCategoryScreen.FinalCategory).ToString();
+        }
+
+        /// <summary>
+        /// This method loads a question from specific category
+        /// </summary>
+        /// <param name="category">Picked category</param>
+        /// <returns>Question</returns>
+        private static Quest LoadQuest(int category)
         {
-            //using Quest/ QuestFactory
             Quest quest = null;
-            if (ChooseCategoryScreen.FinalCategory == 1)
+            switch (category)
             {
-               quest = QuestFactory.GenerateQuest(QuestionType.Cs);
+                case 1:
+                    quest = QuestFactory.GenerateQuest(QuestionType.Cs);
+                    break;
+                case 2:
+                    quest = QuestFactory.GenerateQuest(QuestionType.Java);
+                    break;
+                case 3:
+                    quest = QuestFactory.GenerateQuest(QuestionType.Cpp);
+                    break;
+                case 4:
+                    quest = QuestFactory.GenerateQuest(QuestionType.Oop);
+                    break;
             }
-            else if (ChooseCategoryScreen.FinalCategory == 2)
-            {
-                quest = QuestFactory.GenerateQuest(QuestionType.Java);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 3)
-            {
-                quest = QuestFactory.GenerateQuest(QuestionType.Cpp);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 4)
-            {
-                quest = QuestFactory.GenerateQuest(QuestionType.Oop);
-            }
-            //show quest
-            label1.Text = quest.ToString();
+            return quest;
         }
 
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
