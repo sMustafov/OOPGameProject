@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Jedis.AsistentJedi;
 using WindowsFormsApplication1.Jedis.JediKnight;
@@ -87,113 +88,73 @@ namespace WindowsFormsApplication1
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
-                Image image = Image.FromFile(nakov.CharacterImage);
-
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                JediImageValidation(nakov, enemyBox);
             }
             else if (Jedi.FinalCharacter == 2)
             {
                 AchoUanKenobi acho = new AchoUanKenobi();
-                Image image = Image.FromFile(acho.CharacterImage);
-
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                JediImageValidation(acho, enemyBox);
             }
             else if (Jedi.FinalCharacter == 3)
             {
                 RoyalSkyWalker royal = new RoyalSkyWalker();
-                Image image = Image.FromFile(royal.CharacterImage);
-
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                JediImageValidation(royal, enemyBox);
             }
             else if (Jedi.FinalCharacter == 4)
             {
                 NaskoSolo nasko = new NaskoSolo();
-                Image image = Image.FromFile(nasko.CharacterImage);
-
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                JediImageValidation(nasko, enemyBox);
             }
             if (Jedi.FinalAssistantCharacter == 1)
             {
                 ChubiEdo edo = new ChubiEdo();
-                Image image = Image.FromFile(edo.CharacterImage);
-
-                pictureBox1.Image = image;
-                pictureBox1.Height = image.Height;
-                pictureBox1.Width = image.Width;
+                AssistantImageValidation(edo, pictureBox1);
             }
             else if (Jedi.FinalAssistantCharacter == 2)
             {
                 R2Trifon2 trifon = new R2Trifon2();
-                Image image = Image.FromFile(trifon.CharacterImage);
-
-                pictureBox1.Image = image;
-                pictureBox1.Height = image.Height;
-                pictureBox1.Width = image.Width;
+                AssistantImageValidation(trifon, pictureBox1);
             }
 
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-                image = Image.FromFile(@"..\..\Resources\Csharp.png");
-                Picture(image);
+                string path = @"..\..\Resources\Csharp.png";
+                CategoryValidation(path);
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-                image = Image.FromFile(@"..\..\Resources\Java.png");
-                Picture(image);
+                string path = @"..\..\Resources\Java.png";
+                CategoryValidation(path);
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-                image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
-                Picture(image);
+                string path = @"..\..\Resources\Cplusplus.png";
+                CategoryValidation(path);
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
-                image = Image.FromFile(@"..\..\Resources\Oop.png");
-                Picture(image);
+                string path = @"..\..\Resources\Oop.png";
+                CategoryValidation(path);
             }
             if (Paduin.FinalPaduinCharacter == 1)
             {
                 CountSevgin sevgin = new CountSevgin();
-                Image image = Image.FromFile(sevgin.CharacterImage);
-
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                PaduinImageValidation(sevgin, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 2)
             {
                 Karnobatman karnobatman = new Karnobatman();
-                Image image = Image.FromFile(karnobatman.CharacterImage);
-
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                PaduinImageValidation(karnobatman, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 3)
             {
                 SashoFett sasho = new SashoFett();
-                Image image = Image.FromFile(sasho.CharacterImage);
-
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                PaduinImageValidation(sasho, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 4)
             {
                 WightJan jan = new WightJan();
-                Image image = Image.FromFile(jan.CharacterImage);
-
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                PaduinImageValidation(jan, paduin);
             }
         }
 
@@ -211,8 +172,14 @@ namespace WindowsFormsApplication1
         private int Drunk = 0;
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
+            if (Score >= 100 || Drunk >= 100)
+            {
+                Score = 100;
+            }
+
             paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", Score);
             jediDrunk.Text = String.Format("Jedi Drunk : {0} %", Drunk);
+
 
             if (Score == 100 || Drunk == 100)
             {
@@ -667,6 +634,65 @@ namespace WindowsFormsApplication1
             pictureBox10.Image = image;
             pictureBox10.Height = image.Height;
             pictureBox10.Width = image.Width;
+        }
+        private void PaduinImageValidation(Paduins.Paduin.Paduin paduinCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(paduinCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + paduinCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+        private void JediImageValidation(Jedis.Jedi jediCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(jediCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + jediCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+        private void AssistantImageValidation(Jedis.AsistentJedi.Assistant assistantCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(assistantCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + assistantCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+
+        private void CategoryValidation(string path)
+        {
+            try
+            {
+                image = Image.FromFile(path);
+
+                Picture(image);
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The category path is not in the correct format !");
+            }
         }
     }
 }
