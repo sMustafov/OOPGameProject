@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayScreen));
-
             this.enemyBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,7 +46,10 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.paduin = new System.Windows.Forms.PictureBox();
-
+            this.redWall = new System.Windows.Forms.PictureBox();
+            this.redWall2 = new System.Windows.Forms.PictureBox();
+            this.redWall3 = new System.Windows.Forms.PictureBox();
+            this.redWall4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.enemyBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,19 +61,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paduin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).BeginInit();
             this.SuspendLayout();
             // 
             // enemyBox
             // 
-
             this.enemyBox.BackColor = System.Drawing.Color.Transparent;
             this.enemyBox.Location = new System.Drawing.Point(12, 224);
-            this.enemyBox.Name = "pictureBox2";
+            this.enemyBox.Name = "enemyBox";
             this.enemyBox.Size = new System.Drawing.Size(50, 65);
             this.enemyBox.TabIndex = 1;
             this.enemyBox.TabStop = false;
             this.enemyBox.Click += new System.EventHandler(this.pictureBox2_Click);
-
             // 
             // pictureBox1
             // 
@@ -197,12 +200,48 @@
             // 
             this.paduin.BackColor = System.Drawing.Color.Transparent;
             this.paduin.Image = ((System.Drawing.Image)(resources.GetObject("paduin.Image")));
-            this.paduin.Location = new System.Drawing.Point(410, 47);
+            this.paduin.Location = new System.Drawing.Point(411, 160);
             this.paduin.Name = "paduin";
             this.paduin.Size = new System.Drawing.Size(50, 65);
             this.paduin.TabIndex = 8;
             this.paduin.TabStop = false;
             this.paduin.Click += new System.EventHandler(this.paduin_Click);
+            // 
+            // redWall
+            // 
+            this.redWall.Location = new System.Drawing.Point(85, 37);
+            this.redWall.Name = "redWall";
+            this.redWall.Size = new System.Drawing.Size(15, 312);
+            this.redWall.TabIndex = 16;
+            this.redWall.TabStop = false;
+            this.redWall.Click += new System.EventHandler(this.redWall_Click);
+            // 
+            // redWall2
+            // 
+            this.redWall2.Location = new System.Drawing.Point(795, 37);
+            this.redWall2.Name = "redWall2";
+            this.redWall2.Size = new System.Drawing.Size(15, 312);
+            this.redWall2.TabIndex = 17;
+            this.redWall2.TabStop = false;
+            this.redWall2.Click += new System.EventHandler(this.redWall2_Click);
+            // 
+            // redWall3
+            // 
+            this.redWall3.Location = new System.Drawing.Point(85, 334);
+            this.redWall3.Name = "redWall3";
+            this.redWall3.Size = new System.Drawing.Size(725, 15);
+            this.redWall3.TabIndex = 18;
+            this.redWall3.TabStop = false;
+            this.redWall3.Click += new System.EventHandler(this.redWall3_Click);
+            // 
+            // redWall4
+            // 
+            this.redWall4.Location = new System.Drawing.Point(85, 37);
+            this.redWall4.Name = "redWall4";
+            this.redWall4.Size = new System.Drawing.Size(725, 15);
+            this.redWall4.TabIndex = 19;
+            this.redWall4.TabStop = false;
+            this.redWall4.Click += new System.EventHandler(this.redWall4_Click);
             // 
             // PlayScreen
             // 
@@ -213,6 +252,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 361);
+            this.Controls.Add(this.redWall4);
+            this.Controls.Add(this.redWall3);
+            this.Controls.Add(this.redWall2);
+            this.Controls.Add(this.redWall);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -229,9 +272,6 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-
-            this.Controls.Add(this.enemyBox);
-
             this.MaximizeBox = false;
             this.Name = "PlayScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -249,6 +289,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paduin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +314,9 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox paduin;
+        private System.Windows.Forms.PictureBox redWall;
+        private System.Windows.Forms.PictureBox redWall2;
+        private System.Windows.Forms.PictureBox redWall3;
+        private System.Windows.Forms.PictureBox redWall4;
     }
 }
