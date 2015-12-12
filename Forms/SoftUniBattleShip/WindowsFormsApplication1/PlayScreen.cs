@@ -67,7 +67,6 @@ namespace WindowsFormsApplication1
             this.directionCategory8 = Direction.None;
             this.directionCategory9 = Direction.None;
             this.directionCategory10 = Direction.None;
-            this.directionCategory11 = Direction.None;
 
             this.pictureBox3.Visible = false;
             this.pictureBox4.Visible = false;
@@ -79,7 +78,6 @@ namespace WindowsFormsApplication1
             this.pictureBox10.Visible = false;
             this.pictureBox11.Visible = false;
             this.pictureBox12.Visible = false;
-            this.pictureBox13.Visible = false;
 
             //Beer.Visible = false;
 
@@ -93,10 +91,10 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        private void JediInitialization()
+        
+        //Walls
+        private void WallsInitialization()
         {
-            //Walls
             Image image = Image.FromFile(@"..\..\Resources\redWall.jpg");
             redWall.Image = image;
             redWall.Height = image.Height;
@@ -104,7 +102,7 @@ namespace WindowsFormsApplication1
             redWall2.Image = image;
             redWall2.Height = image.Height;
             redWall2.Width = image.Width;
-            
+
             Image image2 = Image.FromFile(@"..\..\Resources\redWall2.jpg");
             redWall3.Image = image2;
             redWall3.Height = image2.Height;
@@ -112,8 +110,12 @@ namespace WindowsFormsApplication1
             redWall4.Image = image2;
             redWall4.Height = image2.Height;
             redWall4.Width = image2.Width;
-
-            //Jedi
+        }
+        
+       
+        private void JediInitialization()
+        {
+             //Jedi
             if (Jedi.FinalCharacter == 1)
             {
                 this.jedi = JediFactory.CreatJedi(JediType.JoNakov);
@@ -197,6 +199,24 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void BeerInitialization()
+        {
+            try
+            {
+                Image image = Image.FromFile(@"..\..\Resources\Beer.png");
+                pictureBox11.Image = image;
+                pictureBox11.Width = image.Width;
+                pictureBox11.Height = image.Height;
+                pictureBox12.Image = image;
+                pictureBox12.Width = image.Width;
+                pictureBox12.Height = image.Height;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The beer path is not in the correct format");
+            }
+        }
+
         private void PlayScreen_Load(object sender, EventArgs e)
         {
             JediInitialization();
@@ -204,6 +224,10 @@ namespace WindowsFormsApplication1
             PicturQeuestionsInitialization();
 
             PaduanInitialization();
+
+            WallsInitialization();
+
+            BeerInitialization();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -230,16 +254,6 @@ namespace WindowsFormsApplication1
             {
                 this.timer.Stop();
             }
-
-            //if (Beer.Bounds.IntersectsWith(pictureBox13.Bounds))
-            //{
-            //    Drunk++;
-            //}
-            //if (Beer.Bounds.IntersectsWith(enemyBox.Bounds))
-            //{
-            //   Drunk++;
-            //}
-
 
             if (this.pictureBox3.Bounds.IntersectsWith(this.paduin.Bounds))
             {
@@ -325,7 +339,7 @@ namespace WindowsFormsApplication1
                 this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
-                this.pictureBox11.Location = new Point(this.pictureBox11.Location.X - this.paduin.Location.X - 60, this.pictureBox11.Location.Y);
+                this.pictureBox11.Location = new Point(824, 120);
             }
 
             if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
@@ -333,16 +347,9 @@ namespace WindowsFormsApplication1
                 this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory10 = Direction.None;
                 this.pictureBox12.Hide();
-                this.pictureBox12.Location = new Point(this.pictureBox12.Location.X - this.paduin.Location.X - 60, this.pictureBox12.Location.Y);
+                this.pictureBox12.Location = new Point(824, 249);
             }
-
-            if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
-            {
-                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
-                this.directionCategory11 = Direction.None;
-                this.pictureBox13.Hide();
-                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X - this.paduin.Location.X - 60, this.pictureBox13.Location.Y);
-            }
+            
             //First Category
             if (this.enemyBox.Location.Y == this.pictureBox3.Location.Y)
             {
@@ -457,45 +464,31 @@ namespace WindowsFormsApplication1
             }
 
             //BeerOne Category
-            if (this.enemyBox.Location.Y == this.pictureBox11.Location.Y)
+            if (this.pictureBox1.Location.Y == this.pictureBox11.Location.Y)
             {
                 this.pictureBox11.Visible = true;
                 this.pictureBox11.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
                 this.directionCategory9 = Direction.Left;
             }
-            if (this.pictureBox11.Left >= 1000)
+            if (this.pictureBox11.Left <= 100)
             {
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
-                this.pictureBox11.Location = new Point(this.pictureBox11.Location.X + 580, this.pictureBox11.Location.Y);
+                this.pictureBox11.Location = new Point(822, 120);
             }
 
             //BeerTwo Category
-            if (this.enemyBox.Location.Y == this.pictureBox12.Location.Y)
+            if (this.pictureBox1.Location.Y == this.pictureBox12.Location.Y)
             {
                 this.pictureBox12.Visible = true;
-                this.pictureBox12.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
+                this.pictureBox12.Location = new Point(this.pictureBox12.Location.X, this.pictureBox12.Location.Y);
                 this.directionCategory10 = Direction.Left;
             }
-            if (this.pictureBox12.Left >= 1000)
+            if (this.pictureBox12.Left <= 100)
             {
                 this.directionCategory10 = Direction.None;
-                this.pictureBox13.Hide();
-                this.pictureBox13.Location = new Point(this.pictureBox12.Location.X + 580, this.pictureBox12.Location.Y);
-            }
-
-            //BeerThree Category
-            if (this.enemyBox.Location.Y == this.pictureBox13.Location.Y)
-            {
-                this.pictureBox13.Visible = true;
-                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X, this.pictureBox13.Location.Y);
-                this.directionCategory11 = Direction.Left;
-            }
-            if (this.pictureBox13.Left >= 1000)
-            {
-                this.directionCategory11 = Direction.None;
-                this.pictureBox13.Hide();
-                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X + 580, this.pictureBox13.Location.Y);
+                this.pictureBox12.Hide();
+                this.pictureBox12.Location = new Point(822, 249);
             }
 
             //Paduins Direction
@@ -529,9 +522,9 @@ namespace WindowsFormsApplication1
             if (this.directionPaduin == Direction.Down)
             {
                 this.paduin.Top += 3;
-                if (this.paduin.Top >= 280)
+                if (this.paduin.Top >= 270)
                 {
-                    this.paduin.Top = 230;
+                    this.paduin.Top = 220;
                     this.directionPaduin = Direction.Up;
                 }
             }
@@ -579,20 +572,16 @@ namespace WindowsFormsApplication1
                 this.pictureBox10.Left += 4;
             }
 
-            if (this.directionCategory9 == Direction.Right)
+            if (this.directionCategory9 == Direction.Left)
             {
-                this.pictureBox10.Left += 4;
+                this.pictureBox11.Left -= 4;
             }
 
-            if (this.directionCategory10 == Direction.Right)
+            if (this.directionCategory10 == Direction.Left)
             {
-                this.pictureBox10.Left += 4;
+                this.pictureBox12.Left -= 4;
             }
-
-            if (this.directionCategory11 == Direction.Right)
-            {
-                this.pictureBox10.Left += 4;
-            }
+            
 
             //Jedi Character direction - only Up and Down
             if (this.directionCharacter == Direction.Up)
@@ -664,9 +653,6 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Space)
             {
-                //Beer = new PictureBox();
-                //Beer.Location = new Point(paduin.Location.X, paduin.Location.Y);
-                //Beer.Visible = true;
                 if (this.directionPaduin == Direction.Right)
                 {
                     this.directionBeer = Direction.Right;
@@ -706,11 +692,6 @@ namespace WindowsFormsApplication1
         }
 
         private void Beer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -762,25 +743,13 @@ namespace WindowsFormsApplication1
             this.pictureBox12.Image = image;
             this.pictureBox12.Height = image.Height;
             this.pictureBox12.Width = image.Width;
-            this.pictureBox13.Image = image;
-            this.pictureBox13.Height = image.Height;
-            this.pictureBox13.Width = image.Width;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void PaduinImageValidation(IPaduin paduinCharacter, PictureBox paduin)
         {
             try
@@ -840,11 +809,6 @@ namespace WindowsFormsApplication1
         }
 
         private void redWall_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click_1(object sender, EventArgs e)
         {
 
         }
