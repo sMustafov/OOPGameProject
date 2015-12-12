@@ -3,43 +3,42 @@ using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
 namespace WindowsFormsApplication1.Paduins.Paduin
 {
+    using AssistantPaduin;
+
     public class CountSevgin : Paduin,ICountSevgin
     {
         private string characterImage = @"..\..\Resources\Sevgin.png";
-
-        public CountSevgin(int pointKnowledge, AssistantPaduin.AssistantPaduin asistensPaduin) 
-            : base(pointKnowledge, asistensPaduin)
-        {
-
-        }
 
         public CountSevgin() : base()
         {
             this.PaduinType = PaduinType.CountSevgin;
         }
 
+        public override int BeerPerSecond
+        {
+            get { return this.beerPerSecond; }
+            set { this.beerPerSecond = 3; }
+        }
+
+        public override PaduinType PaduinType { get; set; }
+
+        public override AssistantPaduin AssistantPaduin { get; set; }
+
         public override string CharacterImage
         {
             get { return this.characterImage; }
-            protected set { this.characterImage = value; }
+            set { this.characterImage = value; }
         }
 
-        public int PointKnowledge1
-        {
+        public override int PointKnowledge {
             get { return this.pointKnowledge; }
             set { this.pointKnowledge += value; }
         }
 
-        public new int PaduinPower
+        public override int PaduinPower
         {
             get { return this.paduinPower; }
             set { this.paduinPower = 50; }
-        }
-
-        public int BeerPerSecound
-        {
-            get { return this.beerPerSecond; }
-            set { this.beerPerSecond = 3; }
         }
 
         public override void KnowledgeCalculator()

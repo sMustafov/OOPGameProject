@@ -8,12 +8,25 @@ using WindowsFormsApplication1.Paduins.Paduin;
 
 namespace WindowsFormsApplication1
 {
+    using Interface;
+    using Interface.IJedi;
+    using Interface.IJedi.IAssistants;
+    using Interface.IPadaun.IPaduinStudents;
+    using Jedis;
+
     public partial class PlayScreen : Form
     {
         private Question q;
         private PlayScreen playScreen;
         private int x;
         private int y;
+
+        private IJedi jedi;
+        private IPaduin paduan;
+        private IAssistants asistenntsJedi;
+
+        private int Score;
+        private int Drunk;
 
         private Timer timer = new Timer();
         private Direction directionCharacter;
@@ -83,13 +96,14 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void PlayScreen_Load(object sender, EventArgs e)
+        private void JediInitialization()
         {
 
+            //Jedi
             if (Jedi.FinalCharacter == 1)
             {
-                JoNakov nakov = new JoNakov();
-                Image image = Image.FromFile(nakov.CharacterImage);
+                this.jedi = JediFactory.CreatJedi(JediType.JoNakov);
+                Image image = Image.FromFile(this.jedi.CharacterImage);
 
                 this.enemyBox.Image = image;
                 this.enemyBox.Height = image.Height;
@@ -97,8 +111,8 @@ namespace WindowsFormsApplication1
             }
             else if (Jedi.FinalCharacter == 2)
             {
-                AchoUanKenobi acho = new AchoUanKenobi();
-                Image image = Image.FromFile(acho.CharacterImage);
+                this.jedi = JediFactory.CreatJedi(JediType.AchoUanKenobi);
+                Image image = Image.FromFile(this.jedi.CharacterImage);
 
                 this.enemyBox.Image = image;
                 this.enemyBox.Height = image.Height;
@@ -106,8 +120,8 @@ namespace WindowsFormsApplication1
             }
             else if (Jedi.FinalCharacter == 3)
             {
-                RoyalSkyWalker royal = new RoyalSkyWalker();
-                Image image = Image.FromFile(royal.CharacterImage);
+                this.jedi = JediFactory.CreatJedi(JediType.RoyalSkyWalker);
+                Image image = Image.FromFile(this.jedi.CharacterImage);
 
                 this.enemyBox.Image = image;
                 this.enemyBox.Height = image.Height;
@@ -115,18 +129,19 @@ namespace WindowsFormsApplication1
             }
             else if (Jedi.FinalCharacter == 4)
             {
-                NaskoSolo nasko = new NaskoSolo();
-                Image image = Image.FromFile(nasko.CharacterImage);
+                this.jedi = JediFactory.CreatJedi(JediType.NaskoSolo);
+                Image image = Image.FromFile(this.jedi.CharacterImage);
 
                 this.enemyBox.Image = image;
                 this.enemyBox.Height = image.Height;
                 this.enemyBox.Width = image.Width;
             }
 
+            //AssistentJedi
             if (Jedi.FinalAssistantCharacter == 1)
             {
-                ChubiEdo edo = new ChubiEdo();
-                Image image = Image.FromFile(edo.CharacterImage);
+                this.asistenntsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.ChubiEdo);
+                Image image = Image.FromFile(this.asistenntsJedi.CharacterImage);
 
                 ////Beer pictur incert
                 //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
@@ -138,8 +153,8 @@ namespace WindowsFormsApplication1
             }
             else if (Jedi.FinalAssistantCharacter == 2)
             {
-                R2Trifon2 trifon = new R2Trifon2();
-                Image image = Image.FromFile(trifon.CharacterImage);
+                this.asistenntsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.R2Trifon2);
+                Image image = Image.FromFile(this.asistenntsJedi.CharacterImage);
 
                 ////Beer pictur incert
                 //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
@@ -149,7 +164,10 @@ namespace WindowsFormsApplication1
                 this.pictureBox1.Height = image.Height;
                 this.pictureBox1.Width = image.Width;
             }
+        }
 
+        private void PicturQeuestionsInitialization()
+        {
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
                 this.image = Image.FromFile(@"..\..\Resources\Csharp.png");
@@ -170,13 +188,14 @@ namespace WindowsFormsApplication1
                 this.image = Image.FromFile(@"..\..\Resources\Oop.png");
                 Picture(this.image);
             }
+        }
 
-            
-
+        private void PaduanInitialization()
+        {
             if (Paduin.FinalPaduinCharacter == 1)
             {
-                CountSevgin sevgin = new CountSevgin();
-                Image image = Image.FromFile(sevgin.CharacterImage);
+                this.paduan = new CountSevgin();
+                Image image = Image.FromFile(this.paduan.CharacterImage);
 
                 this.paduin.Image = image;
                 this.paduin.Height = image.Height;
@@ -184,8 +203,8 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 2)
             {
-                Karnobatman karnobatman = new Karnobatman();
-                Image image = Image.FromFile(karnobatman.CharacterImage);
+                this.paduan = new Karnobatman();
+                Image image = Image.FromFile(this.paduan.CharacterImage);
 
                 this.paduin.Image = image;
                 this.paduin.Height = image.Height;
@@ -193,8 +212,8 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 3)
             {
-                SashoFett sasho = new SashoFett();
-                Image image = Image.FromFile(sasho.CharacterImage);
+                this.paduan = new SashoFett();
+                Image image = Image.FromFile(this.paduan.CharacterImage);
 
                 this.paduin.Image = image;
                 this.paduin.Height = image.Height;
@@ -202,13 +221,22 @@ namespace WindowsFormsApplication1
             }
             else if (Paduin.FinalPaduinCharacter == 4)
             {
-                WightJan jan = new WightJan();
-                Image image = Image.FromFile(jan.CharacterImage);
+                this.paduan = new WightJan();
+                Image image = Image.FromFile(this.paduan.CharacterImage);
 
                 this.paduin.Image = image;
                 this.paduin.Height = image.Height;
                 this.paduin.Width = image.Width;
             }
+        }
+
+        private void PlayScreen_Load(object sender, EventArgs e)
+        {
+            JediInitialization();
+
+            PicturQeuestionsInitialization();
+            
+            PaduanInitialization();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -221,8 +249,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private int Score = 0;
-        private int Drunk = 0;
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
             this.paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", this.Score);
@@ -261,14 +287,14 @@ namespace WindowsFormsApplication1
                     this.directionCategory1 = Direction.None;
                     this.pictureBox3.Hide();
                     this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60, this.pictureBox3.Location.Y);
-                    this.Score += 30;
+                    this.Score = this.Score + this.jedi.KnowledgeDamage;
                     this.timer.Start();
                 }
             }
 
             if (this.pictureBox4.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory2 = Direction.None;
                 this.pictureBox4.Hide();
                 this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - this.paduin.Location.X + 60, this.pictureBox4.Location.Y);
@@ -276,7 +302,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox5.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory3 = Direction.None;
                 this.pictureBox5.Hide();
                 this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - this.paduin.Location.X + 60, this.pictureBox5.Location.Y);
@@ -284,7 +310,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox6.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory4 = Direction.None;
                 this.pictureBox6.Hide();
                 this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60, this.pictureBox6.Location.Y);
@@ -292,7 +318,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox7.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory5 = Direction.None;
                 this.pictureBox7.Hide();
                 this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - this.paduin.Location.X + 60, this.pictureBox7.Location.Y);
@@ -300,7 +326,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox8.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory6 = Direction.None;
                 this.pictureBox8.Hide();
                 this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - this.paduin.Location.X + 60, this.pictureBox8.Location.Y);
@@ -308,7 +334,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox9.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory7 = Direction.None;
                 this.pictureBox9.Hide();
                 this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - this.paduin.Location.X + 60, this.pictureBox9.Location.Y);
@@ -316,7 +342,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox10.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.jedi.PointsDamage;
                 this.directionCategory8 = Direction.None;
                 this.pictureBox10.Hide();
                 this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60, this.pictureBox10.Location.Y);
@@ -324,7 +350,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox11.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
                 this.pictureBox11.Location = new Point(this.pictureBox11.Location.X - this.paduin.Location.X - 60, this.pictureBox11.Location.Y);
@@ -332,7 +358,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
                 this.directionCategory10 = Direction.None;
                 this.pictureBox12.Hide();
                 this.pictureBox12.Location = new Point(this.pictureBox12.Location.X - this.paduin.Location.X - 60, this.pictureBox12.Location.Y);
@@ -340,7 +366,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score++;
+                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
                 this.directionCategory11 = Direction.None;
                 this.pictureBox13.Hide();
                 this.pictureBox13.Location = new Point(this.pictureBox13.Location.X - this.paduin.Location.X - 60, this.pictureBox13.Location.Y);
@@ -784,4 +810,6 @@ namespace WindowsFormsApplication1
 
         }
     }
+
+   
 }

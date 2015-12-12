@@ -8,13 +8,13 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
     public class RoyalSkyWalker : JediKnight, IRoyalSkyWalker
     {
         private string characterImage = @"..\..\Resources\Royal.png";
-        public RoyalSkyWalker(int points, Assistant assistant) : base(points, assistant)
-        {
-        }
-
+        
         public RoyalSkyWalker() : base()
         {
             this.JediType = JediType.RoyalSkyWalker;
+            this.knowledgeDamage = 15;
+            this.thePower = 70;
+            this.points = 3;
         }
 
         public override string CharacterImage
@@ -26,19 +26,19 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
         public override int KnowledgeDamage
         {
             get { return this.knowledgeDamage; }
-            set { this.knowledgeDamage = 15; }
+            set { this.knowledgeDamage = value; }
         }
 
         public override int ThePolerOfDrinks
         {
             get { return this.thePower; }
-            set { this.thePower = 70; }
+            set { this.thePower = value; }
         }
 
         public override int PointsDamage
         {
             get { return this.points; }
-            set { this.points += value; }
+            set { this.points = value; }
         }
 
         public override void Points()

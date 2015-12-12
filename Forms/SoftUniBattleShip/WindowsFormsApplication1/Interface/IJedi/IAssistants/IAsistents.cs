@@ -8,7 +8,9 @@
 
         int AssistantLive { get; } // Живота му
 
-        AssistantJediType AssistantJediType { get; set; }
+        AssistantJediType AssistantJediType { get; }
+
+        string CharacterImage { get; }
 
         void Point();
     }

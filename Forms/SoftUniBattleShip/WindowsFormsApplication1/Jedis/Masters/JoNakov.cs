@@ -12,12 +12,14 @@ namespace WindowsFormsApplication1.Jedis.Masters
         public JoNakov() : base()
         {
             this.JediType = JediType.JoNakov;
+            this.knowledgeDamage = 30;
+            this.thePower = 100;
+            this.point = 5;
         }
 
-        public JoNakov(int points, Assistant assistant, string characterImage) : base(points, assistant)
-        {
-            this.CharacterImage = characterImage;
-        }
+        public override JediType JediType { get; set; }
+
+        public override Assistant Assistant { get; set; }
 
         public override string CharacterImage
         {
@@ -40,7 +42,7 @@ namespace WindowsFormsApplication1.Jedis.Masters
         public override int PointsDamage
         {
             get { return this.point; }
-            set { this.point += value; }
+            set { this.point = 5; }
         }
 
         public override void Points()

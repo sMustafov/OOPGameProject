@@ -8,29 +8,31 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
     {
         private string characterImage = @"..\..\Resources\Trifon.png";
 
-        public R2Trifon2(int poits) : base(poits)
-        {
-        }
-
         public R2Trifon2() : base()
         {
             this.AssistantJediType = AssistantJediType.R2Trifon2;
+            this.assistantLives = 40;
+            this.assistantAttack = 2;
         }
+
+        public override AssistantJediType AssistantJediType { get; set; }
+
         public override string CharacterImage
         {
             get { return this.characterImage; }
             set { this.characterImage = value; }
         }
+
         public override int AssistantLive
         {
             get { return this.assistantLives; }
-            set { this.assistantLives = 40; }
+            set { this.assistantLives = value; }
         }
 
         public override int AssistantAttack
         {
             get { return this.assistantAttack; }
-            set { this.assistantAttack = 5; }
+            set { this.assistantAttack = value; }
         }
 
         public override int AssistantPoint

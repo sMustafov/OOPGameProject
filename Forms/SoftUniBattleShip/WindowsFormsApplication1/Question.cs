@@ -26,22 +26,24 @@ namespace WindowsFormsApplication1
             Random random = new Random();
             int randNum = random.Next(1, 5);
             string question = null;
-            if (ChooseCategoryScreen.FinalCategory == 1)
-            {
-                question = JediQuest.cShrap(randNum);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 2)
-            {
-                question = JediQuest.Java(randNum);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 4)
-            {
-                question = JediQuest.OOP(randNum);
-            }
-            else if (ChooseCategoryScreen.FinalCategory == 3)
-            {
-                question = JediQuest.cPlusPlus(randNum);
-            }
+            
+            //if (ChooseCategoryScreen.FinalCategory == 1)
+            //{
+            //    question = JediQuest.cShrap(randNum);
+            //}
+            //else if (ChooseCategoryScreen.FinalCategory == 2)
+            //{
+            //    question = JediQuest.Java(randNum);
+            //}
+            //else if (ChooseCategoryScreen.FinalCategory == 4)
+            //{
+            //    question = JediQuest.OOP(randNum);
+            //}
+            //else if (ChooseCategoryScreen.FinalCategory == 3)
+            //{
+            //    question = JediQuest.cPlusPlus(randNum);
+            //}
+
             this.label1.Text = question;
         }
 

@@ -7,15 +7,16 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
     public class ChubiEdo : Assistant, IChubiEdo
     {
         private string characterImage = @"..\..\Resources\Edo.png";
-
-        public ChubiEdo(int poits) : base(poits)
-        {
-        }
-
+        
         public ChubiEdo() : base()
         {
             this.AssistantJediType = AssistantJediType.ChubiEdo;
+            this.assistantLives = 40;
+            this.assistantAttack = 2;
         }
+
+        public override AssistantJediType AssistantJediType { get; set; }
+
         public override string CharacterImage
         {
             get { return this.characterImage; }
@@ -25,15 +26,15 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
         public override int AssistantLive
         {
             get { return this.assistantLives; }
-            set { this.assistantLives = 40; }
+            set { this.assistantLives = value; }
         }
 
-        public new int AssistantAttack
+        public override int AssistantAttack
         {
             get { return this.assistantAttack; }
-            set { this.assistantAttack = 5; }
+            set { this.assistantAttack = value; }
         }
-
+        
         public override int AssistantPoint
         {
             get { return this.assistantPoints; }

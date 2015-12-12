@@ -8,14 +8,13 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
     public class NaskoSolo : JediKnight, INaskoSolo
     {
         private string characterImage = @"..\..\Resources\Nasko.png";
-
-        public NaskoSolo(int points, Assistant assistant) : base(points, assistant)
-        {
-        }
-
+        
         public NaskoSolo() : base()
         {
             this.JediType = JediType.NaskoSolo;
+            this.knowledgeDamage = 15;
+            this.thePower = 70;
+            this.points = 3;
         }
 
         public override string CharacterImage
@@ -27,19 +26,19 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
         public override int KnowledgeDamage
         {
             get { return this.knowledgeDamage; }
-            set { this.knowledgeDamage = 15; }
+            set { this.knowledgeDamage = value; }
         }
 
         public override int ThePolerOfDrinks
         {
             get { return this.thePower; }
-            set { this.thePower = 70; }
+            set { this.thePower = value; }
         }
 
         public override int PointsDamage
         {
             get { return this.points; }
-            set { this.points += value; }
+            set { this.points = value; }
         }
 
         public override void Points()

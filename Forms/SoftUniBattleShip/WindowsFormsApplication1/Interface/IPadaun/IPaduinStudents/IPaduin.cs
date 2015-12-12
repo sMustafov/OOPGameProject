@@ -4,15 +4,15 @@ namespace WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents
 {
     public interface IPaduin
     {
-        string NickName { get; set; }
+        int PointKnowledge { get; }
 
-        int PointKnowledge { get; set; }
+        int PaduinPower { get; }
 
-        int PaduinPower { get; set; }
+        int BeerPerSecond { set; }
 
-        int BeerPerSecond { set; get; }
+        PaduinType PaduinType { get; }
 
-        PaduinType PaduinType { get; set; }
+        string CharacterImage { get; }
 
         void KnowledgeCalculator();
     }

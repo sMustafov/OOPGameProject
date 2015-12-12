@@ -9,10 +9,6 @@ namespace WindowsFormsApplication1.Jedis.Masters
         protected int thePower;
         protected int point;
 
-        protected Masters(int points, Assistant assistant) : base(points, assistant)
-        {
-        }
-
         protected Masters()
         {
         }

@@ -8,13 +8,13 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
     public class AchoUanKenobi : JediKnight, IAchoUanKenobi
     {
         private string characterImage = @"..\..\Resources\Acho.png";
-        public AchoUanKenobi(int points, Assistant assistant) : base(points, assistant)
-        {
-        }
-
+        
         public AchoUanKenobi()
         {
             this.JediType = JediType.AchoUanKenobi;
+            this.knowledgeDamage = 20;
+            this.thePower = 80;
+            this.points = 4;
         }
         public override string CharacterImage
         {
@@ -24,19 +24,19 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
         public override int KnowledgeDamage
         {
             get { return this.knowledgeDamage; }
-            set { this.knowledgeDamage = 20; }
+            set { this.knowledgeDamage = value; }
         }
 
         public override int ThePolerOfDrinks
         {
             get { return this.thePower; }
-            set { this.thePower = 80; }
+            set { this.thePower = value; }
         }
 
         public override int PointsDamage
         {
             get { return this.points; }
-            set { this.points += value; }
+            set { this.points = value; }
         }
 
         public override void Points()

@@ -78,7 +78,6 @@
     <Compile Include="Interface\IPadaun\IPaduinStudents\ISashoFett.cs" />
     <Compile Include="Interface\IPadaun\IPaduinStudents\IWightJan.cs" />
     <Compile Include="Interface\JediType.cs" />
-    <Compile Include="JediQuest.cs" />
     <Compile Include="Paduins\PaduinType.cs" />
     <Compile Include="Jedi.cs">
       <SubType>Form</SubType>
@@ -111,7 +110,7 @@
     <Compile Include="Paduins\PadoinFactor.cs" />
     <Compile Include="Paduins\Paduin\CountSevgin.cs" />
     <Compile Include="Paduins\Paduin\Karnobatman.cs" />
-    <Compile Include="Paduins\Paduin\Paduin.cs" />
+    <Compile Include="Paduins\Paduin.cs" />
     <Compile Include="Paduins\Paduin\SashoFett.cs" />
     <Compile Include="Paduins\Paduin\WightJan.cs" />
     <Compile Include="PlayScreen.cs">
@@ -126,6 +125,9 @@
     <Compile Include="Question.Designer.cs">
       <DependentUpon>Question.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quests\Quest.cs" />
+    <Compile Include="Quests\QuestFactory.cs" />
+    <Compile Include="Quests\QuestionType.cs" />
     <Compile Include="StartingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,9 +143,6 @@
       <DependentUpon>ChooseCharacterScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instructions.en-001.resx">
-      <DependentUpon>Instructions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Instructions.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jedi.resx">

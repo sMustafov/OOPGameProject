@@ -3,42 +3,38 @@ using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
 namespace WindowsFormsApplication1.Paduins.Paduin
 {
-    public class WightJan : Paduin,IWightJan
+    using AssistantPaduin;
+
+    public class WightJan : Paduin, IWightJan
     {
-        private string characterImage = @"..\..\Resources\Jan.png"; 
-        
-        public WightJan(int pointKnowledge, AssistantPaduin.AssistantPaduin assistantPaduin) 
-            : base(pointKnowledge, assistantPaduin)
-        {
+        private string characterImage = @"..\..\Resources\Jan.png";
 
+        public override int BeerPerSecond
+        {
+            get { return this.beerPerSecond; }
+            set { this.beerPerSecond = 3; }
         }
 
-        public WightJan() : base()
-        {
-            this.PaduinType = PaduinType.WightJan;
-        }
+        public override PaduinType PaduinType { get; set; }
+
+        public override AssistantPaduin AssistantPaduin { get; set; }
+
         public override string CharacterImage
         {
             get { return this.characterImage; }
-            protected set { this.characterImage = value; }
+            set { this.characterImage = value; }
         }
 
-        public int PointKnowledge1
+        public override int PointKnowledge
         {
             get { return this.pointKnowledge; }
             set { this.pointKnowledge += value; }
         }
 
-        public new int PaduinPower
+        public override int PaduinPower
         {
             get { return this.paduinPower; }
             set { this.paduinPower = 50; }
-        }
-
-        public int BeerPerSecound
-        {
-            get { return this.beerPerSecond; }
-            set { this.beerPerSecond = 3; }
         }
 
         public override void KnowledgeCalculator()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Jedis.Masters;
 
 namespace WindowsFormsApplication1
 {
@@ -73,6 +74,11 @@ namespace WindowsFormsApplication1
             ChooseCharacterScreen ccs = new ChooseCharacterScreen();
             ccs.ShowDialog();
             Close();
+        }
+
+        public static implicit operator Jedi(JoNakov v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
