@@ -20,21 +20,21 @@ namespace WindowsFormsApplication1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            Category = 1;
+            this.Category = 1;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            Category = 2;
+            this.Category = 2;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             StartingScreen ss = new StartingScreen();
-            FinalCategory = Category;
+            FinalCategory = this.Category;
             ss.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void ChooseCategoryScreen_Load(object sender, EventArgs e)
@@ -44,12 +44,12 @@ namespace WindowsFormsApplication1
 
         private void CPPButton_CheckedChanged(object sender, EventArgs e)
         {
-            Category = 3;
+            this.Category = 3;
         }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
-            Category = 4;
+            this.Category = 4;
         }
     }
 }

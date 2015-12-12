@@ -42,34 +42,34 @@ namespace WindowsFormsApplication1
             {
                 question = JediQuest.cPlusPlus(randNum);
             }
-            label1.Text = question;
+            this.label1.Text = question;
         }
 
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
         {
-            answer = 1;
+            this.answer = 1;
         }
 
         private void FalseButton_CheckedChanged(object sender, EventArgs e)
         {
-            answer = 2;
+            this.answer = 2;
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-            FinalAnswer = answer;
-            this.Close();
+            FinalAnswer = this.answer;
+            Close();
 
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            answer = 3;
+            this.answer = 3;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            answer = 4;
+            this.answer = 4;
         }
     }
 }

@@ -17,11 +17,11 @@ namespace WindowsFormsApplication1
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             StartingScreen ss = new StartingScreen();
-            FinalPaduinCharacter = paduinCharacter;
+            FinalPaduinCharacter = this.paduinCharacter;
             ss.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void PaduinLabel_Click(object sender, EventArgs e)
@@ -36,22 +36,22 @@ namespace WindowsFormsApplication1
 
         private void SevginButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinCharacter = 1;
+            this.paduinCharacter = 1;
         }
 
         private void YanchoButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinCharacter = 2;
+            this.paduinCharacter = 2;
         }
 
         private void SashoButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinCharacter = 3;
+            this.paduinCharacter = 3;
         }
 
         private void JanButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinCharacter = 4;
+            this.paduinCharacter = 4;
         }
 
         private void Paduin_Load(object sender, EventArgs e)
@@ -66,12 +66,12 @@ namespace WindowsFormsApplication1
 
         private void FuglemanButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinAssistant = 1;
+            this.paduinAssistant = 1;
         }
 
         private void TriBiriButton_CheckedChanged(object sender, EventArgs e)
         {
-            paduinAssistant = 2;
+            this.paduinAssistant = 2;
         }
     }
 }

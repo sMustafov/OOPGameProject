@@ -17,10 +17,10 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             StartingScreen ss = new StartingScreen();
             ss.ShowDialog();
-            this.Close();
+            Close();
         }
     }
 }

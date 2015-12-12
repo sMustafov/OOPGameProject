@@ -30,41 +30,52 @@ namespace WindowsFormsApplication1
         private Direction directionCategory6 = Direction.None;
         private Direction directionCategory7 = Direction.None;
         private Direction directionCategory8 = Direction.None;
+        private Direction directionCategory9 = Direction.None;
+        private Direction directionCategory10 = Direction.None;
+        private Direction directionCategory11 = Direction.None;
+
 
         public PlayScreen()
         {
             InitializeComponent();
 
-            x = 1;
-            y = 1;
-            directionCharacter = Direction.Down;
-            directionAssistant = Direction.Up;
-            directionPaduin = Direction.None;
-            directionBeer = Direction.None;
+            this.x = 1;
+            this.y = 1;
+            this.directionCharacter = Direction.Down;
+            this.directionAssistant = Direction.Up;
+            this.directionPaduin = Direction.None;
+            this.directionBeer = Direction.None;
 
-            directionCategory1 = Direction.None;
-            directionCategory2 = Direction.None;
-            directionCategory3 = Direction.None;
-            directionCategory4 = Direction.None;
-            directionCategory5 = Direction.None;
-            directionCategory6 = Direction.None;
-            directionCategory7 = Direction.None;
-            directionCategory8 = Direction.None;
+            this.directionCategory1 = Direction.None;
+            this.directionCategory2 = Direction.None;
+            this.directionCategory3 = Direction.None;
+            this.directionCategory4 = Direction.None;
+            this.directionCategory5 = Direction.None;
+            this.directionCategory6 = Direction.None;
+            this.directionCategory7 = Direction.None;
+            this.directionCategory8 = Direction.None;
+            this.directionCategory9 = Direction.None;
+            this.directionCategory10 = Direction.None;
+            this.directionCategory11 = Direction.None;
 
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = false;
-            pictureBox5.Visible = false;
-            pictureBox6.Visible = false;
-            pictureBox7.Visible = false;
-            pictureBox8.Visible = false;
-            pictureBox9.Visible = false;
-            pictureBox10.Visible = false;
+            this.pictureBox3.Visible = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox5.Visible = false;
+            this.pictureBox6.Visible = false;
+            this.pictureBox7.Visible = false;
+            this.pictureBox8.Visible = false;
+            this.pictureBox9.Visible = false;
+            this.pictureBox10.Visible = false;
+            this.pictureBox11.Visible = false;
+            this.pictureBox12.Visible = false;
+            this.pictureBox13.Visible = false;
+
             //Beer.Visible = false;
 
 
-            timer.Interval = 15;
-            timer.Tick += timerCharacter_Tick;
-            timer.Start();
+            this.timer.Interval = 15;
+            this.timer.Tick += timerCharacter_Tick;
+            this.timer.Start();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -74,126 +85,129 @@ namespace WindowsFormsApplication1
 
         private void PlayScreen_Load(object sender, EventArgs e)
         {
-            //Image beer = Image.FromFile(@"..\..\Resources\Beer.png");
-            //Beer.Image = beer;
-            //Beer.Height = beer.Height;
-            //Beer.Width = beer.Width;
-
-            //@"..\..\Resources\beer.jpg");
-            //Beer.Image = beer;
-            //Beer.Height = beer.Height;
-            //Beer.Width = beer.Width;
 
             if (Jedi.FinalCharacter == 1)
             {
                 JoNakov nakov = new JoNakov();
                 Image image = Image.FromFile(nakov.CharacterImage);
 
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                this.enemyBox.Image = image;
+                this.enemyBox.Height = image.Height;
+                this.enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 2)
             {
                 AchoUanKenobi acho = new AchoUanKenobi();
                 Image image = Image.FromFile(acho.CharacterImage);
 
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                this.enemyBox.Image = image;
+                this.enemyBox.Height = image.Height;
+                this.enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 3)
             {
                 RoyalSkyWalker royal = new RoyalSkyWalker();
                 Image image = Image.FromFile(royal.CharacterImage);
 
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                this.enemyBox.Image = image;
+                this.enemyBox.Height = image.Height;
+                this.enemyBox.Width = image.Width;
             }
             else if (Jedi.FinalCharacter == 4)
             {
                 NaskoSolo nasko = new NaskoSolo();
                 Image image = Image.FromFile(nasko.CharacterImage);
 
-                enemyBox.Image = image;
-                enemyBox.Height = image.Height;
-                enemyBox.Width = image.Width;
+                this.enemyBox.Image = image;
+                this.enemyBox.Height = image.Height;
+                this.enemyBox.Width = image.Width;
             }
+
             if (Jedi.FinalAssistantCharacter == 1)
             {
                 ChubiEdo edo = new ChubiEdo();
                 Image image = Image.FromFile(edo.CharacterImage);
 
-                pictureBox1.Image = image;
-                pictureBox1.Height = image.Height;
-                pictureBox1.Width = image.Width;
+                ////Beer pictur incert
+                //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
+                //Picture(this.image);
+
+                this.pictureBox1.Image = image;
+                this.pictureBox1.Height = image.Height;
+                this.pictureBox1.Width = image.Width;
             }
             else if (Jedi.FinalAssistantCharacter == 2)
             {
                 R2Trifon2 trifon = new R2Trifon2();
                 Image image = Image.FromFile(trifon.CharacterImage);
 
-                pictureBox1.Image = image;
-                pictureBox1.Height = image.Height;
-                pictureBox1.Width = image.Width;
+                ////Beer pictur incert
+                //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
+                //Picture(this.image);
+
+                this.pictureBox1.Image = image;
+                this.pictureBox1.Height = image.Height;
+                this.pictureBox1.Width = image.Width;
             }
 
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
-                image = Image.FromFile(@"..\..\Resources\Csharp.png");
-                Picture(image);
+                this.image = Image.FromFile(@"..\..\Resources\Csharp.png");
+                Picture(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
-                image = Image.FromFile(@"..\..\Resources\Java.png");
-                Picture(image);
+                this.image = Image.FromFile(@"..\..\Resources\Java.png");
+                Picture(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
-                image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
-                Picture(image);
+                this.image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
+                Picture(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
-                image = Image.FromFile(@"..\..\Resources\Oop.png");
-                Picture(image);
+                this.image = Image.FromFile(@"..\..\Resources\Oop.png");
+                Picture(this.image);
             }
+
+            
+
             if (Paduin.FinalPaduinCharacter == 1)
             {
                 CountSevgin sevgin = new CountSevgin();
                 Image image = Image.FromFile(sevgin.CharacterImage);
 
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                this.paduin.Image = image;
+                this.paduin.Height = image.Height;
+                this.paduin.Width = image.Width;
             }
             else if (Paduin.FinalPaduinCharacter == 2)
             {
                 Karnobatman karnobatman = new Karnobatman();
                 Image image = Image.FromFile(karnobatman.CharacterImage);
 
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                this.paduin.Image = image;
+                this.paduin.Height = image.Height;
+                this.paduin.Width = image.Width;
             }
             else if (Paduin.FinalPaduinCharacter == 3)
             {
                 SashoFett sasho = new SashoFett();
                 Image image = Image.FromFile(sasho.CharacterImage);
 
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                this.paduin.Image = image;
+                this.paduin.Height = image.Height;
+                this.paduin.Width = image.Width;
             }
             else if (Paduin.FinalPaduinCharacter == 4)
             {
                 WightJan jan = new WightJan();
                 Image image = Image.FromFile(jan.CharacterImage);
 
-                paduin.Image = image;
-                paduin.Height = image.Height;
-                paduin.Width = image.Width;
+                this.paduin.Image = image;
+                this.paduin.Height = image.Height;
+                this.paduin.Width = image.Width;
             }
         }
 
@@ -211,15 +225,15 @@ namespace WindowsFormsApplication1
         private int Drunk = 0;
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
-            paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", Score);
-            jediDrunk.Text = String.Format("Jedi Drunk : {0} %", Drunk);
+            this.paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", this.Score);
+            this.jediDrunk.Text = String.Format("Jedi Drunk : {0} %", this.Drunk);
 
-            if (Score == 100 || Drunk == 100)
+            if (this.Score == 100 || this.Drunk == 100)
             {
-                timer.Stop();
+                this.timer.Stop();
             }
 
-            //if (Beer.Bounds.IntersectsWith(pictureBox2.Bounds))
+            //if (Beer.Bounds.IntersectsWith(pictureBox13.Bounds))
             //{
             //    Drunk++;
             //}
@@ -229,325 +243,402 @@ namespace WindowsFormsApplication1
             //}
 
 
-            if (pictureBox3.Bounds.IntersectsWith(paduin.Bounds))
+            if (this.pictureBox3.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                timer.Stop();
-                q = new Question();
-                q.ShowDialog();
+                this.timer.Stop();
+                this.q = new Question();
+                this.q.ShowDialog();
 
                 if (Question.FinalAnswer == 1)
                 {
-                    directionCategory1 = Direction.None;
-                    pictureBox3.Hide();
-                    pictureBox3.Location = new Point(pictureBox3.Location.X - paduin.Location.X + 60,
-                        pictureBox3.Location.Y);
-                    timer.Start();
+                    this.directionCategory1 = Direction.None;
+                    this.pictureBox3.Hide();
+                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60, this.pictureBox3.Location.Y);
+                    this.timer.Start();
                 }
                 else if (Question.FinalAnswer == 2 || Question.FinalAnswer == 3 || Question.FinalAnswer == 4)
                 {
-                    
-                    directionCategory1 = Direction.None;
-                    pictureBox3.Hide();
-                    pictureBox3.Location = new Point(pictureBox3.Location.X - paduin.Location.X + 60,
-                        pictureBox3.Location.Y);
-                    Score += 30;
-                    timer.Start();
+                    this.directionCategory1 = Direction.None;
+                    this.pictureBox3.Hide();
+                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60, this.pictureBox3.Location.Y);
+                    this.Score += 30;
+                    this.timer.Start();
                 }
             }
-            if (pictureBox4.Bounds.IntersectsWith(paduin.Bounds))
+
+            if (this.pictureBox4.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                Score++;
-                directionCategory2 = Direction.None;
-                pictureBox4.Hide();
-                pictureBox4.Location = new Point(pictureBox4.Location.X - paduin.Location.X + 60,
-                        pictureBox4.Location.Y);
-            }
-            if (pictureBox5.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory3 = Direction.None;
-                pictureBox5.Hide();
-                pictureBox5.Location = new Point(pictureBox5.Location.X - paduin.Location.X + 60,
-                        pictureBox5.Location.Y);
-            }
-            if (pictureBox6.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory4 = Direction.None;
-                pictureBox6.Hide();
-                pictureBox6.Location = new Point(pictureBox6.Location.X - paduin.Location.X + 60,
-                        pictureBox6.Location.Y);
-            }
-            if (pictureBox7.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory5 = Direction.None;
-                pictureBox7.Hide();
-                pictureBox7.Location = new Point(pictureBox7.Location.X - paduin.Location.X + 60,
-                        pictureBox7.Location.Y);
-            }
-            if (pictureBox8.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory6 = Direction.None;
-                pictureBox8.Hide();
-                pictureBox8.Location = new Point(pictureBox8.Location.X - paduin.Location.X + 60,
-                        pictureBox8.Location.Y);
-            }
-            if (pictureBox9.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory7 = Direction.None;
-                pictureBox9.Hide();
-                pictureBox9.Location = new Point(pictureBox9.Location.X - paduin.Location.X + 60,
-                        pictureBox9.Location.Y);
-            }
-            if (pictureBox10.Bounds.IntersectsWith(paduin.Bounds))
-            {
-                Score++;
-                directionCategory8 = Direction.None;
-                pictureBox10.Hide();
-                pictureBox10.Location = new Point(pictureBox10.Location.X - paduin.Location.X + 60,
-                        pictureBox10.Location.Y);
+                this.Score++;
+                this.directionCategory2 = Direction.None;
+                this.pictureBox4.Hide();
+                this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - this.paduin.Location.X + 60, this.pictureBox4.Location.Y);
             }
 
+            if (this.pictureBox5.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory3 = Direction.None;
+                this.pictureBox5.Hide();
+                this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - this.paduin.Location.X + 60, this.pictureBox5.Location.Y);
+            }
 
+            if (this.pictureBox6.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory4 = Direction.None;
+                this.pictureBox6.Hide();
+                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60, this.pictureBox6.Location.Y);
+            }
+
+            if (this.pictureBox7.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory5 = Direction.None;
+                this.pictureBox7.Hide();
+                this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - this.paduin.Location.X + 60, this.pictureBox7.Location.Y);
+            }
+
+            if (this.pictureBox8.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory6 = Direction.None;
+                this.pictureBox8.Hide();
+                this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - this.paduin.Location.X + 60, this.pictureBox8.Location.Y);
+            }
+
+            if (this.pictureBox9.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory7 = Direction.None;
+                this.pictureBox9.Hide();
+                this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - this.paduin.Location.X + 60, this.pictureBox9.Location.Y);
+            }
+
+            if (this.pictureBox10.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory8 = Direction.None;
+                this.pictureBox10.Hide();
+                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60, this.pictureBox10.Location.Y);
+            }
+
+            if (this.pictureBox11.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory9 = Direction.None;
+                this.pictureBox11.Hide();
+                this.pictureBox11.Location = new Point(this.pictureBox11.Location.X - this.paduin.Location.X - 60, this.pictureBox11.Location.Y);
+            }
+
+            if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory10 = Direction.None;
+                this.pictureBox12.Hide();
+                this.pictureBox12.Location = new Point(this.pictureBox12.Location.X - this.paduin.Location.X - 60, this.pictureBox12.Location.Y);
+            }
+
+            if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score++;
+                this.directionCategory11 = Direction.None;
+                this.pictureBox13.Hide();
+                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X - this.paduin.Location.X - 60, this.pictureBox13.Location.Y);
+            }
             //First Category
-            if (enemyBox.Location.Y == pictureBox3.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox3.Location.Y)
             {
-                pictureBox3.Visible = true;
-                pictureBox3.Location = new Point(pictureBox3.Location.X, pictureBox3.Location.Y);
-                directionCategory1 = Direction.Right;
+                this.pictureBox3.Visible = true;
+                this.pictureBox3.Location = new Point(this.pictureBox3.Location.X, this.pictureBox3.Location.Y);
+                this.directionCategory1 = Direction.Right;
             }
-            if (pictureBox3.Left >= 600)
+            if (this.pictureBox3.Left >= 600)
             {
-                directionCategory1 = Direction.None;
-                pictureBox3.Hide();
-                pictureBox3.Location = new Point(pictureBox3.Location.X - 580,
-                        pictureBox3.Location.Y);
+                this.directionCategory1 = Direction.None;
+                this.pictureBox3.Hide();
+                this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - 580, this.pictureBox3.Location.Y);
             }
 
             //Second Category
-            if (enemyBox.Location.Y == pictureBox4.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox4.Location.Y)
             {
-                pictureBox4.Visible = true;
-                pictureBox4.Location = new Point(pictureBox4.Location.X, pictureBox4.Location.Y);
-                directionCategory2 = Direction.Right;
+                this.pictureBox4.Visible = true;
+                this.pictureBox4.Location = new Point(this.pictureBox4.Location.X, this.pictureBox4.Location.Y);
+                this.directionCategory2 = Direction.Right;
             }
-            if (pictureBox4.Left >= 600)
+            if (this.pictureBox4.Left >= 600)
             {
-                directionCategory2 = Direction.None;
-                pictureBox4.Hide();
-                pictureBox4.Location = new Point(pictureBox4.Location.X - 580,
-                        pictureBox4.Location.Y);
+                this.directionCategory2 = Direction.None;
+                this.pictureBox4.Hide();
+                this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - 580, this.pictureBox4.Location.Y);
             }
 
             //Third Category
-            if (enemyBox.Location.Y == pictureBox5.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox5.Location.Y)
             {
-                pictureBox5.Visible = true;
-                pictureBox5.Location = new Point(pictureBox5.Location.X, pictureBox5.Location.Y);
-                directionCategory3 = Direction.Right;
+                this.pictureBox5.Visible = true;
+                this.pictureBox5.Location = new Point(this.pictureBox5.Location.X, this.pictureBox5.Location.Y);
+                this.directionCategory3 = Direction.Right;
             }
-            if (pictureBox5.Left >= 600)
+            if (this.pictureBox5.Left >= 600)
             {
-                directionCategory3 = Direction.None;
-                pictureBox5.Hide();
-                pictureBox5.Location = new Point(pictureBox5.Location.X - 580,
-                        pictureBox5.Location.Y);
+                this.directionCategory3 = Direction.None;
+                this.pictureBox5.Hide();
+                this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - 580, this.pictureBox5.Location.Y);
             }
 
 
             //Forth Category 
-            if (enemyBox.Location.Y == pictureBox6.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox6.Location.Y)
             {
-                pictureBox6.Visible = true;
-                pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y);
-                directionCategory4 = Direction.Right;
+                this.pictureBox6.Visible = true;
+                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X, this.pictureBox6.Location.Y);
+                this.directionCategory4 = Direction.Right;
             }
-            if (pictureBox6.Left >= 600)
+            if (this.pictureBox6.Left >= 600)
             {
-                directionCategory4 = Direction.None;
-                pictureBox6.Hide();
-                pictureBox6.Location = new Point(pictureBox6.Location.X - 580,
-                        pictureBox6.Location.Y);
+                this.directionCategory4 = Direction.None;
+                this.pictureBox6.Hide();
+                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - 580, this.pictureBox6.Location.Y);
             }
 
             //Fifth Category
-            if (enemyBox.Location.Y == pictureBox7.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox7.Location.Y)
             {
-                pictureBox7.Visible = true;
-                pictureBox7.Location = new Point(pictureBox7.Location.X, pictureBox7.Location.Y);
-                directionCategory5 = Direction.Right;
+                this.pictureBox7.Visible = true;
+                this.pictureBox7.Location = new Point(this.pictureBox7.Location.X, this.pictureBox7.Location.Y);
+                this.directionCategory5 = Direction.Right;
             }
-            if (pictureBox7.Left >= 600)
+            if (this.pictureBox7.Left >= 600)
             {
-                directionCategory5 = Direction.None;
-                pictureBox7.Hide();
-                pictureBox7.Location = new Point(pictureBox7.Location.X - 580,
-                        pictureBox7.Location.Y);
+                this.directionCategory5 = Direction.None;
+                this.pictureBox7.Hide();
+                this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - 580, this.pictureBox7.Location.Y);
             }
 
             //Sixth Category
-            if (enemyBox.Location.Y == pictureBox8.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox8.Location.Y)
             {
-                pictureBox8.Visible = true;
-                pictureBox8.Location = new Point(pictureBox8.Location.X, pictureBox8.Location.Y);
-                directionCategory6 = Direction.Right;
+                this.pictureBox8.Visible = true;
+                this.pictureBox8.Location = new Point(this.pictureBox8.Location.X, this.pictureBox8.Location.Y);
+                this.directionCategory6 = Direction.Right;
             }
-            if (pictureBox8.Left >= 600)
+            if (this.pictureBox8.Left >= 600)
             {
-                directionCategory6 = Direction.None;
-                pictureBox8.Hide();
-                pictureBox8.Location = new Point(pictureBox8.Location.X - 580,
-                        pictureBox8.Location.Y);
+                this.directionCategory6 = Direction.None;
+                this.pictureBox8.Hide();
+                this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - 580, this.pictureBox8.Location.Y);
             }
 
             //Seventh Category
-            if (enemyBox.Location.Y == pictureBox9.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox9.Location.Y)
             {
-                pictureBox9.Visible = true;
-                pictureBox9.Location = new Point(pictureBox9.Location.X, pictureBox9.Location.Y);
-                directionCategory7 = Direction.Right;
+                this.pictureBox9.Visible = true;
+                this.pictureBox9.Location = new Point(this.pictureBox9.Location.X, this.pictureBox9.Location.Y);
+                this.directionCategory7 = Direction.Right;
             }
-            if (pictureBox9.Left >= 600)
+            if (this.pictureBox9.Left >= 600)
             {
-                directionCategory7 = Direction.None;
-                pictureBox9.Hide();
-                pictureBox9.Location = new Point(pictureBox9.Location.X - 580,
-                        pictureBox9.Location.Y);
+                this.directionCategory7 = Direction.None;
+                this.pictureBox9.Hide();
+                this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - 580, this.pictureBox9.Location.Y);
             }
 
             //Eight Category
-            if (enemyBox.Location.Y == pictureBox10.Location.Y)
+            if (this.enemyBox.Location.Y == this.pictureBox10.Location.Y)
             {
-                pictureBox10.Visible = true;
-                pictureBox10.Location = new Point(pictureBox10.Location.X, pictureBox10.Location.Y);
-                directionCategory8 = Direction.Right;
+                this.pictureBox10.Visible = true;
+                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X, this.pictureBox10.Location.Y);
+                this.directionCategory8 = Direction.Right;
             }
-            if (pictureBox10.Left >= 600)
+            if (this.pictureBox10.Left >= 600)
             {
-                directionCategory8 = Direction.None;
-                pictureBox10.Hide();
-                pictureBox10.Location = new Point(pictureBox10.Location.X - 580,
-                        pictureBox10.Location.Y);
+                this.directionCategory8 = Direction.None;
+                this.pictureBox10.Hide();
+                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - 580, this.pictureBox10.Location.Y);
             }
+
+            //BeerOne Category
+            if (this.enemyBox.Location.Y == this.pictureBox11.Location.Y)
+            {
+                this.pictureBox11.Visible = true;
+                this.pictureBox11.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
+                this.directionCategory9 = Direction.Right;
+            }
+            if (this.pictureBox11.Left >= 1000)
+            {
+                this.directionCategory9 = Direction.None;
+                this.pictureBox11.Hide();
+                this.pictureBox11.Location = new Point(this.pictureBox11.Location.X + 580, this.pictureBox11.Location.Y);
+            }
+
+            //BeerTwo Category
+            if (this.enemyBox.Location.Y == this.pictureBox12.Location.Y)
+            {
+                this.pictureBox12.Visible = true;
+                this.pictureBox12.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
+                this.directionCategory10 = Direction.Right;
+            }
+            if (this.pictureBox12.Left >= 1000)
+            {
+                this.directionCategory10 = Direction.None;
+                this.pictureBox13.Hide();
+                this.pictureBox13.Location = new Point(this.pictureBox12.Location.X + 580, this.pictureBox12.Location.Y);
+            }
+
+            //BeerThree Category
+            if (this.enemyBox.Location.Y == this.pictureBox13.Location.Y)
+            {
+                this.pictureBox13.Visible = true;
+                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X, this.pictureBox13.Location.Y);
+                this.directionCategory11 = Direction.Right;
+            }
+            if (this.pictureBox13.Left >= 1000)
+            {
+                this.directionCategory11 = Direction.None;
+                this.pictureBox13.Hide();
+                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X + 580, this.pictureBox13.Location.Y);
+            }
+
             //Paduins Direction
-            if (directionPaduin == Direction.Right)
+            if (this.directionPaduin == Direction.Right)
             {
-                paduin.Left += 3;
-                if (paduin.Left >= 750)
+                this.paduin.Left += 3;
+                if (this.paduin.Left >= 750)
                 {
-                    paduin.Left = 700;
-                    directionPaduin = Direction.Left;
+                    this.paduin.Left = 700;
+                    this.directionPaduin = Direction.Left;
                 }
             }
-            if (directionPaduin == Direction.Left)
+            if (this.directionPaduin == Direction.Left)
             {
-                paduin.Left -= 3;
-                if (paduin.Left <= 100)
+                this.paduin.Left -= 3;
+                if (this.paduin.Left <= 100)
                 {
-                    paduin.Left = 150;
-                    directionPaduin = Direction.Right;
+                    this.paduin.Left = 150;
+                    this.directionPaduin = Direction.Right;
                 }
             }
-            if (directionPaduin == Direction.Up)
+            if (this.directionPaduin == Direction.Up)
             {
-                paduin.Top -= 3;
-                if (paduin.Top <= 10)
+                this.paduin.Top -= 3;
+                if (this.paduin.Top <= 10)
                 {
-                    paduin.Top = 50;
-                    directionPaduin = Direction.Down;
+                    this.paduin.Top = 50;
+                    this.directionPaduin = Direction.Down;
                 }
             }
-            if (directionPaduin == Direction.Down)
+            if (this.directionPaduin == Direction.Down)
             {
-                paduin.Top += 3;
-                if (paduin.Top >= 280)
+                this.paduin.Top += 3;
+                if (this.paduin.Top >= 280)
                 {
-                    paduin.Top = 230;
-                    directionPaduin = Direction.Up;
+                    this.paduin.Top = 230;
+                    this.directionPaduin = Direction.Up;
                 }
             }
 
 
             //Category direction - only Right
-            if (directionCategory1 == Direction.Right)
+
+            if (this.directionCategory1 == Direction.Right)
             {
-                pictureBox3.Left += 4;
+                this.pictureBox3.Left += 4;
             }
-            if (directionCategory2 == Direction.Right)
+
+            if (this.directionCategory2 == Direction.Right)
             {
-                pictureBox4.Left += 4;
+                this.pictureBox4.Left += 4;
             }
-            if (directionCategory3 == Direction.Right)
+
+            if (this.directionCategory3 == Direction.Right)
             {
-                pictureBox5.Left += 4;
+                this.pictureBox5.Left += 4;
             }
-            if (directionCategory4 == Direction.Right)
+
+            if (this.directionCategory4 == Direction.Right)
             {
-                pictureBox6.Left += 4;
+                this.pictureBox6.Left += 4;
             }
-            if (directionCategory5 == Direction.Right)
+
+            if (this.directionCategory5 == Direction.Right)
             {
-                pictureBox7.Left += 4;
+                this.pictureBox7.Left += 4;
             }
-            if (directionCategory6 == Direction.Right)
+
+            if (this.directionCategory6 == Direction.Right)
             {
-                pictureBox8.Left += 4;
+                this.pictureBox8.Left += 4;
             }
-            if (directionCategory7 == Direction.Right)
+
+            if (this.directionCategory7 == Direction.Right)
             {
-                pictureBox9.Left += 4;
+                this.pictureBox9.Left += 4;
             }
-            if (directionCategory8 == Direction.Right)
+
+            if (this.directionCategory8 == Direction.Right)
             {
-                pictureBox10.Left += 4;
+                this.pictureBox10.Left += 4;
+            }
+
+            if (this.directionCategory9 == Direction.Right)
+            {
+                this.pictureBox10.Left += 4;
+            }
+
+            if (this.directionCategory10 == Direction.Right)
+            {
+                this.pictureBox10.Left += 4;
+            }
+
+            if (this.directionCategory11 == Direction.Right)
+            {
+                this.pictureBox10.Left += 4;
             }
 
             //Jedi Character direction - only Up and Down
-            if (directionCharacter == Direction.Up)
+            if (this.directionCharacter == Direction.Up)
             {
-                enemyBox.Top -= 1;
-                if (enemyBox.Top == 20)
+                this.enemyBox.Top -= 1;
+                if (this.enemyBox.Top == 20)
                 {
-                    directionCharacter = Direction.Down;
+                    this.directionCharacter = Direction.Down;
                 }
             }
-            if (directionCharacter == Direction.Down)
+            if (this.directionCharacter == Direction.Down)
             {
-                enemyBox.Top += 1;
-                if (enemyBox.Top == 280)
+                this.enemyBox.Top += 1;
+                if (this.enemyBox.Top == 280)
                 {
-                    directionCharacter = Direction.Up;
+                    this.directionCharacter = Direction.Up;
                 }
             }
 
             //Assistant direction - only Up and Down
-            if (directionAssistant == Direction.Up)
+            if (this.directionAssistant == Direction.Up)
             {
-                pictureBox1.Top -= 1;
-                if (pictureBox1.Top == 20)
+                this.pictureBox1.Top -= 1;
+                if (this.pictureBox1.Top == 20)
                 {
-                    directionAssistant = Direction.Down;
+                    this.directionAssistant = Direction.Down;
                 }
             }
 
-            if (directionAssistant == Direction.Down)
+            if (this.directionAssistant == Direction.Down)
             {
-                pictureBox1.Top += 1;
-                if (pictureBox1.Top == 280)
+                this.pictureBox1.Top += 1;
+                if (this.pictureBox1.Top == 280)
                 {
-                    directionAssistant = Direction.Up;
+                    this.directionAssistant = Direction.Up;
                 }
             }
 
             //Beer direction
-            if (directionBeer == Direction.Right)
+            if (this.directionBeer == Direction.Right)
             {
                 //Beer.Left += 5;
             }
-            else if (directionBeer == Direction.Left)
+            else if (this.directionBeer == Direction.Left)
             {
                 //Beer.Left -= 5;
             }
@@ -559,32 +650,32 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.Down)
             {
-                directionPaduin = Direction.Down;
+                this.directionPaduin = Direction.Down;
             }
             if (e.KeyCode == Keys.Up)
             {
-                directionPaduin = Direction.Up;
+                this.directionPaduin = Direction.Up;
             }
             if (e.KeyCode == Keys.Left)
             {
-                directionPaduin = Direction.Left;
+                this.directionPaduin = Direction.Left;
             }
             if (e.KeyCode == Keys.Right)
             {
-                directionPaduin = Direction.Right;
+                this.directionPaduin = Direction.Right;
             }
             if (e.KeyCode == Keys.Space)
             {
                 //Beer = new PictureBox();
                 //Beer.Location = new Point(paduin.Location.X, paduin.Location.Y);
                 //Beer.Visible = true;
-                if (directionPaduin == Direction.Right)
+                if (this.directionPaduin == Direction.Right)
                 {
-                    directionBeer = Direction.Right;
+                    this.directionBeer = Direction.Right;
                 }
-                else if (directionPaduin == Direction.Left)
+                else if (this.directionPaduin == Direction.Left)
                 {
-                    directionBeer = Direction.Left;
+                    this.directionBeer = Direction.Left;
                 }
             }
         }
@@ -643,30 +734,54 @@ namespace WindowsFormsApplication1
 
         private void Picture(Image image)
         {
-            pictureBox3.Image = image;
-            pictureBox3.Height = image.Height;
-            pictureBox3.Width = image.Width;
-            pictureBox4.Image = image;
-            pictureBox4.Height = image.Height;
-            pictureBox4.Width = image.Width;
-            pictureBox5.Image = image;
-            pictureBox5.Height = image.Height;
-            pictureBox5.Width = image.Width;
-            pictureBox6.Image = image;
-            pictureBox6.Height = image.Height;
-            pictureBox6.Width = image.Width;
-            pictureBox7.Image = image;
-            pictureBox7.Height = image.Height;
-            pictureBox7.Width = image.Width;
-            pictureBox8.Image = image;
-            pictureBox8.Height = image.Height;
-            pictureBox8.Width = image.Width;
-            pictureBox9.Image = image;
-            pictureBox9.Height = image.Height;
-            pictureBox9.Width = image.Width;
-            pictureBox10.Image = image;
-            pictureBox10.Height = image.Height;
-            pictureBox10.Width = image.Width;
+            this.pictureBox3.Image = image;
+            this.pictureBox3.Height = image.Height;
+            this.pictureBox3.Width = image.Width;
+            this.pictureBox4.Image = image;
+            this.pictureBox4.Height = image.Height;
+            this.pictureBox4.Width = image.Width;
+            this.pictureBox5.Image = image;
+            this.pictureBox5.Height = image.Height;
+            this.pictureBox5.Width = image.Width;
+            this.pictureBox6.Image = image;
+            this.pictureBox6.Height = image.Height;
+            this.pictureBox6.Width = image.Width;
+            this.pictureBox7.Image = image;
+            this.pictureBox7.Height = image.Height;
+            this.pictureBox7.Width = image.Width;
+            this.pictureBox8.Image = image;
+            this.pictureBox8.Height = image.Height;
+            this.pictureBox8.Width = image.Width;
+            this.pictureBox9.Image = image;
+            this.pictureBox9.Height = image.Height;
+            this.pictureBox9.Width = image.Width;
+            this.pictureBox10.Image = image;
+            this.pictureBox10.Height = image.Height;
+            this.pictureBox10.Width = image.Width;
+            this.pictureBox11.Image = image;
+            this.pictureBox11.Height = image.Height;
+            this.pictureBox11.Width = image.Width;
+            this.pictureBox12.Image = image;
+            this.pictureBox12.Height = image.Height;
+            this.pictureBox12.Width = image.Width;
+            this.pictureBox13.Image = image;
+            this.pictureBox13.Height = image.Height;
+            this.pictureBox13.Width = image.Width;
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,10 +17,10 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             PlayScreen ps = new PlayScreen();
             ps.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void StartingScreen_Load(object sender, EventArgs e)
@@ -30,31 +30,31 @@ namespace WindowsFormsApplication1
 
         private void CharacterTypeButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             ChooseCharacterScreen ccs = new ChooseCharacterScreen();
             ccs.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void InstructionsButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             Instructions instructions = new Instructions();
             instructions.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void ChooseCategory_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             ChooseCategoryScreen ccs = new ChooseCategoryScreen();
             ccs.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Invalidate();
+            Invalidate();
         }
     }
 }

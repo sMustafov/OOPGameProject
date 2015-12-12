@@ -22,17 +22,17 @@ namespace WindowsFormsApplication1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            Character = 1;
+            this.Character = 1;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FinalCharacter = Character;
-            FinalAssistantCharacter = AssistantCharacter;
+            Hide();
+            FinalCharacter = this.Character;
+            FinalAssistantCharacter = this.AssistantCharacter;
             ChooseCharacterScreen ss = new ChooseCharacterScreen();
             ss.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void Jedi_Load(object sender, EventArgs e)
@@ -42,37 +42,37 @@ namespace WindowsFormsApplication1
 
         private void AchoButton_CheckedChanged(object sender, EventArgs e)
         {
-            Character = 2;
+            this.Character = 2;
         }
 
         private void RoyalButton_CheckedChanged(object sender, EventArgs e)
         {
-            Character = 3;
+            this.Character = 3;
         }
 
         private void NaskoButton_CheckedChanged(object sender, EventArgs e)
         {
-            Character = 4;
+            this.Character = 4;
         }
 
         private void EdoButton_CheckedChanged(object sender, EventArgs e)
         {
-            AssistantCharacter = 1;
+            this.AssistantCharacter = 1;
         }
 
         private void TrigonButton_CheckedChanged(object sender, EventArgs e)
         {
-            AssistantCharacter = 2;
+            this.AssistantCharacter = 2;
         }
 
         private void BackButton(object sender, EventArgs e)
         {
-            this.Hide();
-            FinalCharacter = Character;
-            FinalAssistantCharacter = AssistantCharacter;
+            Hide();
+            FinalCharacter = this.Character;
+            FinalAssistantCharacter = this.AssistantCharacter;
             ChooseCharacterScreen ccs = new ChooseCharacterScreen();
             ccs.ShowDialog();
-            this.Close();
+            Close();
         }
     }
 }

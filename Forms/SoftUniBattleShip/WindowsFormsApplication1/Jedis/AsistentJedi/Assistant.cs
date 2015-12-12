@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
 
         protected Assistant(int points)
         {
-            AssistantPoint = points;
+            this.AssistantPoint = points;
         }
 
         protected Assistant()

@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
 
         public override void Point()
         {
-            if (AssistantPoint > AssistantLive)
+            if (this.AssistantPoint > this.AssistantLive)
             {
                 Console.WriteLine("ChubiEdo is drunk!!!");
             }

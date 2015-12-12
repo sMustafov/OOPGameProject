@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1.Paduins.AssistantPaduin
 
         public override void Point()
         {
-            if (AssistantPoints > AssistantLives)
+            if (this.AssistantPoints > this.AssistantLives)
             {
                 Console.WriteLine("CubaEdo is drunk!!!");
             }

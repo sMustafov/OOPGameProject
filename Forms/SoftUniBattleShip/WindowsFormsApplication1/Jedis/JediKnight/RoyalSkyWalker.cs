@@ -37,13 +37,13 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
 
         public override int PointsDamage
         {
-            get { return points; }
+            get { return this.points; }
             set { this.points += value; }
         }
 
         public override void Points()
         {
-            if (PointsDamage > ThePolerOfDrinks)
+            if (this.PointsDamage > this.ThePolerOfDrinks)
             {
                 Console.WriteLine("RoyalSkyWalker is drunk!!!");
             }

@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1.Paduins.Paduin
 
         public override void KnowledgeCalculator()
         {
-            if (PaduinPower < PointKnowledge)
+            if (this.PaduinPower < this.PointKnowledge)
             {
                 Console.WriteLine("Paduin have knowledge");
             }
