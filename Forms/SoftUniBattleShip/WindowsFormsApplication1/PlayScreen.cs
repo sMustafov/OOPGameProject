@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Jedis.AsistentJedi;
-using WindowsFormsApplication1.Jedis.JediKnight;
-using WindowsFormsApplication1.Jedis.Masters;
 using WindowsFormsApplication1.Paduins.Paduin;
 
 namespace WindowsFormsApplication1
@@ -22,8 +20,8 @@ namespace WindowsFormsApplication1
         private int y;
 
         private IJedi jedi;
-        private IPaduin paduan;
-        private IAssistants asistenntsJedi;
+        private IPaduin paduinCharacter;
+        private IAssistants assistantsJedi;
 
         private int Score;
         private int Drunk;
@@ -98,71 +96,56 @@ namespace WindowsFormsApplication1
 
         private void JediInitialization()
         {
+            //Walls
+            Image image = Image.FromFile(@"..\..\Resources\redWall.jpg");
+            redWall.Image = image;
+            redWall.Height = image.Height;
+            redWall.Width = image.Width;
+            redWall2.Image = image;
+            redWall2.Height = image.Height;
+            redWall2.Width = image.Width;
+            
+            Image image2 = Image.FromFile(@"..\..\Resources\redWall2.jpg");
+            redWall3.Image = image2;
+            redWall3.Height = image2.Height;
+            redWall3.Width = image2.Width;
+            redWall4.Image = image2;
+            redWall4.Height = image2.Height;
+            redWall4.Width = image2.Width;
 
             //Jedi
             if (Jedi.FinalCharacter == 1)
             {
                 this.jedi = JediFactory.CreatJedi(JediType.JoNakov);
-                Image image = Image.FromFile(this.jedi.CharacterImage);
-
-                this.enemyBox.Image = image;
-                this.enemyBox.Height = image.Height;
-                this.enemyBox.Width = image.Width;
+                JediImageValidation(this.jedi, enemyBox);
             }
             else if (Jedi.FinalCharacter == 2)
             {
                 this.jedi = JediFactory.CreatJedi(JediType.AchoUanKenobi);
-                Image image = Image.FromFile(this.jedi.CharacterImage);
-
-                this.enemyBox.Image = image;
-                this.enemyBox.Height = image.Height;
-                this.enemyBox.Width = image.Width;
+                JediImageValidation(jedi, enemyBox);
             }
             else if (Jedi.FinalCharacter == 3)
             {
                 this.jedi = JediFactory.CreatJedi(JediType.RoyalSkyWalker);
-                Image image = Image.FromFile(this.jedi.CharacterImage);
-
-                this.enemyBox.Image = image;
-                this.enemyBox.Height = image.Height;
-                this.enemyBox.Width = image.Width;
+                JediImageValidation(jedi, enemyBox);
             }
             else if (Jedi.FinalCharacter == 4)
             {
                 this.jedi = JediFactory.CreatJedi(JediType.NaskoSolo);
-                Image image = Image.FromFile(this.jedi.CharacterImage);
-
-                this.enemyBox.Image = image;
-                this.enemyBox.Height = image.Height;
-                this.enemyBox.Width = image.Width;
+                JediImageValidation(jedi, enemyBox);
             }
 
             //AssistentJedi
             if (Jedi.FinalAssistantCharacter == 1)
             {
-                this.asistenntsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.ChubiEdo);
-                Image image = Image.FromFile(this.asistenntsJedi.CharacterImage);
+                this.assistantsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.ChubiEdo);
+                AssistantImageValidation(this.assistantsJedi, pictureBox1);
 
-                ////Beer pictur incert
-                //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
-                //Picture(this.image);
-
-                this.pictureBox1.Image = image;
-                this.pictureBox1.Height = image.Height;
-                this.pictureBox1.Width = image.Width;
             }
             else if (Jedi.FinalAssistantCharacter == 2)
             {
-                this.asistenntsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.R2Trifon2);
-                Image image = Image.FromFile(this.asistenntsJedi.CharacterImage);
-
-                ////Beer pictur incert
-                //this.image = Image.FromFile(@"..\..\Resources\Beer.png");
-                //Picture(this.image);
-
-                this.pictureBox1.Image = image;
-                this.pictureBox1.Height = image.Height;
-                this.pictureBox1.Width = image.Width;
+                this.assistantsJedi = AssistantJediFactory.CreateJediАsistant(AssistantJediType.R2Trifon2);
+                AssistantImageValidation(this.assistantsJedi, pictureBox1);
             }
         }
 
@@ -171,22 +154,22 @@ namespace WindowsFormsApplication1
             if (ChooseCategoryScreen.FinalCategory == 1)
             {
                 this.image = Image.FromFile(@"..\..\Resources\Csharp.png");
-                Picture(this.image);
+                CategoryValidation(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 2)
             {
                 this.image = Image.FromFile(@"..\..\Resources\Java.png");
-                Picture(this.image);
+                CategoryValidation(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 3)
             {
                 this.image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
-                Picture(this.image);
+                CategoryValidation(this.image);
             }
             else if (ChooseCategoryScreen.FinalCategory == 4)
             {
                 this.image = Image.FromFile(@"..\..\Resources\Oop.png");
-                Picture(this.image);
+                CategoryValidation(this.image);
             }
         }
 
@@ -194,39 +177,23 @@ namespace WindowsFormsApplication1
         {
             if (Paduin.FinalPaduinCharacter == 1)
             {
-                this.paduan = new CountSevgin();
-                Image image = Image.FromFile(this.paduan.CharacterImage);
-
-                this.paduin.Image = image;
-                this.paduin.Height = image.Height;
-                this.paduin.Width = image.Width;
+                this.paduinCharacter = new CountSevgin();
+                PaduinImageValidation(this.paduinCharacter, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 2)
             {
-                this.paduan = new Karnobatman();
-                Image image = Image.FromFile(this.paduan.CharacterImage);
-
-                this.paduin.Image = image;
-                this.paduin.Height = image.Height;
-                this.paduin.Width = image.Width;
+                this.paduinCharacter = new Karnobatman();
+                PaduinImageValidation(this.paduinCharacter, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 3)
             {
-                this.paduan = new SashoFett();
-                Image image = Image.FromFile(this.paduan.CharacterImage);
-
-                this.paduin.Image = image;
-                this.paduin.Height = image.Height;
-                this.paduin.Width = image.Width;
+                this.paduinCharacter = new SashoFett();
+                PaduinImageValidation(this.paduinCharacter, paduin);
             }
             else if (Paduin.FinalPaduinCharacter == 4)
             {
-                this.paduan = new WightJan();
-                Image image = Image.FromFile(this.paduan.CharacterImage);
-
-                this.paduin.Image = image;
-                this.paduin.Height = image.Height;
-                this.paduin.Width = image.Width;
+                this.paduinCharacter = new WightJan();
+                PaduinImageValidation(this.paduinCharacter, paduin);
             }
         }
 
@@ -235,7 +202,7 @@ namespace WindowsFormsApplication1
             JediInitialization();
 
             PicturQeuestionsInitialization();
-            
+
             PaduanInitialization();
         }
 
@@ -251,6 +218,11 @@ namespace WindowsFormsApplication1
 
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
+            if (Score >= 100 || Drunk >= 100)
+            {
+                Score = 100;
+            }
+            
             this.paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", this.Score);
             this.jediDrunk.Text = String.Format("Jedi Drunk : {0} %", this.Drunk);
 
@@ -350,7 +322,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox11.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
+                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
                 this.pictureBox11.Location = new Point(this.pictureBox11.Location.X - this.paduin.Location.X - 60, this.pictureBox11.Location.Y);
@@ -358,7 +330,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
+                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory10 = Direction.None;
                 this.pictureBox12.Hide();
                 this.pictureBox12.Location = new Point(this.pictureBox12.Location.X - this.paduin.Location.X - 60, this.pictureBox12.Location.Y);
@@ -366,7 +338,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.asistenntsJedi.AssistantAttack;
+                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory11 = Direction.None;
                 this.pictureBox13.Hide();
                 this.pictureBox13.Location = new Point(this.pictureBox13.Location.X - this.paduin.Location.X - 60, this.pictureBox13.Location.Y);
@@ -378,11 +350,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox3.Location = new Point(this.pictureBox3.Location.X, this.pictureBox3.Location.Y);
                 this.directionCategory1 = Direction.Right;
             }
-            if (this.pictureBox3.Left >= 600)
+            if (this.pictureBox3.Left >= 740)
             {
                 this.directionCategory1 = Direction.None;
                 this.pictureBox3.Hide();
-                this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - 580, this.pictureBox3.Location.Y);
+                this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - 720, this.pictureBox3.Location.Y);
             }
 
             //Second Category
@@ -392,11 +364,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox4.Location = new Point(this.pictureBox4.Location.X, this.pictureBox4.Location.Y);
                 this.directionCategory2 = Direction.Right;
             }
-            if (this.pictureBox4.Left >= 600)
+            if (this.pictureBox4.Left >= 740)
             {
                 this.directionCategory2 = Direction.None;
                 this.pictureBox4.Hide();
-                this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - 580, this.pictureBox4.Location.Y);
+                this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - 720, this.pictureBox4.Location.Y);
             }
 
             //Third Category
@@ -406,11 +378,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox5.Location = new Point(this.pictureBox5.Location.X, this.pictureBox5.Location.Y);
                 this.directionCategory3 = Direction.Right;
             }
-            if (this.pictureBox5.Left >= 600)
+            if (this.pictureBox5.Left >= 740)
             {
                 this.directionCategory3 = Direction.None;
                 this.pictureBox5.Hide();
-                this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - 580, this.pictureBox5.Location.Y);
+                this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - 720, this.pictureBox5.Location.Y);
             }
 
 
@@ -421,11 +393,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox6.Location = new Point(this.pictureBox6.Location.X, this.pictureBox6.Location.Y);
                 this.directionCategory4 = Direction.Right;
             }
-            if (this.pictureBox6.Left >= 600)
+            if (this.pictureBox6.Left >= 740)
             {
                 this.directionCategory4 = Direction.None;
                 this.pictureBox6.Hide();
-                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - 580, this.pictureBox6.Location.Y);
+                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - 720, this.pictureBox6.Location.Y);
             }
 
             //Fifth Category
@@ -435,11 +407,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox7.Location = new Point(this.pictureBox7.Location.X, this.pictureBox7.Location.Y);
                 this.directionCategory5 = Direction.Right;
             }
-            if (this.pictureBox7.Left >= 600)
+            if (this.pictureBox7.Left >= 740)
             {
                 this.directionCategory5 = Direction.None;
                 this.pictureBox7.Hide();
-                this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - 580, this.pictureBox7.Location.Y);
+                this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - 720, this.pictureBox7.Location.Y);
             }
 
             //Sixth Category
@@ -449,11 +421,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox8.Location = new Point(this.pictureBox8.Location.X, this.pictureBox8.Location.Y);
                 this.directionCategory6 = Direction.Right;
             }
-            if (this.pictureBox8.Left >= 600)
+            if (this.pictureBox8.Left >= 740)
             {
                 this.directionCategory6 = Direction.None;
                 this.pictureBox8.Hide();
-                this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - 580, this.pictureBox8.Location.Y);
+                this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - 720, this.pictureBox8.Location.Y);
             }
 
             //Seventh Category
@@ -463,11 +435,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox9.Location = new Point(this.pictureBox9.Location.X, this.pictureBox9.Location.Y);
                 this.directionCategory7 = Direction.Right;
             }
-            if (this.pictureBox9.Left >= 600)
+            if (this.pictureBox9.Left >= 740)
             {
                 this.directionCategory7 = Direction.None;
                 this.pictureBox9.Hide();
-                this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - 580, this.pictureBox9.Location.Y);
+                this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - 720, this.pictureBox9.Location.Y);
             }
 
             //Eight Category
@@ -477,11 +449,11 @@ namespace WindowsFormsApplication1
                 this.pictureBox10.Location = new Point(this.pictureBox10.Location.X, this.pictureBox10.Location.Y);
                 this.directionCategory8 = Direction.Right;
             }
-            if (this.pictureBox10.Left >= 600)
+            if (this.pictureBox10.Left >= 740)
             {
                 this.directionCategory8 = Direction.None;
                 this.pictureBox10.Hide();
-                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - 580, this.pictureBox10.Location.Y);
+                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - 720, this.pictureBox10.Location.Y);
             }
 
             //BeerOne Category
@@ -489,7 +461,7 @@ namespace WindowsFormsApplication1
             {
                 this.pictureBox11.Visible = true;
                 this.pictureBox11.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
-                this.directionCategory9 = Direction.Right;
+                this.directionCategory9 = Direction.Left;
             }
             if (this.pictureBox11.Left >= 1000)
             {
@@ -503,7 +475,7 @@ namespace WindowsFormsApplication1
             {
                 this.pictureBox12.Visible = true;
                 this.pictureBox12.Location = new Point(this.pictureBox11.Location.X, this.pictureBox11.Location.Y);
-                this.directionCategory10 = Direction.Right;
+                this.directionCategory10 = Direction.Left;
             }
             if (this.pictureBox12.Left >= 1000)
             {
@@ -517,7 +489,7 @@ namespace WindowsFormsApplication1
             {
                 this.pictureBox13.Visible = true;
                 this.pictureBox13.Location = new Point(this.pictureBox13.Location.X, this.pictureBox13.Location.Y);
-                this.directionCategory11 = Direction.Right;
+                this.directionCategory11 = Direction.Left;
             }
             if (this.pictureBox13.Left >= 1000)
             {
@@ -548,9 +520,9 @@ namespace WindowsFormsApplication1
             if (this.directionPaduin == Direction.Up)
             {
                 this.paduin.Top -= 3;
-                if (this.paduin.Top <= 10)
+                if (this.paduin.Top <= 45)
                 {
-                    this.paduin.Top = 50;
+                    this.paduin.Top = 75;
                     this.directionPaduin = Direction.Down;
                 }
             }
@@ -809,7 +781,84 @@ namespace WindowsFormsApplication1
         {
 
         }
+        private void PaduinImageValidation(IPaduin paduinCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(paduinCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + paduinCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+        private void JediImageValidation(IJedi jediCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(jediCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + jediCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+        private void AssistantImageValidation(IAssistants assistantCharacter, PictureBox paduin)
+        {
+            try
+            {
+                image = Image.FromFile(assistantCharacter.CharacterImage);
+
+                paduin.Image = image;
+                paduin.Height = image.Height;
+                paduin.Width = image.Width;
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The path of " + assistantCharacter.GetType().Name + " is not in the correct format !");
+            }
+        }
+
+        private void CategoryValidation(Image image)
+        {
+            try
+            {
+                Picture(image);
+            }
+            catch (FileNotFoundException)
+            {
+                throw new FileNotFoundException("The category path is not in the correct format !");
+            }
+        }
+
+        private void redWall_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
-   
+
 }

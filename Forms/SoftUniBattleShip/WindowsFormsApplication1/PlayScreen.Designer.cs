@@ -49,6 +49,10 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.redWall = new System.Windows.Forms.PictureBox();
+            this.redWall4 = new System.Windows.Forms.PictureBox();
+            this.redWall3 = new System.Windows.Forms.PictureBox();
+            this.redWall2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.enemyBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,6 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).BeginInit();
             this.SuspendLayout();
             // 
             // enemyBox
@@ -88,7 +96,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 47);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 56);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 40);
             this.pictureBox3.TabIndex = 3;
@@ -103,7 +111,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(32, 70);
+            this.pictureBox4.Location = new System.Drawing.Point(32, 85);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 40);
             this.pictureBox4.TabIndex = 4;
@@ -113,7 +121,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(33, 93);
+            this.pictureBox5.Location = new System.Drawing.Point(32, 116);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 40);
             this.pictureBox5.TabIndex = 5;
@@ -123,7 +131,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(32, 128);
+            this.pictureBox6.Location = new System.Drawing.Point(32, 143);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 40);
             this.pictureBox6.TabIndex = 6;
@@ -157,7 +165,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(32, 253);
+            this.pictureBox7.Location = new System.Drawing.Point(32, 263);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(30, 40);
             this.pictureBox7.TabIndex = 12;
@@ -167,7 +175,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(32, 224);
+            this.pictureBox8.Location = new System.Drawing.Point(32, 234);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(30, 40);
             this.pictureBox8.TabIndex = 13;
@@ -177,7 +185,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Location = new System.Drawing.Point(32, 188);
+            this.pictureBox9.Location = new System.Drawing.Point(32, 206);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(30, 40);
             this.pictureBox9.TabIndex = 14;
@@ -187,53 +195,86 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Location = new System.Drawing.Point(32, 160);
+            this.pictureBox10.Location = new System.Drawing.Point(32, 174);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(30, 40);
             this.pictureBox10.TabIndex = 15;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click_1);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Location = new System.Drawing.Point(822, 23);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(50, 49);
-            this.pictureBox13.TabIndex = 16;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox13_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Location = new System.Drawing.Point(822, 160);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 40);
-            this.pictureBox11.TabIndex = 17;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox11_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Location = new System.Drawing.Point(824, 280);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(48, 50);
-            this.pictureBox12.TabIndex = 18;
-            this.pictureBox12.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // paduin
             // 
             this.paduin.BackColor = System.Drawing.Color.Transparent;
             this.paduin.Image = ((System.Drawing.Image)(resources.GetObject("paduin.Image")));
-            this.paduin.Location = new System.Drawing.Point(410, 47);
+            this.paduin.Location = new System.Drawing.Point(400, 160);
             this.paduin.Name = "paduin";
             this.paduin.Size = new System.Drawing.Size(50, 65);
             this.paduin.TabIndex = 8;
             this.paduin.TabStop = false;
             this.paduin.Click += new System.EventHandler(this.paduin_Click);
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Location = new System.Drawing.Point(822, 47);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(50, 49);
+            this.pictureBox13.TabIndex = 16;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click_1);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Location = new System.Drawing.Point(822, 188);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 40);
+            this.pictureBox11.TabIndex = 17;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click_1);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Location = new System.Drawing.Point(822, 253);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox12.TabIndex = 18;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click_1);
+            // 
+            // redWall
+            // 
+            this.redWall.Location = new System.Drawing.Point(85, 37);
+            this.redWall.Name = "redWall";
+            this.redWall.Size = new System.Drawing.Size(15, 312);
+            this.redWall.TabIndex = 19;
+            this.redWall.TabStop = false;
+            this.redWall.Click += new System.EventHandler(this.redWall_Click);
+            // 
+            // redWall4
+            // 
+            this.redWall4.Location = new System.Drawing.Point(85, 334);
+            this.redWall4.Name = "redWall4";
+            this.redWall4.Size = new System.Drawing.Size(715, 15);
+            this.redWall4.TabIndex = 20;
+            this.redWall4.TabStop = false;
+            // 
+            // redWall3
+            // 
+            this.redWall3.Location = new System.Drawing.Point(85, 37);
+            this.redWall3.Name = "redWall3";
+            this.redWall3.Size = new System.Drawing.Size(715, 15);
+            this.redWall3.TabIndex = 22;
+            this.redWall3.TabStop = false;
+            // 
+            // redWall2
+            // 
+            this.redWall2.Location = new System.Drawing.Point(801, 37);
+            this.redWall2.Name = "redWall2";
+            this.redWall2.Size = new System.Drawing.Size(15, 312);
+            this.redWall2.TabIndex = 23;
+            this.redWall2.TabStop = false;
             // 
             // PlayScreen
             // 
@@ -244,6 +285,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 361);
+            this.Controls.Add(this.redWall2);
+            this.Controls.Add(this.redWall3);
+            this.Controls.Add(this.redWall4);
+            this.Controls.Add(this.redWall);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox13);
@@ -283,6 +328,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +356,9 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox redWall;
+        private System.Windows.Forms.PictureBox redWall4;
+        private System.Windows.Forms.PictureBox redWall3;
+        private System.Windows.Forms.PictureBox redWall2;
     }
 }
