@@ -67,6 +67,7 @@ namespace WindowsFormsApplication1
             this.directionCategory8 = Direction.None;
             this.directionCategory9 = Direction.None;
             this.directionCategory10 = Direction.None;
+            this.directionCategory11 = Direction.None;
 
             this.pictureBox3.Visible = false;
             this.pictureBox4.Visible = false;
@@ -78,6 +79,7 @@ namespace WindowsFormsApplication1
             this.pictureBox10.Visible = false;
             this.pictureBox11.Visible = false;
             this.pictureBox12.Visible = false;
+            this.pictureBox13.Visible = false;
 
             //Beer.Visible = false;
 
@@ -210,6 +212,9 @@ namespace WindowsFormsApplication1
                 pictureBox12.Image = image;
                 pictureBox12.Width = image.Width;
                 pictureBox12.Height = image.Height;
+                pictureBox13.Image = image;
+                pictureBox13.Width = image.Width;
+                pictureBox13.Height = image.Height;
             }
             catch (FileNotFoundException)
             {
@@ -339,7 +344,7 @@ namespace WindowsFormsApplication1
                 this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
-                this.pictureBox11.Location = new Point(824, 120);
+                this.pictureBox11.Location = new Point(822, 120);
             }
 
             if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
@@ -347,9 +352,16 @@ namespace WindowsFormsApplication1
                 this.Score = this.Score + this.assistantsJedi.AssistantAttack;
                 this.directionCategory10 = Direction.None;
                 this.pictureBox12.Hide();
-                this.pictureBox12.Location = new Point(824, 249);
+                this.pictureBox12.Location = new Point(822, 249);
             }
-            
+            if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
+                this.directionCategory11 = Direction.None;
+                this.pictureBox13.Hide();
+                this.pictureBox13.Location = new Point(822, 397);
+            }
+
             //First Category
             if (this.enemyBox.Location.Y == this.pictureBox3.Location.Y)
             {
@@ -490,6 +502,19 @@ namespace WindowsFormsApplication1
                 this.pictureBox12.Hide();
                 this.pictureBox12.Location = new Point(822, 249);
             }
+            //BeerThree Category
+            if (this.pictureBox1.Location.Y == this.pictureBox13.Location.Y)
+            {
+                this.pictureBox13.Visible = true;
+                this.pictureBox13.Location = new Point(this.pictureBox13.Location.X, this.pictureBox13.Location.Y);
+                this.directionCategory11 = Direction.Left;
+            }
+            if (this.pictureBox13.Left <= 100)
+            {
+                this.directionCategory11 = Direction.None;
+                this.pictureBox13.Hide();
+                this.pictureBox13.Location = new Point(822, 397);
+            }
 
             //Paduins Direction
             if (this.directionPaduin == Direction.Right)
@@ -522,9 +547,9 @@ namespace WindowsFormsApplication1
             if (this.directionPaduin == Direction.Down)
             {
                 this.paduin.Top += 3;
-                if (this.paduin.Top >= 270)
+                if (this.paduin.Top >= 450)
                 {
-                    this.paduin.Top = 220;
+                    this.paduin.Top = 400;
                     this.directionPaduin = Direction.Up;
                 }
             }
@@ -581,13 +606,16 @@ namespace WindowsFormsApplication1
             {
                 this.pictureBox12.Left -= 4;
             }
-            
+            if (this.directionCategory11 == Direction.Left)
+            {
+                this.pictureBox13.Left -= 4;
+            }
 
             //Jedi Character direction - only Up and Down
             if (this.directionCharacter == Direction.Up)
             {
                 this.enemyBox.Top -= 1;
-                if (this.enemyBox.Top == 20)
+                if (this.enemyBox.Top == 30)
                 {
                     this.directionCharacter = Direction.Down;
                 }
@@ -595,7 +623,7 @@ namespace WindowsFormsApplication1
             if (this.directionCharacter == Direction.Down)
             {
                 this.enemyBox.Top += 1;
-                if (this.enemyBox.Top == 280)
+                if (this.enemyBox.Top == 460)
                 {
                     this.directionCharacter = Direction.Up;
                 }
@@ -605,7 +633,7 @@ namespace WindowsFormsApplication1
             if (this.directionAssistant == Direction.Up)
             {
                 this.pictureBox1.Top -= 1;
-                if (this.pictureBox1.Top == 20)
+                if (this.pictureBox1.Top == 30)
                 {
                     this.directionAssistant = Direction.Down;
                 }
@@ -614,7 +642,7 @@ namespace WindowsFormsApplication1
             if (this.directionAssistant == Direction.Down)
             {
                 this.pictureBox1.Top += 1;
-                if (this.pictureBox1.Top == 280)
+                if (this.pictureBox1.Top == 460)
                 {
                     this.directionAssistant = Direction.Up;
                 }
@@ -822,7 +850,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void redWall2_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-
-
 }
