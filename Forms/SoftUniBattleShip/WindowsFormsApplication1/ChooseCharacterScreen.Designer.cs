@@ -38,7 +38,7 @@
             this.JediButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.JediButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.JediButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JediButton.Location = new System.Drawing.Point(31, 90);
+            this.JediButton.Location = new System.Drawing.Point(507, 94);
             this.JediButton.Name = "JediButton";
             this.JediButton.Size = new System.Drawing.Size(99, 36);
             this.JediButton.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.PaduinButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PaduinButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PaduinButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaduinButton.Location = new System.Drawing.Point(493, 88);
+            this.PaduinButton.Location = new System.Drawing.Point(12, 94);
             this.PaduinButton.Name = "PaduinButton";
             this.PaduinButton.Size = new System.Drawing.Size(130, 38);
             this.PaduinButton.TabIndex = 1;

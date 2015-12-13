@@ -153,17 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayScreen.resx">
       <DependentUpon>PlayScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Question.resx">
       <DependentUpon>Question.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,22 +180,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Acho.png" />
+    <None Include="Resources\Trifon1.png" />
+    <None Include="Resources\Angel.png" />
+    <Content Include="Resources\AngelSecond.png" />
     <Content Include="Resources\BattleGameSpace.jpg" />
-    <Content Include="Resources\BattleMenu.jpg" />
     <Content Include="Resources\BattleMenu2.jpg" />
     <Content Include="Resources\BattleMenuMatrix.jpg" />
-    <Content Include="Resources\BattleSpace.jpg" />
     <Content Include="Resources\Beer.png" />
     <Content Include="Resources\Cplusplus.png" />
     <Content Include="Resources\csharp.png" />
     <Content Include="Resources\Edo.png" />
+    <None Include="Resources\Edo1.png" />
+    <Content Include="Resources\EdoSecond.png" />
     <Content Include="Resources\Jan.png" />
     <Content Include="Resources\Java.png" />
     <Content Include="Resources\Nakov.png" />
+    <None Include="Resources\Nakov1.png" />
+    <Content Include="Resources\NakovSecond.png" />
     <Content Include="Resources\Nasko.png" />
+    <None Include="Resources\Nasko1.png" />
+    <Content Include="Resources\NaskoSecond.png" />
     <Content Include="Resources\Oop.png" />
     <Content Include="Resources\Qncho.png" />
     <Content Include="Resources\Royal.png" />
+    <None Include="Resources\Royal1.png" />
+    <Content Include="Resources\RoyalSecond.png" />
     <Content Include="Resources\Sasho.png" />
     <Content Include="Resources\Sevgin.png" />
     <Content Include="Resources\Trifon.png" />

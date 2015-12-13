@@ -84,6 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(895, 119);
             this.pictureBox1.Location = new System.Drawing.Point(822, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 53);
@@ -205,7 +206,7 @@
             this.paduin.BackColor = System.Drawing.Color.Transparent;
             this.paduin.Location = new System.Drawing.Point(400, 160);
             this.paduin.Name = "paduin";
-            this.paduin.Size = new System.Drawing.Size(50, 65);
+            this.paduin.Size = new System.Drawing.Size(53, 68);
             this.paduin.TabIndex = 8;
             this.paduin.TabStop = false;
             this.paduin.Click += new System.EventHandler(this.paduin_Click);
@@ -232,15 +233,38 @@
             // 
             // redWall
             // 
+            this.redWall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall.BackgroundImage")));
             this.redWall.Location = new System.Drawing.Point(85, 37);
             this.redWall.Name = "redWall";
+
+            this.redWall.Size = new System.Drawing.Size(11, 473);
+            this.redWall.TabIndex = 16;
+
             this.redWall.Size = new System.Drawing.Size(15, 312);
             this.redWall.TabIndex = 19;
+
             this.redWall.TabStop = false;
             this.redWall.Click += new System.EventHandler(this.redWall_Click);
             // 
             // redWall4
             // 
+
+            this.redWall2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall2.BackgroundImage")));
+            this.redWall2.Location = new System.Drawing.Point(866, 37);
+            this.redWall2.Name = "redWall2";
+            this.redWall2.Size = new System.Drawing.Size(10, 473);
+            this.redWall2.TabIndex = 17;
+            this.redWall2.TabStop = false;
+            //this.redWall2.Click += new System.EventHandler(this.redWall2_Click);
+            // 
+            // redWall3
+            // 
+            this.redWall3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall3.BackgroundImage")));
+            this.redWall3.Location = new System.Drawing.Point(85, 500);
+            this.redWall3.Name = "redWall3";
+            this.redWall3.Size = new System.Drawing.Size(791, 10);
+            this.redWall3.TabIndex = 18;
+
             this.redWall4.Location = new System.Drawing.Point(85, 334);
             this.redWall4.Name = "redWall4";
             this.redWall4.Size = new System.Drawing.Size(715, 15);
@@ -253,16 +277,26 @@
             this.redWall3.Name = "redWall3";
             this.redWall3.Size = new System.Drawing.Size(715, 15);
             this.redWall3.TabIndex = 22;
+
             this.redWall3.TabStop = false;
             // 
             // redWall2
             // 
+
+            this.redWall4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall4.BackgroundImage")));
+            this.redWall4.Location = new System.Drawing.Point(85, 37);
+            this.redWall4.Name = "redWall4";
+            this.redWall4.Size = new System.Drawing.Size(791, 12);
+            this.redWall4.TabIndex = 19;
+            this.redWall4.TabStop = false;
+            //this.redWall4.Click += new System.EventHandler(this.redWall4_Click);
+
             this.redWall2.Location = new System.Drawing.Point(801, 37);
             this.redWall2.Name = "redWall2";
             this.redWall2.Size = new System.Drawing.Size(15, 312);
             this.redWall2.TabIndex = 23;
             this.redWall2.TabStop = false;
-            // 
+
             // PlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,7 +305,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+
+            this.ClientSize = new System.Drawing.Size(957, 558);
+            this.Controls.Add(this.redWall4);
+            this.Controls.Add(this.redWall3);
+
             this.ClientSize = new System.Drawing.Size(884, 361);
+
             this.Controls.Add(this.redWall2);
             this.Controls.Add(this.redWall3);
             this.Controls.Add(this.redWall4);

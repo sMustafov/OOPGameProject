@@ -34,34 +34,38 @@
             this.YanchoButton = new System.Windows.Forms.RadioButton();
             this.SashoButton = new System.Windows.Forms.RadioButton();
             this.JanButton = new System.Windows.Forms.RadioButton();
-            this.FuglemanButton = new System.Windows.Forms.RadioButton();
-            this.TriBiriButton = new System.Windows.Forms.RadioButton();
             this.SaveButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 48);
+            this.label1.Size = new System.Drawing.Size(563, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Choose your characters:";
+            this.label1.Text = "Choose your character";
             // 
             // SevginButton
             // 
             this.SevginButton.AutoSize = true;
-            this.SevginButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SevginButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SevginButton.Location = new System.Drawing.Point(0, 28);
+            this.SevginButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SevginButton.ForeColor = System.Drawing.Color.Black;
+            this.SevginButton.Location = new System.Drawing.Point(750, 28);
             this.SevginButton.Name = "SevginButton";
-            this.SevginButton.Size = new System.Drawing.Size(123, 22);
+            this.SevginButton.Size = new System.Drawing.Size(150, 31);
             this.SevginButton.TabIndex = 1;
             this.SevginButton.TabStop = true;
             this.SevginButton.Text = "Count Sevgin";
@@ -71,11 +75,11 @@
             // YanchoButton
             // 
             this.YanchoButton.AutoSize = true;
-            this.YanchoButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YanchoButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.YanchoButton.Location = new System.Drawing.Point(0, 56);
+            this.YanchoButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.YanchoButton.ForeColor = System.Drawing.Color.Black;
+            this.YanchoButton.Location = new System.Drawing.Point(497, 28);
             this.YanchoButton.Name = "YanchoButton";
-            this.YanchoButton.Size = new System.Drawing.Size(169, 22);
+            this.YanchoButton.Size = new System.Drawing.Size(200, 31);
             this.YanchoButton.TabIndex = 2;
             this.YanchoButton.TabStop = true;
             this.YanchoButton.Text = "Karnobatman Bane";
@@ -85,11 +89,11 @@
             // SashoButton
             // 
             this.SashoButton.AutoSize = true;
-            this.SashoButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SashoButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SashoButton.Location = new System.Drawing.Point(0, 84);
+            this.SashoButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SashoButton.ForeColor = System.Drawing.Color.Black;
+            this.SashoButton.Location = new System.Drawing.Point(75, 28);
             this.SashoButton.Name = "SashoButton";
-            this.SashoButton.Size = new System.Drawing.Size(104, 22);
+            this.SashoButton.Size = new System.Drawing.Size(126, 31);
             this.SashoButton.TabIndex = 3;
             this.SashoButton.TabStop = true;
             this.SashoButton.Text = "Sasho Fett";
@@ -99,51 +103,23 @@
             // JanButton
             // 
             this.JanButton.AutoSize = true;
-            this.JanButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JanButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.JanButton.Location = new System.Drawing.Point(0, 112);
+            this.JanButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.JanButton.ForeColor = System.Drawing.Color.Black;
+            this.JanButton.Location = new System.Drawing.Point(301, 28);
             this.JanButton.Name = "JanButton";
-            this.JanButton.Size = new System.Drawing.Size(104, 22);
+            this.JanButton.Size = new System.Drawing.Size(117, 31);
             this.JanButton.TabIndex = 4;
             this.JanButton.TabStop = true;
             this.JanButton.Text = "Wight Jan";
             this.JanButton.UseVisualStyleBackColor = true;
             this.JanButton.CheckedChanged += new System.EventHandler(this.JanButton_CheckedChanged);
             // 
-            // FuglemanButton
-            // 
-            this.FuglemanButton.AutoSize = true;
-            this.FuglemanButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FuglemanButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FuglemanButton.Location = new System.Drawing.Point(0, 28);
-            this.FuglemanButton.Name = "FuglemanButton";
-            this.FuglemanButton.Size = new System.Drawing.Size(177, 22);
-            this.FuglemanButton.TabIndex = 5;
-            this.FuglemanButton.TabStop = true;
-            this.FuglemanButton.Text = "Fugleman ToWookie";
-            this.FuglemanButton.UseVisualStyleBackColor = true;
-            this.FuglemanButton.CheckedChanged += new System.EventHandler(this.FuglemanButton_CheckedChanged);
-            // 
-            // TriBiriButton
-            // 
-            this.TriBiriButton.AutoSize = true;
-            this.TriBiriButton.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TriBiriButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TriBiriButton.Location = new System.Drawing.Point(0, 54);
-            this.TriBiriButton.Name = "TriBiriButton";
-            this.TriBiriButton.Size = new System.Drawing.Size(128, 22);
-            this.TriBiriButton.TabIndex = 6;
-            this.TriBiriButton.TabStop = true;
-            this.TriBiriButton.Text = "Sipi TriBiriO";
-            this.TriBiriButton.UseVisualStyleBackColor = true;
-            this.TriBiriButton.CheckedChanged += new System.EventHandler(this.TriBiriButton_CheckedChanged);
-            // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SaveButton.Location = new System.Drawing.Point(612, 191);
+            this.SaveButton.Location = new System.Drawing.Point(853, 9);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(92, 51);
             this.SaveButton.TabIndex = 9;
@@ -160,27 +136,53 @@
             this.groupBox1.Controls.Add(this.JanButton);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(48, 60);
+            this.groupBox1.Location = new System.Drawing.Point(0, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(222, 182);
+            this.groupBox1.Size = new System.Drawing.Size(930, 72);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select  a paduin";
+            this.groupBox1.Text = "Paduins:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // pictureBox1
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.FuglemanButton);
-            this.groupBox2.Controls.Add(this.TriBiriButton);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(347, 60);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(191, 182);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Assistant";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 144);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(253, 411);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(270, 144);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(201, 403);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(481, 144);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(232, 403);
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(715, 153);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(232, 394);
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
             // 
             // Paduin
             // 
@@ -188,22 +190,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(728, 264);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(957, 558);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Location = new System.Drawing.Point(613, 192);
             this.MaximizeBox = false;
             this.Name = "Paduin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Paduin";
-            this.Load += new System.EventHandler(this.Paduin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,10 +221,11 @@
         private System.Windows.Forms.RadioButton YanchoButton;
         private System.Windows.Forms.RadioButton SashoButton;
         private System.Windows.Forms.RadioButton JanButton;
-        private System.Windows.Forms.RadioButton FuglemanButton;
-        private System.Windows.Forms.RadioButton TriBiriButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

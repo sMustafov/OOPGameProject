@@ -64,7 +64,9 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void FuglemanButton_CheckedChanged(object sender, EventArgs e)
+
+
+     private void FuglemanButton_CheckedChanged(object sender, EventArgs e)
         {
             this.paduinAssistant = 1;
         }
@@ -73,5 +75,6 @@ namespace WindowsFormsApplication1
         {
             this.paduinAssistant = 2;
         }
+
     }
 }
