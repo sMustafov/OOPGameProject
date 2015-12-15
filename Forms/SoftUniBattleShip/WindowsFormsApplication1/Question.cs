@@ -1,67 +1,40 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1
 {
+    using System;
+    using System.Windows.Forms;
+
+    using Quests;
+
     public partial class Question : Form
     {
-        public static int FinalAnswer;
+        public static int FinalAnswer; //used smwhere else and cannot be converted to string for checking answer
+                                       //makes it too complicated... introducing answerAsString for the check
+
         private int answer;
-        private Question question;
-        private PlayScreen pl;
+        private Quest quest;
+        private string answerAsString; //used to check playerAnswer - questionAnswer
 
         public Question()
         {
-
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Question_Load(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int randNum = random.Next(1, 5);
-            string question = null;
-            
-            //if (ChooseCategoryScreen.FinalCategory == 1)
-            //{
-            //    question = JediQuest.cShrap(randNum);
-            //}
-            //else if (ChooseCategoryScreen.FinalCategory == 2)
-            //{
-            //    question = JediQuest.Java(randNum);
-            //}
-            //else if (ChooseCategoryScreen.FinalCategory == 4)
-            //{
-            //    question = JediQuest.OOP(randNum);
-            //}
-            //else if (ChooseCategoryScreen.FinalCategory == 3)
-            //{
-            //    question = JediQuest.cPlusPlus(randNum);
-            //}
-
-            this.label1.Text = question;
+            quest = QuestFactory.GenerateQuestOnCategory();
+            this.questionLabel.Text = quest.ToString();
         }
 
         private void TrueButton_CheckedChanged(object sender, EventArgs e)
         {
             this.answer = 1;
+            this.answerAsString = "true";
         }
 
         private void FalseButton_CheckedChanged(object sender, EventArgs e)
         {
             this.answer = 2;
-        }
-
-        private void Save_Click(object sender, EventArgs e)
-        {
-            FinalAnswer = this.answer;
-            Close();
-
+            this.answerAsString = "false";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -73,5 +46,24 @@ namespace WindowsFormsApplication1
         {
             this.answer = 4;
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            FinalAnswer = this.answer;
+
+            //checks the anwer of the question
+            if (QuestFactory.CheckAnswer(answerAsString, quest.Answer))
+            {
+                MessageBox.Show("CORRECT!"); //logic if correct
+            }
+            else
+            {
+                MessageBox.Show("NOT CORRECT"); //logic if not correct
+            }
+            
+            Close();
+
+        }
+
     }
 }

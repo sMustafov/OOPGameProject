@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Paduins.Paduin;
-
 namespace WindowsFormsApplication1
 {
     using Interface;
@@ -11,6 +9,7 @@ namespace WindowsFormsApplication1
     using Interface.IJedi.IAssistants;
     using Interface.IPadaun.IPaduinStudents;
     using Jedis;
+    using Paduins.Paduin;
 
     public partial class PlayScreen : Form
     {
@@ -153,24 +152,24 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void PicturQeuestionsInitialization()
+        private void PictureQuestionInitialization()
         {
-            if (ChooseCategoryScreen.FinalCategory == 1)
+            if (ChooseCategoryScreen.GetFinalCategory() == "Csharp")
             {
                 this.image = Image.FromFile(@"..\..\Resources\Csharp.png");
                 CategoryValidation(this.image);
             }
-            else if (ChooseCategoryScreen.FinalCategory == 2)
+            else if (ChooseCategoryScreen.GetFinalCategory() == "Java")
             {
                 this.image = Image.FromFile(@"..\..\Resources\Java.png");
                 CategoryValidation(this.image);
             }
-            else if (ChooseCategoryScreen.FinalCategory == 3)
+            else if (ChooseCategoryScreen.GetFinalCategory() == "Cpp")
             {
                 this.image = Image.FromFile(@"..\..\Resources\Cplusplus.png");
                 CategoryValidation(this.image);
             }
-            else if (ChooseCategoryScreen.FinalCategory == 4)
+            else if (ChooseCategoryScreen.GetFinalCategory() == "OOP")
             {
                 this.image = Image.FromFile(@"..\..\Resources\Oop.png");
                 CategoryValidation(this.image);
@@ -226,7 +225,7 @@ namespace WindowsFormsApplication1
         {
             JediInitialization();
 
-            PicturQeuestionsInitialization();
+            PictureQuestionInitialization();
 
             PaduanInitialization();
 

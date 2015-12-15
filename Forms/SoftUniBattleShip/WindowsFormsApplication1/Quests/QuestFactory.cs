@@ -26,15 +26,41 @@
             new Quest("C++ programs can be run only with special IDE. Answer with: \"true\" or \"false\"", "false", QuestionType.Cpp),
         };
 
+        /// <summary>
+        /// This method generates a question depending on the category
+        /// </summary>
+        /// <returns>question</returns>
+        public static Quest GenerateQuestOnCategory()
+        {
+            Quest question = null;
+
+            switch (ChooseCategoryScreen.GetFinalCategory())
+            {
+                case "Csharp":
+                    question = GenerateRandomQuest(QuestionType.Cs);
+                    break;
+                case "Java":
+                    question = GenerateRandomQuest(QuestionType.Java);
+                    break;
+                case "OOP":
+                    question = GenerateRandomQuest(QuestionType.Oop);
+                    break;
+                case "Cpp":
+                    question = GenerateRandomQuest(QuestionType.Cpp);
+                    break;
+            }
+
+                 return question;
+        }
         
         /// <summary>
         /// This method generates a random question
         /// </summary>
         /// <param name="questionType">Type of the question</param>
-        /// <returns>Question</returns>
-        public static Quest GenerateQuest(QuestionType questionType)
+        /// <returns>Random question</returns>
+        private static  Quest GenerateRandomQuest(QuestionType questionType)
         {
-            int questionListSize = QuestionList.Count;
+            var questionListSize = QuestionList.Count;
 
             Random random = new Random();
             try
@@ -55,5 +81,16 @@
                 return QuestionList[1];
             }
         }
+
+        /// <summary>
+        /// This method checks whether the answer is correct
+        /// </summary>
+        /// <param name="playerAnswer">Player answer</param>
+        /// <param name="questionAnswer">Question answer</param>
+        /// <returns>True if correct, false if not</returns>
+        public static bool CheckAnswer(string playerAnswer, string questionAnswer)
+        {
+            return String.Compare(playerAnswer, questionAnswer, StringComparison.OrdinalIgnoreCase) == 0;
+        }//method should be in Quest class??
     }
 }

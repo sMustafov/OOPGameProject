@@ -1,7 +1,7 @@
-﻿using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
-
-namespace WindowsFormsApplication1.Paduins.Paduin
+﻿namespace WindowsFormsApplication1.Paduins.Paduin
 {
+    using Interface.IPadaun.IPaduinStudents;
+
     public abstract class Paduin : IPaduin
     {
         protected int paduinPower;

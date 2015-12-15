@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.questionLabel = new System.Windows.Forms.Label();
             this.TrueButton = new System.Windows.Forms.RadioButton();
             this.FalseButton = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -36,15 +36,15 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // label1
+            // questionLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(569, 76);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Question";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionLabel.Location = new System.Drawing.Point(12, 9);
+            this.questionLabel.Name = "questionLabel";
+            this.questionLabel.Size = new System.Drawing.Size(569, 76);
+            this.questionLabel.TabIndex = 0;
+            this.questionLabel.Text = "Question";
+//            this.questionLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // TrueButton
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.FalseButton);
             this.Controls.Add(this.TrueButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.questionLabel);
             this.Name = "Question";
             this.Text = "Question";
             this.Load += new System.EventHandler(this.Question_Load);
@@ -123,7 +123,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.RadioButton TrueButton;
         private System.Windows.Forms.RadioButton FalseButton;
         private System.Windows.Forms.RadioButton radioButton4;

@@ -136,7 +136,7 @@
             this.MaximizeBox = false;
             this.Name = "ChooseCategoryScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Category";
+            this.Text = "category";
             this.Load += new System.EventHandler(this.ChooseCategoryScreen_Load);
             this.ResumeLayout(false);
 
