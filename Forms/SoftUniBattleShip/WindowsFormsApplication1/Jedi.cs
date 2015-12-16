@@ -45,41 +45,6 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void AchoButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.Character = 2;
-
-        }
-
-        private void RoyalButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.Character = 3;
-
-        }
-
-        private void NaskoButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.Character = 4;
-
-        }
-
-        private void EdoButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.AssistantCharacter = 1;
-
-        }
-
-        private void TrigonButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-            this.AssistantCharacter = 2;
-
-        }
-
         private void BackButton(object sender, EventArgs e)
         {
             Hide();
@@ -90,13 +55,41 @@ namespace WindowsFormsApplication1
             Close();
         }
 
+
+
         public static implicit operator Jedi(JoNakov v)
         {
             throw new NotImplementedException();
         }
+
+        private void NakovJediPic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NakovJediPic_MouseHover(object sender, EventArgs e)
+        {
+            NakovJediPic.Cursor = Cursors.Hand;
+        }
+        private void NakovLabel_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void NakovLabel_MouseHover(object sender, EventArgs e)
+        {
+            NakovLabel.Cursor = Cursors.UpArrow;
+        }
+        private void NakovJediPic_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.Character = 1;
+            NakovJediPic.Hide();
+        }
+
+
+
+
         private void AngelJediPic_Click(object sender, EventArgs e)
         {
-            Character = 4;
+            
         }
         private void AngelSecond_Click(object sender, EventArgs e)
         {   
@@ -114,6 +107,7 @@ namespace WindowsFormsApplication1
         }
         private void AngelJediPic_MouseDown(object sender, MouseEventArgs e)
         {
+            this.Character = 2;
             AngelJediPic.Hide();
         }
 
@@ -122,14 +116,10 @@ namespace WindowsFormsApplication1
 
         private void RoyalJediPic_Click_1(object sender, EventArgs e)
         {
-            Character = 3;
+            
         }
         private void RoyalSecond_Click(object sender, EventArgs e)
         {
-        }
-        private void RoyalJediPic_MouseDown(object sender, MouseEventArgs e)
-        {
-            RoyalJediPic.Hide();
         }
         private void RoyalLabel_TextChanged(object sender, EventArgs e)
         {
@@ -142,13 +132,45 @@ namespace WindowsFormsApplication1
         {
             RoyalJediPic.Cursor = Cursors.Hand;
         }
+        private void RoyalJediPic_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.Character = 3;
+            RoyalJediPic.Hide();
+        }
+
+
+
+
+        private void NaskoJediPic_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void NaskoSecond_Click(object sender, EventArgs e)
+        {
+        }
+        private void NaskoLabel_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void NaskoLabel_MouseHover(object sender, EventArgs e)
+        {
+            NaskoLabel.Cursor = Cursors.UpArrow;
+        }
+        private void NaskoJediPic_MouseHover(object sender, EventArgs e)
+        {
+            NaskoJediPic.Cursor = Cursors.Hand;
+        }
+        private void NaskoJediPic_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.Character = 4;
+            NaskoJediPic.Hide();
+        }
 
 
 
 
         private void TrifonJediPic_Click(object sender, EventArgs e)
         {
-            AssistantCharacter = 2;
+
         }
         private void TrifonSecond_Click(object sender, EventArgs e)
         {
@@ -166,70 +188,12 @@ namespace WindowsFormsApplication1
         }
         private void TrifonJediPic_MouseDown(object sender, MouseEventArgs e)
         {
+            this.AssistantCharacter = 2;
             TrifonJediPic.Hide();
         }
 
 
 
-
-        private void NaskoJediPic_Click(object sender, EventArgs e)
-        {
-            Character = 1;
-        }
-        private void NaskoSecond_Click(object sender, EventArgs e)
-        {
-        }
-        private void NaskoLabel_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void NaskoLabel_MouseHover(object sender, EventArgs e)
-        {
-            NaskoLabel.Cursor = Cursors.UpArrow;
-        }
-        private void NaskoJediPic_MouseDown(object sender, MouseEventArgs e)
-        {
-            NaskoJediPic.Hide();
-        }
-        private void NaskoJediPic_MouseHover(object sender, EventArgs e)
-        {
-            NaskoJediPic.Cursor = Cursors.Hand;
-        }
-
-
-
-
-
-        private void NakovJediPic_Click(object sender, EventArgs e)
-        {
-            Character = 2;
-        }
-        private void NakovSecond_Click(object sender, EventArgs e)
-        {   
-        }
-        private void NakovJediPic_MouseDown(object sender, MouseEventArgs e)
-        {
-            NakovJediPic.Hide();
-        }
-        private void NakovJediPic_MouseHover(object sender, EventArgs e)
-        {
-            NakovJediPic.Cursor = Cursors.Hand;
-        }
-        private void NakovLabel_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void NakovLabel_MouseHover(object sender, EventArgs e)
-        {
-            NakovLabel.Cursor = Cursors.UpArrow;
-        }
-
-
-
-
-        
-        private void EdoJediPic_Click(object sender, EventArgs e)
-        {
-            AssistantCharacter = 1;
-        }
         private void EdoSecond_Click(object sender, EventArgs e)
         {
         }
@@ -244,9 +208,9 @@ namespace WindowsFormsApplication1
         {
             EdoLabel.Cursor = Cursors.UpArrow;
         }
-
         private void EdoJediPic_MouseDown(object sender, MouseEventArgs e)
         {
+            this.AssistantCharacter = 1;
             EdoJediPic.Hide();
         }
     }

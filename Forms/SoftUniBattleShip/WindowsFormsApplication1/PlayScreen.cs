@@ -94,21 +94,11 @@ namespace WindowsFormsApplication1
         //Walls
         private void WallsInitialization()
         {
-            Image image = Image.FromFile(@"..\..\Resources\redWall.jpg");
-            redWall.Image = image;
-            redWall.Height = image.Height;
-            redWall.Width = image.Width;
-            redWall2.Image = image;
-            redWall2.Height = image.Height;
-            redWall2.Width = image.Width;
+            Image image = Image.FromFile(@"..\..\Resources\RedSwordOffRightUpOfficial.png");
+            Image image2 = Image.FromFile(@"..\..\Resources\RedSwordOffRightUpOfficial.png");
 
-            Image image2 = Image.FromFile(@"..\..\Resources\redWall2.jpg");
-            redWall3.Image = image2;
-            redWall3.Height = image2.Height;
-            redWall3.Width = image2.Width;
-            redWall4.Image = image2;
-            redWall4.Height = image2.Height;
-            redWall4.Width = image2.Width;
+            Image image5 = Image.FromFile(@"..\..\Resources\RedSwordOffRightDown.png");
+            Image image4 = Image.FromFile(@"..\..\Resources\RedSwordOffRightUpOfficial.png");
 
             Image image3 = Image.FromFile(@"..\..\Resources\beer.png");
             beerBox.Image = image3;
@@ -934,6 +924,31 @@ namespace WindowsFormsApplication1
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redWall4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redWall2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redWall3_Click(object sender, EventArgs e)
         {
 
         }
