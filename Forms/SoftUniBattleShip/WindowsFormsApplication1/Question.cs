@@ -52,5 +52,10 @@
 
             Close();
         }
+
+        private void questionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

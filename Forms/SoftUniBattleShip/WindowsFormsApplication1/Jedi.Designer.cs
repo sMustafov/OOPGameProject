@@ -364,6 +364,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Label);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Jedi";

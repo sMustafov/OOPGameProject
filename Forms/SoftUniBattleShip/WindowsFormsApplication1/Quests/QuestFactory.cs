@@ -10,7 +10,7 @@
             new Quest("C# namespace is different from Java package. Answer with: \"true\" or \"false\".", "false", QuestionType.Cs),
             new Quest("Checked exceptions are not present in C#. Answer with: \"true\" or \"false\".","true", QuestionType.Cs),
             new Quest("C# programmers must use the keyword \"virtual\" to allow methods to be overridden by subclasses. Answer with: \"true\" or \"false\"", "true", QuestionType.Cs),
-            new Quest("Does the lambda expressions are included in C# 2.0. Answer with: \"true\" or \"false\".", "false", QuestionType.Cs),
+            new Quest("Is lambda expressions included in C# 2.0. Answer with: \"true\" or \"false\".", "false", QuestionType.Cs),
             new Quest("C# is not suitable for writing applications for both hosted and embedded systems. Answer with: \"true\" or \"false\".", "false", QuestionType.Cs),
             new Quest("There are various ways to read input from the keyboad, the Console.ReadLine is one of them. Answer with: \"true\" or \"false\".", "false", QuestionType.Java),
             new Quest("Java is named by the Java coffee from Indonesian island. Answer with: \"true\" or \"false\".", "true", QuestionType.Java),
