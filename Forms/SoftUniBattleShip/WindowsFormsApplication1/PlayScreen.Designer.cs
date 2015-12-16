@@ -76,7 +76,7 @@
             // enemyBox
             // 
             this.enemyBox.BackColor = System.Drawing.Color.Transparent;
-            this.enemyBox.Location = new System.Drawing.Point(12, 224);
+            this.enemyBox.Location = new System.Drawing.Point(12, 234);
             this.enemyBox.Name = "enemyBox";
             this.enemyBox.Size = new System.Drawing.Size(50, 65);
             this.enemyBox.TabIndex = 1;
@@ -96,7 +96,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 56);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 84);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 40);
             this.pictureBox3.TabIndex = 3;
@@ -111,7 +111,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(32, 85);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 130);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 40);
             this.pictureBox4.TabIndex = 4;
@@ -121,7 +121,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(32, 116);
+            this.pictureBox5.Location = new System.Drawing.Point(33, 217);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 40);
             this.pictureBox5.TabIndex = 5;
@@ -131,7 +131,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(32, 143);
+            this.pictureBox6.Location = new System.Drawing.Point(33, 171);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 40);
             this.pictureBox6.TabIndex = 6;
@@ -165,7 +165,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(32, 263);
+            this.pictureBox7.Location = new System.Drawing.Point(32, 432);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(30, 40);
             this.pictureBox7.TabIndex = 12;
@@ -175,7 +175,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(32, 234);
+            this.pictureBox8.Location = new System.Drawing.Point(32, 374);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(30, 40);
             this.pictureBox8.TabIndex = 13;
@@ -185,7 +185,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Location = new System.Drawing.Point(32, 206);
+            this.pictureBox9.Location = new System.Drawing.Point(33, 319);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(30, 40);
             this.pictureBox9.TabIndex = 14;
@@ -195,7 +195,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Location = new System.Drawing.Point(32, 174);
+            this.pictureBox10.Location = new System.Drawing.Point(32, 273);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(30, 40);
             this.pictureBox10.TabIndex = 15;

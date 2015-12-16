@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Quests;
+
 namespace WindowsFormsApplication1
 {
     using Interface;
@@ -234,16 +236,6 @@ namespace WindowsFormsApplication1
             BeerInitialization();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
             if (Score >= 100 || Drunk >= 100)
@@ -259,28 +251,7 @@ namespace WindowsFormsApplication1
                 this.timer.Stop();
             }
 
-            if (this.pictureBox3.Bounds.IntersectsWith(this.paduin.Bounds))
-            {
-                this.timer.Stop();
-                this.q = new Question();
-                this.q.ShowDialog();
-
-                if (Question.FinalAnswer == 1)
-                {
-                    this.directionCategory1 = Direction.None;
-                    this.pictureBox3.Hide();
-                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60, this.pictureBox3.Location.Y);
-                    this.timer.Start();
-                }
-                else if (Question.FinalAnswer == 2 || Question.FinalAnswer == 3 || Question.FinalAnswer == 4)
-                {
-                    this.directionCategory1 = Direction.None;
-                    this.pictureBox3.Hide();
-                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60, this.pictureBox3.Location.Y);
-                    this.Score = this.Score + this.jedi.KnowledgeDamage;
-                    this.timer.Start();
-                }
-            }
+            AskQuestion();
 
             if (this.pictureBox4.Bounds.IntersectsWith(this.paduin.Bounds))
             {
@@ -296,14 +267,6 @@ namespace WindowsFormsApplication1
                 this.directionCategory3 = Direction.None;
                 this.pictureBox5.Hide();
                 this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - this.paduin.Location.X + 60, this.pictureBox5.Location.Y);
-            }
-
-            if (this.pictureBox6.Bounds.IntersectsWith(this.paduin.Bounds))
-            {
-                this.Score = this.Score + this.jedi.PointsDamage;
-                this.directionCategory4 = Direction.None;
-                this.pictureBox6.Hide();
-                this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60, this.pictureBox6.Location.Y);
             }
 
             if (this.pictureBox7.Bounds.IntersectsWith(this.paduin.Bounds))
@@ -328,14 +291,6 @@ namespace WindowsFormsApplication1
                 this.directionCategory7 = Direction.None;
                 this.pictureBox9.Hide();
                 this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - this.paduin.Location.X + 60, this.pictureBox9.Location.Y);
-            }
-
-            if (this.pictureBox10.Bounds.IntersectsWith(this.paduin.Bounds))
-            {
-                this.Score = this.Score + this.jedi.PointsDamage;
-                this.directionCategory8 = Direction.None;
-                this.pictureBox10.Hide();
-                this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60, this.pictureBox10.Location.Y);
             }
 
             if (this.pictureBox11.Bounds.IntersectsWith(this.paduin.Bounds))
@@ -516,46 +471,150 @@ namespace WindowsFormsApplication1
             }
 
             //Paduins Direction
-            if (this.directionPaduin == Direction.Right)
-            {
-                this.paduin.Left += 3;
-                if (this.paduin.Left >= 750)
-                {
-                    this.paduin.Left = 700;
-                    this.directionPaduin = Direction.Left;
-                }
-            }
-            if (this.directionPaduin == Direction.Left)
-            {
-                this.paduin.Left -= 3;
-                if (this.paduin.Left <= 100)
-                {
-                    this.paduin.Left = 150;
-                    this.directionPaduin = Direction.Right;
-                }
-            }
-            if (this.directionPaduin == Direction.Up)
-            {
-                this.paduin.Top -= 3;
-                if (this.paduin.Top <= 45)
-                {
-                    this.paduin.Top = 75;
-                    this.directionPaduin = Direction.Down;
-                }
-            }
-            if (this.directionPaduin == Direction.Down)
-            {
-                this.paduin.Top += 3;
-                if (this.paduin.Top >= 450)
-                {
-                    this.paduin.Top = 400;
-                    this.directionPaduin = Direction.Up;
-                }
-            }
+            this.PaduinDirectionsMethod();
 
 
             //Category direction - only Right
+            this.CategoriesDirectionMethod();
 
+            //Jedi Character direction - only Up and Down
+            this.JediDirectionsMethod();
+
+            //Assistant direction - only Up and Down
+            this.AssistantDirectionsMethod();
+
+            ////Beer direction
+            //if (this.directionBeer == Direction.Right)
+            //{
+            //    //Beer.Left += 5;
+            //}
+            //else if (this.directionBeer == Direction.Left)
+            //{
+            //    //Beer.Left -= 5;
+            //}
+
+            Invalidate();
+        }
+
+        private void AskQuestion()
+        {
+            if (this.pictureBox3.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.timer.Stop();
+                this.q = new Question();
+                this.q.ShowDialog();
+
+                if (Question.FinalAnswer == 1)
+                {
+                    this.directionCategory1 = Direction.None;
+                    this.pictureBox3.Hide();
+                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox3.Location.Y);
+                    this.timer.Start();
+                }
+                else if (Question.FinalAnswer == 2)
+                {
+                    this.directionCategory1 = Direction.None;
+                    this.pictureBox3.Hide();
+                    this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox3.Location.Y);
+                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.timer.Start();
+                }
+            }
+            if (this.pictureBox6.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.timer.Stop();
+                this.q = new Question();
+                this.q.ShowDialog();
+
+                if (Question.FinalAnswer == 1)
+                {
+                    this.directionCategory4 = Direction.None;
+                    this.pictureBox6.Hide();
+                    this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox6.Location.Y);
+                    this.timer.Start();
+                }
+                else if (Question.FinalAnswer == 2)
+                {
+                    this.directionCategory4 = Direction.None;
+                    this.pictureBox6.Hide();
+                    this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox6.Location.Y);
+                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.timer.Start();
+                }
+            }
+            if (this.pictureBox10.Bounds.IntersectsWith(this.paduin.Bounds))
+            {
+                this.timer.Stop();
+                this.q = new Question();
+                this.q.ShowDialog();
+
+                if (Question.FinalAnswer == 1)
+                {
+                    this.directionCategory8 = Direction.None;
+                    this.pictureBox10.Hide();
+                    this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox10.Location.Y);
+                    this.timer.Start();
+                }
+                else if (Question.FinalAnswer == 2)
+                {
+                    this.directionCategory8 = Direction.None;
+                    this.pictureBox10.Hide();
+                    this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60,
+                        this.pictureBox10.Location.Y);
+                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.timer.Start();
+                }
+            }
+        }
+
+        private void AssistantDirectionsMethod()
+        {
+            if (this.directionAssistant == Direction.Up)
+            {
+                this.pictureBox1.Top -= 1;
+                if (this.pictureBox1.Top == 30)
+                {
+                    this.directionAssistant = Direction.Down;
+                }
+            }
+
+            if (this.directionAssistant == Direction.Down)
+            {
+                this.pictureBox1.Top += 1;
+                if (this.pictureBox1.Top == 460)
+                {
+                    this.directionAssistant = Direction.Up;
+                }
+            }
+        }
+
+        private void JediDirectionsMethod()
+        {
+            if (this.directionCharacter == Direction.Up)
+            {
+                this.enemyBox.Top -= 1;
+                if (this.enemyBox.Top == 30)
+                {
+                    this.directionCharacter = Direction.Down;
+                }
+            }
+            if (this.directionCharacter == Direction.Down)
+            {
+                this.enemyBox.Top += 1;
+                if (this.enemyBox.Top == 460)
+                {
+                    this.directionCharacter = Direction.Up;
+                }
+            }
+        }
+
+        private void CategoriesDirectionMethod()
+        {
             if (this.directionCategory1 == Direction.Right)
             {
                 this.pictureBox3.Left += 4;
@@ -609,55 +668,46 @@ namespace WindowsFormsApplication1
             {
                 this.pictureBox13.Left -= 4;
             }
+        }
 
-            //Jedi Character direction - only Up and Down
-            if (this.directionCharacter == Direction.Up)
+        private void PaduinDirectionsMethod()
+        {
+            if (this.directionPaduin == Direction.Right)
             {
-                this.enemyBox.Top -= 1;
-                if (this.enemyBox.Top == 30)
+                this.paduin.Left += 3;
+                if (this.paduin.Left >= 750)
                 {
-                    this.directionCharacter = Direction.Down;
+                    this.paduin.Left = 700;
+                    this.directionPaduin = Direction.Left;
                 }
             }
-            if (this.directionCharacter == Direction.Down)
+            if (this.directionPaduin == Direction.Left)
             {
-                this.enemyBox.Top += 1;
-                if (this.enemyBox.Top == 460)
+                this.paduin.Left -= 3;
+                if (this.paduin.Left <= 100)
                 {
-                    this.directionCharacter = Direction.Up;
+                    this.paduin.Left = 150;
+                    this.directionPaduin = Direction.Right;
                 }
             }
-
-            //Assistant direction - only Up and Down
-            if (this.directionAssistant == Direction.Up)
+            if (this.directionPaduin == Direction.Up)
             {
-                this.pictureBox1.Top -= 1;
-                if (this.pictureBox1.Top == 30)
+                this.paduin.Top -= 3;
+                if (this.paduin.Top <= 45)
                 {
-                    this.directionAssistant = Direction.Down;
+                    this.paduin.Top = 75;
+                    this.directionPaduin = Direction.Down;
                 }
             }
-
-            if (this.directionAssistant == Direction.Down)
+            if (this.directionPaduin == Direction.Down)
             {
-                this.pictureBox1.Top += 1;
-                if (this.pictureBox1.Top == 460)
+                this.paduin.Top += 3;
+                if (this.paduin.Top >= 450)
                 {
-                    this.directionAssistant = Direction.Up;
+                    this.paduin.Top = 400;
+                    this.directionPaduin = Direction.Up;
                 }
             }
-
-            //Beer direction
-            if (this.directionBeer == Direction.Right)
-            {
-                //Beer.Left += 5;
-            }
-            else if (this.directionBeer == Direction.Left)
-            {
-                //Beer.Left -= 5;
-            }
-
-            Invalidate();
         }
 
         private void PlayScreen_KeyDown(object sender, KeyEventArgs e)
@@ -689,53 +739,6 @@ namespace WindowsFormsApplication1
                     this.directionBeer = Direction.Left;
                 }
             }
-        }
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void paduin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void paduinKnowledge_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jediDrunk_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Beer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Picture(Image image)
@@ -835,6 +838,16 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void redWall_Click(object sender, EventArgs e)
         {
 
@@ -849,13 +862,52 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        private void redWall2_Click(object sender, EventArgs e)
+        
+        private void pictureBox13_Click(object sender, EventArgs e)
         {
 
         }
-        
-        private void pictureBox13_Click(object sender, EventArgs e)
+
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paduin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paduinKnowledge_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jediDrunk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
 
         }
