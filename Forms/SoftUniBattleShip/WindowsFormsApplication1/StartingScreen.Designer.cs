@@ -40,9 +40,9 @@
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(39, 30);
+            this.button1.Location = new System.Drawing.Point(12, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 36);
+            this.button1.Size = new System.Drawing.Size(88, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Play";
             this.button1.UseVisualStyleBackColor = false;

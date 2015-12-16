@@ -22,5 +22,10 @@ namespace WindowsFormsApplication1
             ss.ShowDialog();
             Close();
         }
+
+        private void Instructions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,6 +31,7 @@ namespace WindowsFormsApplication1
         private Direction directionCharacter;
         private Direction directionAssistant;
         private Direction directionPaduin;
+        private Direction lastPaduinDirection;
         private Direction directionBeer;
         private Image image;
 
@@ -70,6 +71,8 @@ namespace WindowsFormsApplication1
             this.directionCategory10 = Direction.None;
             this.directionCategory11 = Direction.None;
 
+            this.lastPaduinDirection = Direction.Left;
+
             this.pictureBox3.Visible = false;
             this.pictureBox4.Visible = false;
             this.pictureBox5.Visible = false;
@@ -81,18 +84,11 @@ namespace WindowsFormsApplication1
             this.pictureBox11.Visible = false;
             this.pictureBox12.Visible = false;
             this.pictureBox13.Visible = false;
-
-            //Beer.Visible = false;
-
+            this.beerBox.Visible = false;
 
             this.timer.Interval = 15;
             this.timer.Tick += timerCharacter_Tick;
             this.timer.Start();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
         
         //Walls
@@ -113,6 +109,11 @@ namespace WindowsFormsApplication1
             redWall4.Image = image2;
             redWall4.Height = image2.Height;
             redWall4.Width = image2.Width;
+
+            Image image3 = Image.FromFile(@"..\..\Resources\beer.png");
+            beerBox.Image = image3;
+            beerBox.Height = image3.Height;
+            beerBox.Width = image3.Width;
         }
         
        
@@ -316,6 +317,17 @@ namespace WindowsFormsApplication1
                 this.pictureBox13.Location = new Point(822, 397);
             }
 
+            //Paduin Beer 
+            if (this.beerBox.Bounds.IntersectsWith(this.enemyBox.Bounds) || 
+                this.beerBox.Bounds.IntersectsWith(this.pictureBox1.Bounds)|| 
+                this.beerBox.Left >= 800 || this.beerBox.Left <= 10)
+            {
+                this.Drunk = this.Score + this.assistantsJedi.AssistantAttack;
+                this.directionBeer = Direction.None;
+                this.beerBox.Hide();
+                this.beerBox.Location = new Point(412, 259);
+            }
+
             //First Category
             if (this.enemyBox.Location.Y == this.pictureBox3.Location.Y)
             {
@@ -473,7 +485,6 @@ namespace WindowsFormsApplication1
             //Paduins Direction
             this.PaduinDirectionsMethod();
 
-
             //Category direction - only Right
             this.CategoriesDirectionMethod();
 
@@ -483,15 +494,15 @@ namespace WindowsFormsApplication1
             //Assistant direction - only Up and Down
             this.AssistantDirectionsMethod();
 
-            ////Beer direction
-            //if (this.directionBeer == Direction.Right)
-            //{
-            //    //Beer.Left += 5;
-            //}
-            //else if (this.directionBeer == Direction.Left)
-            //{
-            //    //Beer.Left -= 5;
-            //}
+            //Beer direction
+            if (this.directionBeer == Direction.Right)
+            {
+                beerBox.Left += 5;
+            }
+            else if (this.directionBeer == Direction.Left)
+            {
+                beerBox.Left -= 5;
+            }
 
             Invalidate();
         }
@@ -722,20 +733,25 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Left)
             {
+                this.lastPaduinDirection = Direction.Left;
                 this.directionPaduin = Direction.Left;
             }
             if (e.KeyCode == Keys.Right)
             {
+                this.lastPaduinDirection = Direction.Right;
                 this.directionPaduin = Direction.Right;
             }
             if (e.KeyCode == Keys.Space)
             {
-                if (this.directionPaduin == Direction.Right)
+                this.beerBox.Visible = true;
+                if (this.directionPaduin == Direction.Right || this.lastPaduinDirection == Direction.Right)
                 {
+                    this.beerBox.Location = new Point(this.paduin.Location.X + 30, this.paduin.Location.Y);
                     this.directionBeer = Direction.Right;
                 }
-                else if (this.directionPaduin == Direction.Left)
+                else if (this.directionPaduin == Direction.Left || this.lastPaduinDirection == Direction.Left)
                 {
+                    this.beerBox.Location = new Point(this.paduin.Location.X - 30, this.paduin.Location.Y);
                     this.directionBeer = Direction.Left;
                 }
             }
@@ -773,11 +789,6 @@ namespace WindowsFormsApplication1
             this.pictureBox12.Image = image;
             this.pictureBox12.Height = image.Height;
             this.pictureBox12.Width = image.Width;
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-
         }
         
         private void PaduinImageValidation(IPaduin paduinCharacter, PictureBox paduin)
@@ -908,6 +919,21 @@ namespace WindowsFormsApplication1
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beerBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
         {
 
         }

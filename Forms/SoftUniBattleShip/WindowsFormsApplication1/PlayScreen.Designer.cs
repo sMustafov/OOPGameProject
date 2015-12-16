@@ -53,6 +53,7 @@
             this.redWall3 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.redWall2 = new System.Windows.Forms.PictureBox();
+            this.beerBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.enemyBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.redWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redWall2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beerBox)).BeginInit();
             this.SuspendLayout();
             // 
             // enemyBox
@@ -279,6 +281,16 @@
             this.redWall2.TabIndex = 25;
             this.redWall2.TabStop = false;
             // 
+            // beerBox
+            // 
+            this.beerBox.BackColor = System.Drawing.Color.Transparent;
+            this.beerBox.Location = new System.Drawing.Point(412, 259);
+            this.beerBox.Name = "beerBox";
+            this.beerBox.Size = new System.Drawing.Size(30, 40);
+            this.beerBox.TabIndex = 26;
+            this.beerBox.TabStop = false;
+            this.beerBox.Click += new System.EventHandler(this.beerBox_Click);
+            // 
             // PlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +300,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.beerBox);
             this.Controls.Add(this.redWall2);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.redWall3);
@@ -335,6 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.redWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redWall2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beerBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,5 +377,6 @@
         private System.Windows.Forms.PictureBox redWall3;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox redWall2;
+        private System.Windows.Forms.PictureBox beerBox;
     }
 }
