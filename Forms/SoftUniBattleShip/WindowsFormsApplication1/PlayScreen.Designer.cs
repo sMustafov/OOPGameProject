@@ -58,6 +58,8 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.paduinDrunk = new System.Windows.Forms.Label();
+            this.assistantDrunk = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.enemyBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -153,9 +155,9 @@
             this.paduinKnowledge.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.paduinKnowledge.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paduinKnowledge.ForeColor = System.Drawing.Color.White;
-            this.paduinKnowledge.Location = new System.Drawing.Point(29, 5);
+            this.paduinKnowledge.Location = new System.Drawing.Point(212, 7);
             this.paduinKnowledge.Name = "paduinKnowledge";
-            this.paduinKnowledge.Size = new System.Drawing.Size(206, 22);
+            this.paduinKnowledge.Size = new System.Drawing.Size(215, 22);
             this.paduinKnowledge.TabIndex = 9;
             this.paduinKnowledge.Text = "Paduin Knowledge :  0";
             this.paduinKnowledge.Click += new System.EventHandler(this.paduinKnowledge_Click);
@@ -165,9 +167,9 @@
             this.jediDrunk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.jediDrunk.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jediDrunk.ForeColor = System.Drawing.Color.White;
-            this.jediDrunk.Location = new System.Drawing.Point(562, 5);
+            this.jediDrunk.Location = new System.Drawing.Point(12, 9);
             this.jediDrunk.Name = "jediDrunk";
-            this.jediDrunk.Size = new System.Drawing.Size(141, 20);
+            this.jediDrunk.Size = new System.Drawing.Size(152, 20);
             this.jediDrunk.TabIndex = 10;
             this.jediDrunk.Text = "Jedi Drunk : 0";
             this.jediDrunk.Click += new System.EventHandler(this.jediDrunk_Click);
@@ -356,6 +358,30 @@
             this.pictureBox16.TabIndex = 30;
             this.pictureBox16.TabStop = false;
             // 
+            // paduinDrunk
+            // 
+            this.paduinDrunk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.paduinDrunk.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paduinDrunk.ForeColor = System.Drawing.Color.White;
+            this.paduinDrunk.Location = new System.Drawing.Point(444, 7);
+            this.paduinDrunk.Name = "paduinDrunk";
+            this.paduinDrunk.Size = new System.Drawing.Size(180, 22);
+            this.paduinDrunk.TabIndex = 31;
+            this.paduinDrunk.Text = "Paduin Drunk :  0";
+            this.paduinDrunk.Click += new System.EventHandler(this.paduinDrunk_Click);
+            // 
+            // assistantDrunk
+            // 
+            this.assistantDrunk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.assistantDrunk.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assistantDrunk.ForeColor = System.Drawing.Color.White;
+            this.assistantDrunk.Location = new System.Drawing.Point(666, 7);
+            this.assistantDrunk.Name = "assistantDrunk";
+            this.assistantDrunk.Size = new System.Drawing.Size(206, 22);
+            this.assistantDrunk.TabIndex = 32;
+            this.assistantDrunk.Text = "Assistant Drunk :  0";
+            this.assistantDrunk.Click += new System.EventHandler(this.assistantDrunk_Click);
+            // 
             // PlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +391,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.assistantDrunk);
+            this.Controls.Add(this.paduinDrunk);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -455,5 +483,7 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label paduinDrunk;
+        private System.Windows.Forms.Label assistantDrunk;
     }
 }

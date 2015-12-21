@@ -24,8 +24,10 @@ namespace WindowsFormsApplication1
         private IPaduin paduinCharacter;
         private IAssistants assistantsJedi;
 
-        private int Score;
-        private int Drunk;
+        private int assistantDrunkScore;
+        private int paduinDrunkScore;
+        private int jediDrunkScore;
+        private int paduinKnowledgeScore;
 
         private Timer timer = new Timer();
         private Direction directionCharacter;
@@ -229,15 +231,30 @@ namespace WindowsFormsApplication1
 
         private void timerCharacter_Tick(object sender, EventArgs e)
         {
-            if (Score >= 100 || Drunk >= 100)
+            if (paduinKnowledgeScore >= 100)
             {
-                Score = 100;
+                paduinKnowledgeScore = 100;
             }
-            
-            this.paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", this.Score);
-            this.jediDrunk.Text = String.Format("Jedi Drunk : {0} %", this.Drunk);
+            if (paduinDrunkScore >= 100)
+            {
+                paduinDrunkScore = 100;
+            }
+            if (jediDrunkScore >= 100)
+            {
+                jediDrunkScore = 100;
+            }
+            if (assistantDrunkScore >= 100)
+            {
+                assistantDrunkScore = 100;
+            }
 
-            if (this.Score == 100 || this.Drunk == 100)
+            this.paduinKnowledge.Text = String.Format("Paduin Knowledge : {0} %", this.paduinKnowledgeScore);
+            this.jediDrunk.Text = String.Format("Jedi Drunk : {0} %", this.jediDrunkScore);
+            this.assistantDrunk.Text = String.Format("Assistant Drunk : {0} %", this.assistantDrunkScore);
+            this.paduinDrunk.Text = String.Format("Paduin Drunk : {0} %", this.paduinDrunkScore);
+
+            if (this.paduinKnowledgeScore == 100 && this.jediDrunkScore == 100 &&
+                assistantDrunkScore == 100 && paduinDrunkScore == 100)
             {
                 this.timer.Stop();
             }
@@ -246,7 +263,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox4.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.jedi.PointsDamage;
+                this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.PointsDamage;
                 this.directionCategory2 = Direction.None;
                 this.pictureBox4.Hide();
                 this.pictureBox4.Location = new Point(this.pictureBox4.Location.X - this.paduin.Location.X + 60, this.pictureBox4.Location.Y);
@@ -254,7 +271,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox5.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.jedi.PointsDamage;
+                this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.PointsDamage;
                 this.directionCategory3 = Direction.None;
                 this.pictureBox5.Hide();
                 this.pictureBox5.Location = new Point(this.pictureBox5.Location.X - this.paduin.Location.X + 60, this.pictureBox5.Location.Y);
@@ -262,7 +279,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox7.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.jedi.PointsDamage;
+                this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.PointsDamage;
                 this.directionCategory5 = Direction.None;
                 this.pictureBox7.Hide();
                 this.pictureBox7.Location = new Point(this.pictureBox7.Location.X - this.paduin.Location.X + 60, this.pictureBox7.Location.Y);
@@ -270,7 +287,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox8.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.jedi.PointsDamage;
+                this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.PointsDamage;
                 this.directionCategory6 = Direction.None;
                 this.pictureBox8.Hide();
                 this.pictureBox8.Location = new Point(this.pictureBox8.Location.X - this.paduin.Location.X + 60, this.pictureBox8.Location.Y);
@@ -278,7 +295,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox9.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.jedi.PointsDamage;
+                this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.PointsDamage;
                 this.directionCategory7 = Direction.None;
                 this.pictureBox9.Hide();
                 this.pictureBox9.Location = new Point(this.pictureBox9.Location.X - this.paduin.Location.X + 60, this.pictureBox9.Location.Y);
@@ -286,7 +303,7 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox11.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
+                this.paduinDrunkScore = this.paduinDrunkScore + this.assistantsJedi.AssistantAttack;
                 this.directionCategory9 = Direction.None;
                 this.pictureBox11.Hide();
                 this.pictureBox11.Location = new Point(822, 120);
@@ -294,25 +311,34 @@ namespace WindowsFormsApplication1
 
             if (this.pictureBox12.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
+                this.paduinDrunkScore = this.paduinDrunkScore + this.assistantsJedi.AssistantAttack;
                 this.directionCategory10 = Direction.None;
                 this.pictureBox12.Hide();
                 this.pictureBox12.Location = new Point(822, 249);
             }
             if (this.pictureBox13.Bounds.IntersectsWith(this.paduin.Bounds))
             {
-                this.Score = this.Score + this.assistantsJedi.AssistantAttack;
+                this.paduinDrunkScore = this.paduinDrunkScore + this.assistantsJedi.AssistantAttack;
                 this.directionCategory11 = Direction.None;
                 this.pictureBox13.Hide();
                 this.pictureBox13.Location = new Point(822, 397);
             }
 
-            //Paduin Beer 
-            if (this.beerBox.Bounds.IntersectsWith(this.enemyBox.Bounds) || 
-                this.beerBox.Bounds.IntersectsWith(this.pictureBox1.Bounds)|| 
+            //Paduin Beer hits enemy jedi
+            if (this.beerBox.Bounds.IntersectsWith(this.enemyBox.Bounds) ||
                 this.beerBox.Left >= 800 || this.beerBox.Left <= 10)
             {
-                this.Drunk = this.Score + this.assistantsJedi.AssistantAttack;
+                this.jediDrunkScore = this.jediDrunkScore + this.jedi.KnowledgeDamage;
+                this.directionBeer = Direction.None;
+                this.beerBox.Hide();
+                this.beerBox.Location = new Point(412, 259);
+            }
+
+            //Paduin Beer hits enemy assistant
+            if (this.beerBox.Bounds.IntersectsWith(this.pictureBox1.Bounds) ||
+                this.beerBox.Left >= 800 || this.beerBox.Left <= 10)
+            {
+                this.assistantDrunkScore = this.assistantDrunkScore + this.assistantsJedi.AssistantAttack;
                 this.directionBeer = Direction.None;
                 this.beerBox.Hide();
                 this.beerBox.Location = new Point(412, 259);
@@ -519,7 +545,7 @@ namespace WindowsFormsApplication1
                     this.pictureBox3.Hide();
                     this.pictureBox3.Location = new Point(this.pictureBox3.Location.X - this.paduin.Location.X + 60,
                         this.pictureBox3.Location.Y);
-                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.KnowledgeDamage;
                     this.timer.Start();
                 }
             }
@@ -543,7 +569,7 @@ namespace WindowsFormsApplication1
                     this.pictureBox6.Hide();
                     this.pictureBox6.Location = new Point(this.pictureBox6.Location.X - this.paduin.Location.X + 60,
                         this.pictureBox6.Location.Y);
-                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.KnowledgeDamage;
                     this.timer.Start();
                 }
             }
@@ -567,7 +593,7 @@ namespace WindowsFormsApplication1
                     this.pictureBox10.Hide();
                     this.pictureBox10.Location = new Point(this.pictureBox10.Location.X - this.paduin.Location.X + 60,
                         this.pictureBox10.Location.Y);
-                    this.Score = this.Score + this.jedi.KnowledgeDamage;
+                    this.paduinKnowledgeScore = this.paduinKnowledgeScore + this.jedi.KnowledgeDamage;
                     this.timer.Start();
                 }
             }
@@ -949,6 +975,16 @@ namespace WindowsFormsApplication1
         }
 
         private void redWall3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paduinDrunk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assistantDrunk_Click(object sender, EventArgs e)
         {
 
         }
