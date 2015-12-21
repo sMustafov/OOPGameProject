@@ -53,6 +53,12 @@
       <DependentUpon>ChooseCharacterScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Direction.cs" />
+    <Compile Include="EndScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndScreen.Designer.cs">
+      <DependentUpon>EndScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instructions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseCharacterScreen.resx">
       <DependentUpon>ChooseCharacterScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndScreen.resx">
+      <DependentUpon>EndScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instructions.en-001.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
