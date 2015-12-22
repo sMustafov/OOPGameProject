@@ -40,6 +40,8 @@
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SaveButton.Location = new System.Drawing.Point(526, 130);
@@ -53,7 +55,7 @@
             // CategoryLabel
             // 
             this.CategoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CategoryLabel.Location = new System.Drawing.Point(66, 21);
             this.CategoryLabel.Name = "CategoryLabel";
@@ -64,11 +66,12 @@
             // CSharpButton
             // 
             this.CSharpButton.BackColor = System.Drawing.Color.Transparent;
-            this.CSharpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSharpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CSharpButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CSharpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CSharpButton.Location = new System.Drawing.Point(73, 87);
+            this.CSharpButton.Location = new System.Drawing.Point(73, 79);
             this.CSharpButton.Name = "CSharpButton";
-            this.CSharpButton.Size = new System.Drawing.Size(104, 34);
+            this.CSharpButton.Size = new System.Drawing.Size(104, 42);
             this.CSharpButton.TabIndex = 2;
             this.CSharpButton.TabStop = true;
             this.CSharpButton.Text = "C#";
@@ -78,11 +81,12 @@
             // CPPButton
             // 
             this.CPPButton.BackColor = System.Drawing.Color.Transparent;
-            this.CPPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPPButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CPPButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPPButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CPPButton.Location = new System.Drawing.Point(282, 144);
             this.CPPButton.Name = "CPPButton";
-            this.CPPButton.Size = new System.Drawing.Size(104, 31);
+            this.CPPButton.Size = new System.Drawing.Size(104, 48);
             this.CPPButton.TabIndex = 3;
             this.CPPButton.TabStop = true;
             this.CPPButton.Text = "C++";
@@ -92,11 +96,12 @@
             // JavaButton
             // 
             this.JavaButton.BackColor = System.Drawing.Color.Transparent;
-            this.JavaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JavaButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.JavaButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JavaButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.JavaButton.Location = new System.Drawing.Point(72, 144);
             this.JavaButton.Name = "JavaButton";
-            this.JavaButton.Size = new System.Drawing.Size(104, 31);
+            this.JavaButton.Size = new System.Drawing.Size(104, 48);
             this.JavaButton.TabIndex = 4;
             this.JavaButton.TabStop = true;
             this.JavaButton.Text = "Java";
@@ -106,11 +111,12 @@
             // radioButton1
             // 
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButton1.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton1.Location = new System.Drawing.Point(282, 87);
+            this.radioButton1.Location = new System.Drawing.Point(282, 79);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 34);
+            this.radioButton1.Size = new System.Drawing.Size(104, 42);
             this.radioButton1.TabIndex = 5;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "OOP";
@@ -136,7 +142,7 @@
             this.MaximizeBox = false;
             this.Name = "ChooseCategoryScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "category";
+            this.Text = "Category";
             this.Load += new System.EventHandler(this.ChooseCategoryScreen_Load);
             this.ResumeLayout(false);
 

@@ -68,20 +68,21 @@
             // 
             this.Label.BackColor = System.Drawing.Color.Transparent;
             this.Label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Label.Font = new System.Drawing.Font("Goudy Stout", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Font = new System.Drawing.Font("Star Jedi Hollow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label.ForeColor = System.Drawing.Color.Transparent;
             this.Label.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Label.Location = new System.Drawing.Point(120, 126);
+            this.Label.Location = new System.Drawing.Point(141, 114);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(715, 61);
+            this.Label.Size = new System.Drawing.Size(665, 72);
             this.Label.TabIndex = 0;
-            this.Label.Text = "Choose one Assistent and one Jedis";
+            this.Label.Text = "Choose one Assistent and one Jedi...";
             this.Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SaveButton.Location = new System.Drawing.Point(853, 12);
@@ -95,10 +96,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(0, 12);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 51);
             this.button1.TabIndex = 13;
@@ -165,11 +167,11 @@
             // 
             this.EdoLabel.BackColor = System.Drawing.SystemColors.MenuText;
             this.EdoLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EdoLabel.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EdoLabel.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EdoLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.EdoLabel.Location = new System.Drawing.Point(831, 534);
+            this.EdoLabel.Location = new System.Drawing.Point(832, 534);
             this.EdoLabel.Name = "EdoLabel";
-            this.EdoLabel.Size = new System.Drawing.Size(114, 20);
+            this.EdoLabel.Size = new System.Drawing.Size(116, 21);
             this.EdoLabel.TabIndex = 20;
             this.EdoLabel.Text = "Ass. Chubi Edo";
             this.EdoLabel.TextChanged += new System.EventHandler(this.EdoLabel_TextChanged);
@@ -179,11 +181,11 @@
             // 
             this.TrifonLabel.BackColor = System.Drawing.SystemColors.MenuText;
             this.TrifonLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TrifonLabel.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TrifonLabel.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TrifonLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.TrifonLabel.Location = new System.Drawing.Point(3, 535);
+            this.TrifonLabel.Location = new System.Drawing.Point(6, 532);
             this.TrifonLabel.Name = "TrifonLabel";
-            this.TrifonLabel.Size = new System.Drawing.Size(129, 20);
+            this.TrifonLabel.Size = new System.Drawing.Size(132, 21);
             this.TrifonLabel.TabIndex = 21;
             this.TrifonLabel.Text = "Ass. R2 Trifon2";
             this.TrifonLabel.TextChanged += new System.EventHandler(this.TrifonLabel_TextChanged);
@@ -193,11 +195,11 @@
             // 
             this.NaskoLabel.BackColor = System.Drawing.SystemColors.MenuText;
             this.NaskoLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NaskoLabel.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaskoLabel.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NaskoLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.NaskoLabel.Location = new System.Drawing.Point(147, 535);
+            this.NaskoLabel.Location = new System.Drawing.Point(147, 532);
             this.NaskoLabel.Name = "NaskoLabel";
-            this.NaskoLabel.Size = new System.Drawing.Size(95, 20);
+            this.NaskoLabel.Size = new System.Drawing.Size(98, 21);
             this.NaskoLabel.TabIndex = 22;
             this.NaskoLabel.Text = "Nasko Solo";
             this.NaskoLabel.TextChanged += new System.EventHandler(this.NaskoLabel_TextChanged);
@@ -207,11 +209,11 @@
             // 
             this.AngelLabel.BackColor = System.Drawing.SystemColors.MenuText;
             this.AngelLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AngelLabel.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AngelLabel.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AngelLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.AngelLabel.Location = new System.Drawing.Point(287, 534);
+            this.AngelLabel.Location = new System.Drawing.Point(290, 531);
             this.AngelLabel.Name = "AngelLabel";
-            this.AngelLabel.Size = new System.Drawing.Size(141, 20);
+            this.AngelLabel.Size = new System.Drawing.Size(144, 21);
             this.AngelLabel.TabIndex = 23;
             this.AngelLabel.Text = "Acho Uan Kenobi";
             this.AngelLabel.TextChanged += new System.EventHandler(this.AngelLabel_TextChanged);
@@ -221,11 +223,11 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.Color.Aqua;
-            this.textBox5.Location = new System.Drawing.Point(452, 534);
+            this.textBox5.Location = new System.Drawing.Point(455, 531);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 20);
+            this.textBox5.Size = new System.Drawing.Size(142, 21);
             this.textBox5.TabIndex = 24;
             this.textBox5.Text = "Royal SkyWalker";
             this.textBox5.TextChanged += new System.EventHandler(this.RoyalLabel_TextChanged);
@@ -235,11 +237,11 @@
             // 
             this.NakovLabel.BackColor = System.Drawing.SystemColors.MenuText;
             this.NakovLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NakovLabel.Font = new System.Drawing.Font("Elephant", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NakovLabel.Font = new System.Drawing.Font("Star Jedi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NakovLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.NakovLabel.Location = new System.Drawing.Point(655, 534);
+            this.NakovLabel.Location = new System.Drawing.Point(658, 531);
             this.NakovLabel.Name = "NakovLabel";
-            this.NakovLabel.Size = new System.Drawing.Size(145, 20);
+            this.NakovLabel.Size = new System.Drawing.Size(148, 21);
             this.NakovLabel.TabIndex = 25;
             this.NakovLabel.Text = "Jo Nakov - Master";
             this.NakovLabel.TextChanged += new System.EventHandler(this.NakovLabel_TextChanged);

@@ -61,11 +61,12 @@
             // SevginButton
             // 
             this.SevginButton.AutoSize = true;
-            this.SevginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SevginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SevginButton.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SevginButton.ForeColor = System.Drawing.Color.Black;
             this.SevginButton.Location = new System.Drawing.Point(750, 28);
             this.SevginButton.Name = "SevginButton";
-            this.SevginButton.Size = new System.Drawing.Size(153, 28);
+            this.SevginButton.Size = new System.Drawing.Size(172, 27);
             this.SevginButton.TabIndex = 1;
             this.SevginButton.TabStop = true;
             this.SevginButton.Text = "Count Sevgin";
@@ -75,11 +76,12 @@
             // YanchoButton
             // 
             this.YanchoButton.AutoSize = true;
-            this.YanchoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.YanchoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YanchoButton.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YanchoButton.ForeColor = System.Drawing.Color.Black;
-            this.YanchoButton.Location = new System.Drawing.Point(497, 28);
+            this.YanchoButton.Location = new System.Drawing.Point(489, 28);
             this.YanchoButton.Name = "YanchoButton";
-            this.YanchoButton.Size = new System.Drawing.Size(205, 28);
+            this.YanchoButton.Size = new System.Drawing.Size(238, 27);
             this.YanchoButton.TabIndex = 2;
             this.YanchoButton.TabStop = true;
             this.YanchoButton.Text = "Karnobatman Bane";
@@ -89,11 +91,12 @@
             // SashoButton
             // 
             this.SashoButton.AutoSize = true;
-            this.SashoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SashoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SashoButton.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SashoButton.ForeColor = System.Drawing.Color.Black;
             this.SashoButton.Location = new System.Drawing.Point(75, 28);
             this.SashoButton.Name = "SashoButton";
-            this.SashoButton.Size = new System.Drawing.Size(127, 28);
+            this.SashoButton.Size = new System.Drawing.Size(150, 27);
             this.SashoButton.TabIndex = 3;
             this.SashoButton.TabStop = true;
             this.SashoButton.Text = "Sasho Fett";
@@ -103,11 +106,12 @@
             // JanButton
             // 
             this.JanButton.AutoSize = true;
-            this.JanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.JanButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.JanButton.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JanButton.ForeColor = System.Drawing.Color.Black;
             this.JanButton.Location = new System.Drawing.Point(301, 28);
             this.JanButton.Name = "JanButton";
-            this.JanButton.Size = new System.Drawing.Size(120, 28);
+            this.JanButton.Size = new System.Drawing.Size(142, 27);
             this.JanButton.TabIndex = 4;
             this.JanButton.TabStop = true;
             this.JanButton.Text = "Wight Jan";
@@ -117,6 +121,8 @@
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SaveButton.Location = new System.Drawing.Point(853, 9);
@@ -134,7 +140,7 @@
             this.groupBox1.Controls.Add(this.YanchoButton);
             this.groupBox1.Controls.Add(this.SashoButton);
             this.groupBox1.Controls.Add(this.JanButton);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(0, 66);
             this.groupBox1.Name = "groupBox1";

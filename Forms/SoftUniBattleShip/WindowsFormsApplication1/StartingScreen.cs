@@ -10,13 +10,17 @@ namespace WindowsFormsApplication1
 {
     public partial class StartingScreen : Form
     {
+        private System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         public StartingScreen()
         {
+            player.SoundLocation = "StarWars.wav";
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            player.Play();
             Hide();
             PlayScreen ps = new PlayScreen();
             ps.ShowDialog();

@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instructions));
+            this.Undestand = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Undestand
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(100, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Undestand.BackColor = System.Drawing.Color.Black;
+            this.Undestand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Undestand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Undestand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Undestand.Font = new System.Drawing.Font("Star Jedi Logo DoubleLine1", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Undestand.ForeColor = System.Drawing.Color.White;
+            this.Undestand.Location = new System.Drawing.Point(718, 12);
+            this.Undestand.Name = "Undestand";
+            this.Undestand.Size = new System.Drawing.Size(154, 32);
+            this.Undestand.TabIndex = 0;
+            this.Undestand.Text = "understand";
+            this.Undestand.UseVisualStyleBackColor = false;
+            this.Undestand.Click += new System.EventHandler(this.button1_Click);
             // 
             // Instructions
             // 
@@ -48,8 +54,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(360, 261);
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(884, 601);
+            this.Controls.Add(this.Undestand);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -61,6 +68,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Undestand;
     }
 }

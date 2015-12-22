@@ -50,6 +50,7 @@
             // TrueButton
             // 
             this.TrueButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.TrueButton.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.TrueButton.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TrueButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TrueButton.Location = new System.Drawing.Point(12, 149);
@@ -64,6 +65,7 @@
             // FalseButton
             // 
             this.FalseButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.FalseButton.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.FalseButton.Font = new System.Drawing.Font("Kristen ITC", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FalseButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FalseButton.Location = new System.Drawing.Point(242, 149);
@@ -78,6 +80,7 @@
             // Save
             // 
             this.Save.BackColor = System.Drawing.Color.SpringGreen;
+            this.Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Save.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Italic);
             this.Save.Location = new System.Drawing.Point(464, 130);

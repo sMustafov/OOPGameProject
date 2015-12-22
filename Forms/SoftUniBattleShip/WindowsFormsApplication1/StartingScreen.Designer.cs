@@ -38,11 +38,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Star Jedi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 36);
+            this.button1.Size = new System.Drawing.Size(134, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Play";
             this.button1.UseVisualStyleBackColor = false;
@@ -51,24 +53,26 @@
             // InstructionsButton
             // 
             this.InstructionsButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.InstructionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InstructionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.InstructionsButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructionsButton.Location = new System.Drawing.Point(12, 132);
+            this.InstructionsButton.Font = new System.Drawing.Font("Star Jedi", 14.25F);
+            this.InstructionsButton.Location = new System.Drawing.Point(525, 136);
             this.InstructionsButton.Name = "InstructionsButton";
-            this.InstructionsButton.Size = new System.Drawing.Size(131, 36);
+            this.InstructionsButton.Size = new System.Drawing.Size(171, 36);
             this.InstructionsButton.TabIndex = 1;
-            this.InstructionsButton.Text = "Instructions";
+            this.InstructionsButton.Text = "instructions";
             this.InstructionsButton.UseVisualStyleBackColor = false;
             this.InstructionsButton.Click += new System.EventHandler(this.InstructionsButton_Click);
             // 
             // CharacterTypeButton
             // 
             this.CharacterTypeButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.CharacterTypeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CharacterTypeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CharacterTypeButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharacterTypeButton.Font = new System.Drawing.Font("Star Jedi", 14.25F);
             this.CharacterTypeButton.Location = new System.Drawing.Point(525, 30);
             this.CharacterTypeButton.Name = "CharacterTypeButton";
-            this.CharacterTypeButton.Size = new System.Drawing.Size(121, 36);
+            this.CharacterTypeButton.Size = new System.Drawing.Size(171, 36);
             this.CharacterTypeButton.TabIndex = 2;
             this.CharacterTypeButton.Text = "Character";
             this.CharacterTypeButton.UseVisualStyleBackColor = false;
@@ -77,11 +81,12 @@
             // ChooseCategory
             // 
             this.ChooseCategory.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ChooseCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChooseCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ChooseCategory.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChooseCategory.Location = new System.Drawing.Point(525, 132);
+            this.ChooseCategory.Font = new System.Drawing.Font("Star Jedi", 14.25F);
+            this.ChooseCategory.Location = new System.Drawing.Point(12, 136);
             this.ChooseCategory.Name = "ChooseCategory";
-            this.ChooseCategory.Size = new System.Drawing.Size(121, 36);
+            this.ChooseCategory.Size = new System.Drawing.Size(134, 36);
             this.ChooseCategory.TabIndex = 3;
             this.ChooseCategory.Text = "Category";
             this.ChooseCategory.UseVisualStyleBackColor = false;
