@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
             this.JediType = JediType.NaskoSolo;
             this.knowledgeDamage = 15;
             this.thePower = 70;
-            this.points = 10;
+            this.points = 15;
         }
 
         public override string CharacterImage

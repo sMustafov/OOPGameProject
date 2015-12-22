@@ -40,9 +40,9 @@
             this.questionLabel.BackColor = System.Drawing.Color.Transparent;
             this.questionLabel.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.questionLabel.Location = new System.Drawing.Point(12, 27);
+            this.questionLabel.Location = new System.Drawing.Point(12, 9);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(569, 76);
+            this.questionLabel.Size = new System.Drawing.Size(569, 118);
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "Question";
             this.questionLabel.Click += new System.EventHandler(this.questionLabel_Click);

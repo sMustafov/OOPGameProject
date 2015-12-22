@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1.Jedis.JediKnight
             this.JediType = JediType.AchoUanKenobi;
             this.knowledgeDamage = 20;
             this.thePower = 80;
-            this.points = 15;
+            this.points = 20;
         }
         public override string CharacterImage
         {

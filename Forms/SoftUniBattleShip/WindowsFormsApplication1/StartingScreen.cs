@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -14,7 +9,7 @@ namespace WindowsFormsApplication1
 
         public StartingScreen()
         {
-            player.SoundLocation = "StarWars.wav";
+            player.SoundLocation = @"..\..\Resources\StarWars.wav";
             InitializeComponent();
         }
 
