@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
         {
             this.AssistantJediType = AssistantJediType.ChubiEdo;
             this.assistantLives = 40;
-            this.assistantAttack = 2;
+            this.assistantAttack = 8;
         }
 
         public override AssistantJediType AssistantJediType { get; set; }

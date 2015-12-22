@@ -3,8 +3,6 @@ using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
 namespace WindowsFormsApplication1.Paduins.Paduin
 {
-    using AssistantPaduin;
-
     public class WightJan : Paduin, IWightJan
     {
         private string characterImage = @"..\..\Resources\Jan.png";
@@ -16,8 +14,6 @@ namespace WindowsFormsApplication1.Paduins.Paduin
         }
 
         public override PaduinType PaduinType { get; set; }
-
-        public override AssistantPaduin AssistantPaduin { get; set; }
 
         public override string CharacterImage
         {

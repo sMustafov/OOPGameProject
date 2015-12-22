@@ -61,11 +61,11 @@
             // SevginButton
             // 
             this.SevginButton.AutoSize = true;
-            this.SevginButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SevginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.SevginButton.ForeColor = System.Drawing.Color.Black;
             this.SevginButton.Location = new System.Drawing.Point(750, 28);
             this.SevginButton.Name = "SevginButton";
-            this.SevginButton.Size = new System.Drawing.Size(150, 31);
+            this.SevginButton.Size = new System.Drawing.Size(153, 28);
             this.SevginButton.TabIndex = 1;
             this.SevginButton.TabStop = true;
             this.SevginButton.Text = "Count Sevgin";
@@ -75,11 +75,11 @@
             // YanchoButton
             // 
             this.YanchoButton.AutoSize = true;
-            this.YanchoButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.YanchoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.YanchoButton.ForeColor = System.Drawing.Color.Black;
             this.YanchoButton.Location = new System.Drawing.Point(497, 28);
             this.YanchoButton.Name = "YanchoButton";
-            this.YanchoButton.Size = new System.Drawing.Size(200, 31);
+            this.YanchoButton.Size = new System.Drawing.Size(205, 28);
             this.YanchoButton.TabIndex = 2;
             this.YanchoButton.TabStop = true;
             this.YanchoButton.Text = "Karnobatman Bane";
@@ -89,11 +89,11 @@
             // SashoButton
             // 
             this.SashoButton.AutoSize = true;
-            this.SashoButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SashoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SashoButton.ForeColor = System.Drawing.Color.Black;
             this.SashoButton.Location = new System.Drawing.Point(75, 28);
             this.SashoButton.Name = "SashoButton";
-            this.SashoButton.Size = new System.Drawing.Size(126, 31);
+            this.SashoButton.Size = new System.Drawing.Size(127, 28);
             this.SashoButton.TabIndex = 3;
             this.SashoButton.TabStop = true;
             this.SashoButton.Text = "Sasho Fett";
@@ -103,11 +103,11 @@
             // JanButton
             // 
             this.JanButton.AutoSize = true;
-            this.JanButton.Font = new System.Drawing.Font("Hobo Std", 14.25F, System.Drawing.FontStyle.Bold);
+            this.JanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.JanButton.ForeColor = System.Drawing.Color.Black;
             this.JanButton.Location = new System.Drawing.Point(301, 28);
             this.JanButton.Name = "JanButton";
-            this.JanButton.Size = new System.Drawing.Size(117, 31);
+            this.JanButton.Size = new System.Drawing.Size(120, 28);
             this.JanButton.TabIndex = 4;
             this.JanButton.TabStop = true;
             this.JanButton.Text = "Wight Jan";
@@ -205,6 +205,7 @@
             this.Name = "Paduin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Paduin";
+            this.Load += new System.EventHandler(this.Paduin_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

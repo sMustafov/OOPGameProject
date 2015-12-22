@@ -2,13 +2,13 @@
 {
     public interface IJedi
     {
-        int PointsDamage { get; set; } //Damage който му се нанася
+        int PointsDamage { get; set; } 
 
-        int KnowledgeDamage { get; set; } //Damadge който нанася
+        int KnowledgeDamage { get; set; }
 
-        int ThePolerOfDrinks { get; set; } //Живота му
+        int ThePolerOfDrinks { get; set; } 
 
-        JediType JediType { get; set; } //
+        JediType JediType { get; set; } 
 
         string CharacterImage { get; set; }
 

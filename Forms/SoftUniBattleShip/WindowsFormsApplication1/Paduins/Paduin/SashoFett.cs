@@ -3,8 +3,6 @@ using WindowsFormsApplication1.Interface.IPadaun.IPaduinStudents;
 
 namespace WindowsFormsApplication1.Paduins.Paduin
 {
-    using AssistantPaduin;
-
     public class SashoFett : Paduin, ISashoFett
     {
         private string characterImage = @"..\..\Resources\Sasho.png";
@@ -21,8 +19,6 @@ namespace WindowsFormsApplication1.Paduins.Paduin
         }
 
         public override PaduinType PaduinType { get; set; }
-
-        public override AssistantPaduin AssistantPaduin { get; set; }
 
         public override string CharacterImage
         {

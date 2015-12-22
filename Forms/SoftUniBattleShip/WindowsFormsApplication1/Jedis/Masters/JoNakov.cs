@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1.Jedis.Masters
             this.JediType = JediType.JoNakov;
             this.knowledgeDamage = 30;
             this.thePower = 100;
-            this.point = 5;
+            this.point = 20;
         }
 
         public override JediType JediType { get; set; }

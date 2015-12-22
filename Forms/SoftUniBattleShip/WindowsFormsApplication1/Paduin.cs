@@ -6,7 +6,6 @@ namespace WindowsFormsApplication1
     public partial class Paduin : Form
     {
         private int paduinCharacter = 1;
-        private int paduinAssistant = 1;
         public static int FinalPaduinCharacter = 1;
         public static int FinalPaduin = 1;
 
@@ -22,16 +21,6 @@ namespace WindowsFormsApplication1
             FinalPaduinCharacter = this.paduinCharacter;
             ss.ShowDialog();
             Close();
-        }
-
-        private void PaduinLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AssistantLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void SevginButton_CheckedChanged(object sender, EventArgs e)
@@ -64,17 +53,9 @@ namespace WindowsFormsApplication1
 
         }
 
-
-
-     private void FuglemanButton_CheckedChanged(object sender, EventArgs e)
+        private void Paduin_Load_1(object sender, EventArgs e)
         {
-            this.paduinAssistant = 1;
-        }
 
-        private void TriBiriButton_CheckedChanged(object sender, EventArgs e)
-        {
-            this.paduinAssistant = 2;
         }
-
     }
 }

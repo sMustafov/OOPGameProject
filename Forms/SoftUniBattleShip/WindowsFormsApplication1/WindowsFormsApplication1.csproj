@@ -111,10 +111,6 @@
     <Compile Include="Paduin.Designer.cs">
       <DependentUpon>Paduin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paduins\AssistantPaduinFactory.cs" />
-    <Compile Include="Paduins\AssistantPaduin\AssistantPaduin.cs" />
-    <Compile Include="Paduins\AssistantPaduin\FugelmanToWookie.cs" />
-    <Compile Include="Paduins\AssistantPaduin\SipiTriBiriO.cs" />
     <Compile Include="Paduins\PadoinFactor.cs" />
     <Compile Include="Paduins\Paduin\CountSevgin.cs" />
     <Compile Include="Paduins\Paduin\Karnobatman.cs" />

@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Jedis.AsistentJedi
         {
             this.AssistantJediType = AssistantJediType.R2Trifon2;
             this.assistantLives = 40;
-            this.assistantAttack = 2;
+            this.assistantAttack = 50;
         }
 
         public override AssistantJediType AssistantJediType { get; set; }

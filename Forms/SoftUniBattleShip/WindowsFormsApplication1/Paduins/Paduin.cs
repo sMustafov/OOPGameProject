@@ -7,7 +7,6 @@
         protected int paduinPower;
         protected int beerPerSecond;
         protected int pointKnowledge;
-        protected AssistantPaduin.AssistantPaduin assistantPaduin;
 
         protected Paduin()
         {
@@ -22,8 +21,6 @@
         public abstract string CharacterImage { get; set; }
 
         public abstract PaduinType PaduinType { get; set; }
-
-        public abstract AssistantPaduin.AssistantPaduin AssistantPaduin { get; set; }
 
         public abstract void KnowledgeCalculator();
     }

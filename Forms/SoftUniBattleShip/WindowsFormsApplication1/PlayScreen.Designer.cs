@@ -48,11 +48,7 @@
             this.paduin = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.redWall = new System.Windows.Forms.PictureBox();
-            this.redWall4 = new System.Windows.Forms.PictureBox();
-            this.redWall3 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.redWall2 = new System.Windows.Forms.PictureBox();
             this.beerBox = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -73,11 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.paduin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beerBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -108,7 +100,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 84);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 88);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 40);
             this.pictureBox3.TabIndex = 3;
@@ -123,7 +115,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(33, 130);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 136);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 40);
             this.pictureBox4.TabIndex = 4;
@@ -133,7 +125,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(33, 217);
+            this.pictureBox5.Location = new System.Drawing.Point(33, 216);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 40);
             this.pictureBox5.TabIndex = 5;
@@ -143,7 +135,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(33, 171);
+            this.pictureBox6.Location = new System.Drawing.Point(33, 176);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 40);
             this.pictureBox6.TabIndex = 6;
@@ -177,7 +169,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(32, 432);
+            this.pictureBox7.Location = new System.Drawing.Point(32, 436);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(30, 40);
             this.pictureBox7.TabIndex = 12;
@@ -187,7 +179,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(32, 374);
+            this.pictureBox8.Location = new System.Drawing.Point(32, 376);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(30, 40);
             this.pictureBox8.TabIndex = 13;
@@ -197,7 +189,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Location = new System.Drawing.Point(33, 319);
+            this.pictureBox9.Location = new System.Drawing.Point(33, 320);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(30, 40);
             this.pictureBox9.TabIndex = 14;
@@ -207,7 +199,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Location = new System.Drawing.Point(32, 273);
+            this.pictureBox10.Location = new System.Drawing.Point(32, 276);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(30, 40);
             this.pictureBox10.TabIndex = 15;
@@ -237,70 +229,22 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Location = new System.Drawing.Point(822, 249);
+            this.pictureBox12.Location = new System.Drawing.Point(822, 240);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(31, 40);
             this.pictureBox12.TabIndex = 18;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click_1);
             // 
-            // redWall
-            // 
-            this.redWall.BackColor = System.Drawing.Color.Transparent;
-            this.redWall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall.BackgroundImage")));
-            this.redWall.Image = ((System.Drawing.Image)(resources.GetObject("redWall.Image")));
-            this.redWall.Location = new System.Drawing.Point(67, 43);
-            this.redWall.Name = "redWall";
-            this.redWall.Size = new System.Drawing.Size(40, 507);
-            this.redWall.TabIndex = 19;
-            this.redWall.TabStop = false;
-            this.redWall.Click += new System.EventHandler(this.redWall_Click);
-            // 
-            // redWall4
-            // 
-            this.redWall4.BackColor = System.Drawing.Color.Transparent;
-            this.redWall4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall4.BackgroundImage")));
-            this.redWall4.Image = ((System.Drawing.Image)(resources.GetObject("redWall4.Image")));
-            this.redWall4.Location = new System.Drawing.Point(101, 29);
-            this.redWall4.Name = "redWall4";
-            this.redWall4.Size = new System.Drawing.Size(704, 44);
-            this.redWall4.TabIndex = 19;
-            this.redWall4.TabStop = false;
-            this.redWall4.Click += new System.EventHandler(this.redWall4_Click);
-            // 
-            // redWall3
-            // 
-            this.redWall3.BackColor = System.Drawing.Color.Transparent;
-            this.redWall3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall3.BackgroundImage")));
-            this.redWall3.Image = ((System.Drawing.Image)(resources.GetObject("redWall3.Image")));
-            this.redWall3.Location = new System.Drawing.Point(100, 509);
-            this.redWall3.Name = "redWall3";
-            this.redWall3.Size = new System.Drawing.Size(705, 41);
-            this.redWall3.TabIndex = 22;
-            this.redWall3.TabStop = false;
-            this.redWall3.Click += new System.EventHandler(this.redWall3_Click);
-            // 
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Location = new System.Drawing.Point(822, 397);
+            this.pictureBox13.Location = new System.Drawing.Point(822, 400);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(31, 40);
             this.pictureBox13.TabIndex = 24;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
-            // 
-            // redWall2
-            // 
-            this.redWall2.BackColor = System.Drawing.Color.Transparent;
-            this.redWall2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("redWall2.BackgroundImage")));
-            this.redWall2.Image = ((System.Drawing.Image)(resources.GetObject("redWall2.Image")));
-            this.redWall2.Location = new System.Drawing.Point(804, 43);
-            this.redWall2.Name = "redWall2";
-            this.redWall2.Size = new System.Drawing.Size(28, 610);
-            this.redWall2.TabIndex = 25;
-            this.redWall2.TabStop = false;
-            this.redWall2.Click += new System.EventHandler(this.redWall2_Click);
             // 
             // beerBox
             // 
@@ -317,7 +261,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(804, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(796, 32);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 610);
             this.pictureBox2.TabIndex = 27;
@@ -329,7 +273,7 @@
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.BackgroundImage")));
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(67, 44);
+            this.pictureBox14.Location = new System.Drawing.Point(68, 43);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(25, 506);
             this.pictureBox14.TabIndex = 28;
@@ -341,7 +285,7 @@
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(102, 28);
+            this.pictureBox15.Location = new System.Drawing.Point(98, 32);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(704, 44);
             this.pictureBox15.TabIndex = 29;
@@ -352,7 +296,7 @@
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(102, 508);
+            this.pictureBox16.Location = new System.Drawing.Point(98, 508);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(705, 41);
             this.pictureBox16.TabIndex = 30;
@@ -398,11 +342,7 @@
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.beerBox);
-            this.Controls.Add(this.redWall2);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.redWall3);
-            this.Controls.Add(this.redWall4);
-            this.Controls.Add(this.redWall);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
@@ -440,11 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.paduin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beerBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -473,11 +409,7 @@
         private System.Windows.Forms.PictureBox paduin;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox redWall;
-        private System.Windows.Forms.PictureBox redWall4;
-        private System.Windows.Forms.PictureBox redWall3;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox redWall2;
         private System.Windows.Forms.PictureBox beerBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox14;

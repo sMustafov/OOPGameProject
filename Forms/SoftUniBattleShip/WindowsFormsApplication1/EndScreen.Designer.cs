@@ -28,35 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ENDGame = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ENDGame)).BeginInit();
+            this.EndScreenImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.EndScreenImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // ENDGame
+            // EndScreenImage
             // 
-            this.ENDGame.Location = new System.Drawing.Point(0, -1);
-            this.ENDGame.Name = "ENDGame";
-            this.ENDGame.Size = new System.Drawing.Size(900, 600);
-            this.ENDGame.TabIndex = 0;
-            this.ENDGame.TabStop = false;
-            this.ENDGame.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.EndScreenImage.Location = new System.Drawing.Point(0, 0);
+            this.EndScreenImage.Name = "EndScreenImage";
+            this.EndScreenImage.Size = new System.Drawing.Size(902, 598);
+            this.EndScreenImage.TabIndex = 0;
+            this.EndScreenImage.TabStop = false;
+            this.EndScreenImage.Click += new System.EventHandler(this.EndScreenImage_Click);
             // 
             // EndScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(903, 600);
-            this.Controls.Add(this.ENDGame);
+            this.Controls.Add(this.EndScreenImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "EndScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EndScreen";
-            ((System.ComponentModel.ISupportInitialize)(this.ENDGame)).EndInit();
+            this.Load += new System.EventHandler(this.EndScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EndScreenImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox ENDGame;
+        private System.Windows.Forms.PictureBox EndScreenImage;
     }
 }
